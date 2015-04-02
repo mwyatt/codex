@@ -1,0 +1,90 @@
+$color-body: #000 !default;
+$font-family: #000 !default;
+$color-secondary-1-0: #000 !default;
+
+
+@mixin button($color: white, $backgroundColor: black) {
+  @include transition(background-color 100ms linear);
+  font-weight: 600;
+  cursor: pointer; 
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1;
+  padding: 7px 10px;
+  background-color: $backgroundColor;
+  color: $color;
+
+  &:hover {
+    background-color: tint($backgroundColor, 20%);
+  }
+
+  &:active {
+    background-color: shade($backgroundColor, 21%);
+  }
+}
+
+
+@mixin link($color: blue) {
+  @include linkContent($color);
+
+  &:visited {
+    @include linkContent($color);
+  }
+}
+
+
+@mixin linkContent($color) {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  color: $color;
+  border-bottom-color: $color;
+
+  &:hover { 
+    color: shade($color, 20%);
+    border-bottom-color: shade($color, 20%);
+  }
+
+  &:focus,
+  &:active {
+    color: shade($color, 50%);
+    border-bottom-color: shade($color, 50%);
+  }
+}
+
+
+@mixin input($type: 'text') {
+  font-size: 1em;
+  box-sizing: border-box;
+  @include appearance(none);
+  @include transition(all 200ms); 
+  color: $color-body;
+  font-family: $font-family;
+  border: 1px solid $color-secondary-1-0;
+  padding: 0.4em 0.5em 0.3em;
+  margin: 0;
+
+  &:focus {
+    box-shadow: 0 0 3px rgba(#000, .2);
+    border-color: $color-secondary-1-0;
+    color: $color-body;
+  }
+}
+
+
+@mixin tableBasic() {
+  width: 100%;
+
+  th {
+    font-weight: 600;
+    text-align: left;
+    background-color: rgba(#000, .05);
+  }
+
+  th,
+  td {
+    padding: 0.5em;
+    border: 1px solid $color-secondary-1-0;
+  }
+}

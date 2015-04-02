@@ -1,0 +1,261 @@
+
+// display
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+// float
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+// width
+.w100 {
+  width: 100%;
+}
+
+// table
+.table-basic {
+  @include tableBasic;
+}
+
+// button
+.button {
+  @include button($color-primary-0);
+}
+
+.button-primary {
+  @include button($color-primary-0);
+}
+
+.button-secondary {
+  @include button($color-secondary-1-0);
+}
+
+.link-primary {
+  @include link($color-primary-0);
+}
+
+.link-secondary {
+  @include link($color-secondary-1-0);
+}
+
+
+.label-block {
+  display: block;
+  margin: 1em 0 .5em;
+  font-weight: 600;
+}
+
+.input-text {
+  @include input;
+}
+
+
+
+.block-clear {
+  @extend %block-margins;
+  @include clearfix;
+}
+
+// margin
+.m1 {
+  margin: 1em;
+}
+
+.mt1 {
+  margin-top: 1em;
+}
+
+.mr1 {
+  margin-right: 1em;
+}
+
+.mb1 {
+  margin-bottom: 1em;
+}
+
+.ml1 {
+  margin-left: 1em;
+}
+
+// padding
+.p1 {
+  padding: 1em;
+}
+
+.pt1 {
+  padding-top: 1em;
+}
+
+.pr1 {
+  padding-right: 1em;
+}
+
+.pb1 {
+  padding-bottom: 1em;
+}
+
+.pl1 {
+  padding-left: 1em;
+}
+
+// print
+.page-break {
+  display: block;
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+// text
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.page-primary-title {
+  margin-top: 0;
+  @extend .h1;
+}
+
+.page-primary-description {
+  @extend .p;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-size-larger {
+  font-size: 1.2em;
+}
+
+.text-size-smaller {
+  font-size: .8em;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $heading-color;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  margin: 1em 0 0.5em;
+}
+
+.h1 {
+  font-size: 2em;
+}
+
+.h2 {
+  font-size: 1.5em;
+}
+
+.h3 {
+  font-size: 1.17em;
+}
+
+.h3,
+.h4 {
+  line-height: 1.3;
+}
+
+.h5 {
+  font-size: .83em;
+}
+
+.h6 {
+  font-size: .75em;
+}
+
+.p {
+  @extend %block-margins;
+  line-height: $line-height;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+} 
+
+.underline {
+  text-decoration: underline;
+}
+
+.unordered-list {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.ordered-list {
+  list-style: decimal;
+}
+
+.unordered-list,
+.ordered-list {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.p,
+.unordered-list,
+.ordered-list {
+  @extend %block-margins;
+}
+
+.a {
+  @include link($color-link);
+}
