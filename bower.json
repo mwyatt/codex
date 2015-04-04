@@ -1,0 +1,10 @@
+{
+  "name": "codex",
+  "version": "0.0.1",
+  "dependencies": {
+    "bourbon": "latest",
+    "normalize-scss": "3.0.1",
+    "rainbow": "latest"
+  },
+  "private": true
+}

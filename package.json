@@ -1,0 +1,25 @@
+{
+  "site": "codex",
+  "author": "Martin Wyatt",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "browserify": "^8.0.2",
+    "browserify-shim": "^3.8.2",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-sass": "latest",
+    "load-grunt-config": "^0.16.0",
+    "load-grunt-tasks": "^3.0.0",
+    "time-grunt": "^1.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "browser": {}
+}

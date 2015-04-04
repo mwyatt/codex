@@ -54,30 +54,8 @@
 
 // table
 .table-basic {
-  @include tableBasic;
+  @include table;
 }
-
-// button
-.button {
-  @include button($color-primary-0);
-}
-
-.button-primary {
-  @include button($color-primary-0);
-}
-
-.button-secondary {
-  @include button($color-secondary-1-0);
-}
-
-.link-primary {
-  @include link($color-primary-0);
-}
-
-.link-secondary {
-  @include link($color-secondary-1-0);
-}
-
 
 .label-block {
   display: block;
@@ -88,8 +66,6 @@
 .input-text {
   @include input;
 }
-
-
 
 .block-clear {
   @extend %block-margins;
@@ -256,6 +232,25 @@
   @extend %block-margins;
 }
 
-.a {
-  @include link($color-link);
+// link
+.a,
+.link-primary {
+  @include link($color-primary-0);
+}
+
+.link-secondary {
+  @include link($color-secondary-1-0);
+}
+
+// button
+.button {
+  @include button(#ccc);
+}
+
+.button-primary {
+  @include button($color-primary-0);
+}
+
+.button-secondary {
+  @include button($color-secondary-1-0);
 }
