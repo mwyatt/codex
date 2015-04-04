@@ -1,0 +1,40 @@
+
+.container {
+  padding: 5em;
+}
+
+.rainbow-pre {
+  padding: 1em;
+}
+
+.rainbow {
+  font-size: $body-font-size;
+}
+
+.site-heading {
+  text-align: center;
+  margin: 0 0 1em;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.heading-primary {
+  @extend .h1;
+}
+
+.heading-secondary {
+  @extend .h2;
+}
+
+.example-code + .rainbow-pre {
+  margin-top: 0;
+  border-radius: 0 0 3px 3px;
+}
+
+.example-code {
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  background-color: #fff;
+}

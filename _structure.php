@@ -30,27 +30,17 @@ return [
 	'buttons' => [
 		'default-buttons',
 		'primary',
-		'secondary',
-		'tertiary',
 		'outline',
-		'disabled',
-		'block'
+		'disabled'
 	],
 	'form' => [
-		'input-text',
-		'input-number',
+		'input',
 		'select',
 		'textarea',
 		'label',
 		'radio',
 		'checkbox',
-		'note',
-		'submit (button)',
-		'sizing' => [
-			'small',
-			'big',
-			'block'
-		]
+		'action'
 	],
 	'alert' => [
 		'normal',

@@ -17,6 +17,10 @@
   visibility: hidden;
 }
 
+.block-margins {
+  @extend %block-margins;
+}
+
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -57,18 +61,37 @@
   @include table;
 }
 
-.label-block {
-  display: block;
-  margin: 1em 0 .5em;
+// form
+.form-label {
   font-weight: 600;
+  margin-right: 1em;
+
+  // 28px
+  line-height: 1.8;
+
+  &.block {
+    margin: 14px 0 5px;
+  }
 }
 
-.input-text {
-  @include input;
+.form-input {
+  @include formInput;
+}
+
+.form-select {
+  @include formSelect;
+}
+
+.form-textarea {
+  @include formInput;
 }
 
 .block-clear {
   @extend %block-margins;
+  @include clearfix;
+}
+
+.clearfix {
   @include clearfix;
 }
 
@@ -197,6 +220,12 @@
 .p {
   @extend %block-margins;
   line-height: $line-height;
+  
+}
+
+p.lead {
+  font-size: 20px;
+  color: mix(#fff, $body-color, 20%);
 }
 
 .bold {
@@ -244,13 +273,21 @@
 
 // button
 .button {
-  @include button(#ccc);
+  @include button(#fff, $color-secondary-1-0);
+}
+
+.button-smaller {
+  font-size: 75%;
+}
+
+.button-larger {
+  font-size: 125%;
 }
 
 .button-primary {
-  @include button($color-primary-0);
+  @include button(#fff, $color-primary-0);
 }
 
-.button-secondary {
-  @include button($color-secondary-1-0);
+.button-outline {
+  @include button($color-primary-0);
 }
