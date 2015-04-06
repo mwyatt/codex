@@ -70,7 +70,7 @@
   line-height: 1.8;
 
   &.block {
-    margin: 14px 0 5px;
+    margin-bottom: 6px;
   }
 }
 
@@ -84,6 +84,18 @@
 
 .form-textarea {
   @include formInput;
+}
+
+.form-action {
+  @include clearfix;
+
+  .left {
+    margin-right: 1em;
+  }
+
+  .right {
+    margin-left: 1em;
+  }
 }
 
 .block-clear {
@@ -226,6 +238,12 @@
 p.lead {
   font-size: 20px;
   color: mix(#fff, $body-color, 20%);
+}
+
+.blockquote {
+  border-left: 2px solid mix(#fff, $body-color, 50%);
+  padding: 1em 1em 1em 1.5em;
+  margin: 0;
 }
 
 .bold {

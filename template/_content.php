@@ -10,17 +10,31 @@
 <body>
 	<div class="container">
 		<h1 class="site-heading">Codex</h1>
+		<div class="menu-container">
+			<nav class="menu-primary">
+				<ul>
+	
+<?php foreach ($structure as $headingPrimary => $secondary): ?>
+	
+					<li class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></li>
+
+<?php endforeach ?>
+
+				</ul>
+			</nav>
+		</div>
+		<div class="content-container">
 	
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
-		<div class="container-primary">
-			<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
+			<div id="<?php echo $headingPrimary ?>" class="container-primary">
+				<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
 
 	<?php include 'template/_' . $headingPrimary . '.php' ?>
 	<?php foreach ($secondary as $headingSecondary): ?>
 
-			<div class="container-secondary">
-				<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
+				<div class="container-secondary">
+					<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
 
 		<?php $pathCode = BASE_PATH . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
 		<?php if (file_exists($pathCode)): ?>
@@ -31,11 +45,12 @@
 		<?php include 'template/' . $headingPrimary . '/_' . $headingSecondary . '.php' ?>
 	<?php endforeach ?>
 
+				</div>
 			</div>
-		</div>
 
 <?php endforeach ?>
 
+		</div>
 	</div>
     <script src="asset/vendor/rainbow.min.js"></script>
 	<script src="asset/vendor/rainbow/language/generic.js"></script>

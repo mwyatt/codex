@@ -45,8 +45,7 @@ return [
 	'alert' => [
 		'normal',
 		'success',
-		'failure',
-		'dismiss'
+		'fail'
 	],
-	'blank-slate' => []
+	'blankslate' => []
 ];

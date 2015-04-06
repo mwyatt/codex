@@ -107,6 +107,7 @@
   border: 1px solid $color-secondary-1-0;
   padding: 2px 3px;
   margin: 0;
+  outline: 0;
 
   &:focus {
     box-shadow: 0 0 3px rgba(#000, .2);
@@ -124,6 +125,7 @@
   border: 1px solid $color-secondary-1-0;
   padding: 1px 2px;
   margin: 0;
+  outline: 0;
 
   &:focus {
     box-shadow: 0 0 3px rgba(#000, .2);

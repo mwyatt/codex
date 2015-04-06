@@ -1,3 +1,5 @@
+<?php $html = file_get_contents(BASE_PATH . 'template/code/_form.html') ?>
+
 <div class="typography">
 	<p>Use the '.form' class to style up a form using a common theme. Alternatively there are many reusable styles to be used independently.</p>
 </div>

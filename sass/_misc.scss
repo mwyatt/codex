@@ -1,6 +1,32 @@
 
+html {
+  background-color: mix(#fff, $color-primary-0, 90%);
+  background-image: url('starry-sky.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: none;
+  background-attachment: fixed
+}
+
+body {
+  background-color: rgba(#fff, .7);
+}
+
 .container {
-  padding: 5em;
+  @include clearfix;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.content-container {
+  float: right;
+  width: 70%;
+}
+
+.menu-container {
+  float: left;
+  width: 25%;
 }
 
 .rainbow-pre {
@@ -16,6 +42,10 @@
   margin: 0 0 1em;
   font-size: 2em;
   text-transform: uppercase;
+  padding: 20px;
+  font-size: 3em;
+  background-color: mix(#fff, $color-primary-0, 80%);
+  color: mix(#000, $color-primary-0, 20%);
 }
 
 .heading-primary {
@@ -32,9 +62,30 @@
 }
 
 .example-code {
+  @include clearfix;
   padding: 1em;
   border: 1px solid #ccc;
   border-bottom: none;
   border-radius: 3px 3px 0 0;
   background-color: #fff;
+}
+
+.cols {
+  @include row;
+}
+
+.col-six {
+  @include col(6);
+
+  &:nth-child(2n) {
+    @include last;
+  }
+}
+
+.col-four {
+  @include col(4);
+
+  &:nth-child(3n) {
+    @include last;
+  }
 }
