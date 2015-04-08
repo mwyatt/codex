@@ -24,6 +24,12 @@
 			</nav>
 		</div>
 		<div class="content-container">
+			<h1 class="heading-primary">Introduction</h1>
+			<p class="p">The codex is a home for my css and js boilerplate. This has been built so that it can be 'plugged in' to an existing / new project easily.</p>
+			<p class="p">The '_dependencies.scss' file can be imported with zero css output.</p>
+			<pre class="rainbow-pre"><code data-language="css">@import "dependencies";</code></pre>
+
+			
 	
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
@@ -43,9 +49,11 @@
 			<?php unset($html) ?>
 		<?php endif ?>
 		<?php include 'template/' . $headingPrimary . '/_' . $headingSecondary . '.php' ?>
-	<?php endforeach ?>
 
 				</div>
+
+	<?php endforeach ?>
+
 			</div>
 
 <?php endforeach ?>

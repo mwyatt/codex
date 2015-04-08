@@ -25,6 +25,13 @@ a:visited {
   text-decoration: none;
 }
 
+input,
+select,
+svg,
+a:focus {
+  outline: none;
+}
+
 p {
   margin: 0;
 }

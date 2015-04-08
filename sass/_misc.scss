@@ -1,16 +1,7 @@
 
-html {
-  background-color: mix(#fff, $color-primary-0, 90%);
-  background-image: url('starry-sky.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: none;
-  background-attachment: fixed
-}
+html {}
 
-body {
-  background-color: rgba(#fff, .7);
-}
+body {}
 
 .container {
   @include clearfix;
@@ -44,8 +35,10 @@ body {
   text-transform: uppercase;
   padding: 20px;
   font-size: 3em;
-  background-color: mix(#fff, $color-primary-0, 80%);
-  color: mix(#000, $color-primary-0, 20%);
+  color: mix(#000, #fff, 50%);
+  border-radius: 0 0 3px 3px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
 }
 
 .heading-primary {

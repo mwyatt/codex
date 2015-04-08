@@ -1,12 +1,9 @@
-
-// display
 .block {
   display: block;
 }
 
 .hidden {
-  display: none !important;
-  visibility: hidden;
+  @extend %hidden;
 }
 
 .hide {
@@ -42,7 +39,6 @@
   width: auto;
 }
 
-// float
 .left {
   float: left;
 }
@@ -51,51 +47,12 @@
   float: right;
 }
 
-// width
 .w100 {
   width: 100%;
 }
 
-// table
-.table-basic {
-  @include table;
-}
-
-// form
-.form-label {
-  font-weight: 600;
-  margin-right: 1em;
-
-  // 28px
-  line-height: 1.8;
-
-  &.block {
-    margin-bottom: 6px;
-  }
-}
-
-.form-input {
-  @include formInput;
-}
-
-.form-select {
-  @include formSelect;
-}
-
-.form-textarea {
-  @include formInput;
-}
-
-.form-action {
-  @include clearfix;
-
-  .left {
-    margin-right: 1em;
-  }
-
-  .right {
-    margin-left: 1em;
-  }
+.table {
+  @extend %table;
 }
 
 .block-clear {
@@ -128,7 +85,6 @@
   margin-left: 1em;
 }
 
-// padding
 .p1 {
   padding: 1em;
 }
@@ -149,149 +105,24 @@
   padding-left: 1em;
 }
 
-// print
 .page-break {
-  display: block;
-  page-break-after: always;
-  page-break-inside: avoid;
+  @extend %page-break;
 }
 
-// text
-.text-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.page-primary-title {
-  margin-top: 0;
-  @extend .h1;
-}
-
-.page-primary-description {
-  @extend .p;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-size-larger {
-  font-size: 1.2em;
-}
-
-.text-size-smaller {
-  font-size: .8em;
-}
-
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  color: $heading-color;
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
-  margin: 1em 0 0.5em;
-}
-
-.h1 {
-  font-size: 2em;
-}
-
-.h2 {
-  font-size: 1.5em;
-}
-
-.h3 {
-  font-size: 1.17em;
-}
-
-.h3,
-.h4 {
-  line-height: 1.3;
-}
-
-.h5 {
-  font-size: .83em;
-}
-
-.h6 {
-  font-size: .75em;
-}
-
-.p {
-  @extend %block-margins;
-  line-height: $line-height;
-  
-}
-
-p.lead {
-  font-size: 20px;
-  color: mix(#fff, $body-color, 20%);
-}
-
-.blockquote {
-  border-left: 2px solid mix(#fff, $body-color, 50%);
-  padding: 1em 1em 1em 1.5em;
-  margin: 0;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.italic {
-  font-style: italic;
-} 
-
-.underline {
-  text-decoration: underline;
-}
-
-.unordered-list {
-  list-style-type: disc;
-  list-style-position: outside;
-}
-
-.ordered-list {
-  list-style: decimal;
-}
-
-.unordered-list,
-.ordered-list {
-  margin-left: 1em;
-  padding-left: 1em;
-}
-
-.p,
-.unordered-list,
-.ordered-list {
-  @extend %block-margins;
-}
-
-// link
-.a,
-.link-primary {
-  @include link($color-primary-0);
-}
-
-.link-secondary {
-  @include link($color-secondary-1-0);
-}
-
-// button
 .button {
-  @include button(#fff, $color-secondary-1-0);
+  @extend %button;
+}
+
+.button-outline {
+  @extend %button-outline;
+}
+
+.button-primary {
+  @extend %button-primary;
+}
+
+.button-primary-outline {
+  @extend %button-primary-outline;
 }
 
 .button-smaller {
@@ -300,12 +131,4 @@ p.lead {
 
 .button-larger {
   font-size: 125%;
-}
-
-.button-primary {
-  @include button(#fff, $color-primary-0);
-}
-
-.button-outline {
-  @include button($color-primary-0);
 }
