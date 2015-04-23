@@ -22,6 +22,7 @@
     "jquery": "$"
   },
   "browser": {
+    "url": "./js/url.js",
     "vendor/rainbow": "./js/vendor/rainbow.js"
   }
 }

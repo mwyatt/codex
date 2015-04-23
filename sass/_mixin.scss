@@ -23,8 +23,8 @@
   &:hover {
 
     @if $background-color == transparent {
-      background-color: $background-color;
-      border-color: $background-color;
+      color: mix(#fff, $color, 20%);
+      border-color: mix(#fff, $color, 20%);
     } @else {
       background-color: mix(#fff, $background-color, 20%);
       border-color: mix(#fff, $background-color, 20%);
@@ -33,9 +33,9 @@
 
   &:active {
 
-    @if $background-color == '' {
-      background-color: transparent;
-      border-color: transparent;
+    @if $background-color == transparent {
+      color: mix(#000, $color, 20%);
+      border-color: mix(#000, $color, 20%);
     } @else {
       background-color: mix(#000, $background-color, 20%);
       border-color: mix(#000, $background-color, 20%);
@@ -71,26 +71,19 @@
 }
 
 
-// builds styling for a link
-@mixin link($color: blue) {
-  @include linkContent($color);
-
-  &:visited {
-    @include linkContent($color);
-  }
-}
-
-
 // generates the styles required to build a link
 @mixin linkContent($color) {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   color: $color;
   border-bottom-color: $color;
+  // @upgrade @include text-decoration-line(underline);
+  // @upgrade @include text-decoration-color(rgba($color, .5));
 
   &:hover { 
     color: shade($color, 20%);
     border-bottom-color: shade($color, 20%);
+    // @upgrade @include text-decoration-color($color);
   }
 
   &:focus {
@@ -100,6 +93,7 @@
   &:active {
     color: shade($color, 50%);
     border-bottom-color: shade($color, 50%);
+    // @upgrade @include text-decoration-color(mix(#000, $color, 20%));
   }
 }
 

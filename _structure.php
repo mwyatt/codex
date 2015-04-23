@@ -13,6 +13,7 @@ return [
 		'normalize',
 		'bourbon'
 	],
+	'palette' => [],
 	'layout' => [
 		'grid',
 		'floats',
@@ -47,5 +48,12 @@ return [
 		'success',
 		'fail'
 	],
-	'blankslate' => []
+	'blankslate' => [],
+	'javascript' => [
+		'url',
+		'messageLoop',
+		'scrollToTop',
+		'smoothScroll',
+		'keycode'
+	]
 ];

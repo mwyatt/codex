@@ -64,6 +64,8 @@
 	<script src="asset/vendor/rainbow/language/generic.js"></script>
 	<script src="asset/vendor/rainbow/language/html.js"></script>
 	<script src="asset/vendor/rainbow/language/css.js"></script>
+	<script>var urlBase = 'http://192.168.1.185/codex/';</script>
+	<script>var url;</script>
     <script src="asset/common.js"></script>
 </body>
 </html>
