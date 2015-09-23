@@ -1,17 +1,34 @@
 {
   "name": "codex",
-  "author": "Martin Wyatt",
-  "version": "0.1.0",
+  "author": "Martin Wyatt <martin.wyatt@gmail.com>",
+  "version": "0.0.0",
   "devDependencies": {
-    "grunt": "latest",
-    "browserify": "^8.0.2",
-    "browserify-shim": "^3.8.2",
-    "grunt-contrib-copy": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-sass": "latest",
-    "load-grunt-config": "^0.16.0",
-    "load-grunt-tasks": "^3.0.0",
-    "time-grunt": "^1.0.0"
+    "autoprefixer-core": "^5.1.11",
+    "browserify": "^10.2.6",
+    "csswring": "^3.0.5",
+    "event-stream": "^3.3.1",
+    "glob": "^5.0.14",
+    "gulp": "^3.8.11",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-jscs": "^2.0.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-postcss": "^5.1.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jquery": "^2.1.4",
+    "mustache": "^2.1.2",
+    "normalize.css": "^3.0.3",
+    "postcss-assets": "^2.1.2",
+    "postcss-color-function": "^1.2.0",
+    "postcss-import": "^5.2.2",
+    "postcss-mixins": "^0.3.0",
+    "postcss-simple-vars": "^0.3.0",
+    "postcss-url": "^3.2.0",
+    "readable-stream": "^2.0.2",
+    "underscore": "^1.8.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "browserify": {
     "transform": [
@@ -20,9 +37,5 @@
   },
   "browserify-shim": {
     "jquery": "$"
-  },
-  "browser": {
-    "url": "./js/url.js",
-    "vendor/rainbow": "./js/vendor/rainbow.js"
   }
 }

@@ -1,0 +1,28 @@
+{
+    "name": "mwyatt/codex",
+    "description": "css and js boilerplate",
+    "authors": [
+        {
+            "name": "Martin Wyatt",
+            "email": "martin.wyatt@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mwyatt/core"
+        }
+    ],
+    "require": {
+        "mwyatt/core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mwyatt\\Codex\\": ["src", "test"]
+        }
+    }
+}

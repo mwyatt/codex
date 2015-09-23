@@ -1,4 +1,4 @@
-<?php $html = file_get_contents(BASE_PATH . 'template/code/buttons/_outline.html') ?>
+<?php $html = file_get_contents($this->getPath() . 'template/code/buttons/_outline.html') ?>
 
 <div class="typography">
 	<p>Outline buttons.</p>

@@ -1,4 +1,4 @@
-<?php $html = file_get_contents(BASE_PATH . 'template/code/typography/_inline.html') ?>
+<?php $html = file_get_contents($this->getPath() . 'template/code/typography/_inline.html') ?>
 
 <div class="typography">
 	<p>Inline elements.</p>

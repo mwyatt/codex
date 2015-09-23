@@ -1,4 +1,4 @@
-<?php $html = file_get_contents(BASE_PATH . 'template/code/form/_input.html') ?>
+<?php $html = file_get_contents($this->getPath() . 'template/code/form/_input.html') ?>
 
 <div class="typography">
     <p>Acceptable input types:</p>

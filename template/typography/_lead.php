@@ -1,4 +1,4 @@
-<?php $html = file_get_contents(BASE_PATH . 'template/code/typography/_lead.html') ?>
+<?php $html = file_get_contents($this->getPath() . 'template/code/typography/_lead.html') ?>
 
 <div class="typography">
 	<p>Make a paragraph stand out by adding '.lead'.</p>

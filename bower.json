@@ -1,9 +1,8 @@
 {
   "name": "codex",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
-    "bourbon": "latest",
-    "normalize-scss": "3.0.1",
+    "normalize-css": "~3.0.3",
     "rainbow": "latest"
   },
   "private": true

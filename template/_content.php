@@ -25,8 +25,8 @@
 		</div>
 		<div class="content-container">
 			<h1 class="heading-primary">Introduction</h1>
-			<p class="p">The codex is a home for my css and js boilerplate. This has been built so that it can be 'plugged in' to an existing / new project easily.</p>
-			<p class="p">The '_dependencies.scss' file can be imported with zero css output.</p>
+			<p class="p">The codex is a css and js boilerplate. This has been built so that it can be 'plugged in' to an existing / new project easily using npm.</p>
+			<p class="p">The 'dependencies.css' file can be imported with zero css output.</p>
 			<pre class="rainbow-pre"><code data-language="css">@import "dependencies";</code></pre>
 
 			
@@ -42,7 +42,7 @@
 				<div class="container-secondary">
 					<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
 
-		<?php $pathCode = BASE_PATH . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
+		<?php $pathCode = $this->getPath() . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
 		<?php if (file_exists($pathCode)): ?>
 			<?php $html = file_get_contents($pathCode) ?>
 		<?php else: ?>

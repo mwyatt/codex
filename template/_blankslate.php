@@ -1,4 +1,4 @@
-<?php $html = file_get_contents(BASE_PATH . 'template/code/_blankslate.html') ?>
+<?php $html = file_get_contents($this->getPath() . 'template/code/_blankslate.html') ?>
 
 <div class="typography">
 	<p>Blankslate</p>
