@@ -2,14 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Codex</title>
+	<title><?php echo $siteTitle ?></title>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
-	<link href="asset/common.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
-	<link href="asset/vendor/rainbow/theme/github.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
+
+<?php include $this->getPathTemplate('header/_css') ?>
+
 </head>
 <body>
-	<div class="container">
-		<h1 class="site-heading">Codex</h1>
+	<div class="body-inner-container">
+		<h1 class="site-heading"><?php echo $siteTitle ?></h1>
 		<div class="menu-container">
 			<nav class="menu-primary">
 				<ul>
@@ -27,9 +28,6 @@
 			<h1 class="heading-primary">Introduction</h1>
 			<p class="p">The codex is a css and js boilerplate. This has been built so that it can be 'plugged in' to an existing / new project easily using npm.</p>
 			<p class="p">The 'dependencies.css' file can be imported with zero css output.</p>
-			<pre class="rainbow-pre"><code data-language="css">@import "dependencies";</code></pre>
-
-			
 	
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
@@ -60,12 +58,9 @@
 
 		</div>
 	</div>
-    <script src="asset/vendor/rainbow.min.js"></script>
-	<script src="asset/vendor/rainbow/language/generic.js"></script>
-	<script src="asset/vendor/rainbow/language/html.js"></script>
-	<script src="asset/vendor/rainbow/language/css.js"></script>
-	<script>var urlBase = 'http://192.168.1.185/codex/';</script>
-	<script>var url;</script>
-    <script src="asset/common.js"></script>
+	<script>var urlBase = <?php echo $this->url->generate() ?>;</script>
+
+<?php include $this->getPathTemplate('footer/_js') ?>
+
 </body>
 </html>

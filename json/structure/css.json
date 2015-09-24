@@ -1,0 +1,40 @@
+{
+	"scaffolding": [
+		"html5-doctype",
+		"box-sizing",
+		"normalize",
+		"bourbon"
+	],
+	"palette": [],
+	"layout": [
+		"grid",
+		"floats",
+		"clearfix",
+		"text-align"
+	],
+	"typography": [
+		"heading",
+		"body",
+		"lead",
+		"inline",
+		"blockquotes",
+		"lists"
+	],
+	"buttons": [
+		"default-buttons",
+		"primary",
+		"outline",
+		"disabled"
+	],
+	"form": [
+		"input",
+		"select",
+		"textarea",
+		"label",
+		"radio",
+		"checkbox",
+		"action"
+	],
+	"alert": [],
+	"blankslate": []
+}

@@ -13,10 +13,14 @@ class Index extends \Mwyatt\Core\Controller
 
 
 	public function home() {
+		$structure = array_merge((array) json_decode(file_get_contents('json/structure/css.json')), (array) json_decode(file_get_contents('json/structure/js.json')));
 		$this
 			->view
+			->appendAsset('siteTitle', 'mwyatt/codex')
+			->appendAsset('js', 'common')
+			->appendAsset('css', 'common')
 			->appendAsset('mustache', 'admin/dialogue')
-			->setDataKey('structure', include $this->view->getPath('structure.php'));
-		return new \Mwyatt\Core\Response($this->view->getTemplate('_content'));
+			->setDataKey('structure', $structure);
+		return new \Mwyatt\Core\Response($this->view->getTemplate('index'));
 	}
 }
