@@ -16,10 +16,10 @@ class Index extends \Mwyatt\Core\Controller
 		$structure = array_merge((array) json_decode(file_get_contents('json/structure/css.json')), (array) json_decode(file_get_contents('json/structure/js.json')));
 		$this
 			->view
-			->appendAsset('siteTitle', 'mwyatt/codex')
 			->appendAsset('js', 'common')
 			->appendAsset('css', 'common')
 			->appendAsset('mustache', 'admin/dialogue')
+			->setDataKey('siteTitle', 'codex')
 			->setDataKey('structure', $structure);
 		return new \Mwyatt\Core\Response($this->view->getTemplate('index'));
 	}
