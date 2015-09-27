@@ -2,8 +2,7 @@
 	"scaffolding": [
 		"html5-doctype",
 		"box-sizing",
-		"normalize",
-		"bourbon"
+		"normalize"
 	],
 	"palette": [],
 	"layout": [
