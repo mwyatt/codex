@@ -20,7 +20,7 @@
 		"lists"
 	],
 	"buttons": [
-		"default-buttons",
+		"default",
 		"primary",
 		"outline",
 		"disabled"

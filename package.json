@@ -29,13 +29,5 @@
     "readable-stream": "^2.0.2",
     "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "$"
   }
 }

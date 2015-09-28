@@ -25,9 +25,6 @@
 			</nav>
 		</div>
 		<div class="content-container">
-			<h1 class="heading-primary">Introduction</h1>
-			<p class="p">The codex is a css and js boilerplate. This has been built so that it can be 'plugged in' to an existing / new project easily using npm.</p>
-			<p class="p">The 'dependencies.css' file can be imported with zero css output.</p>
 	
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
@@ -35,17 +32,16 @@
 				<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
 
 	<?php include 'template/_' . $headingPrimary . '.php' ?>
+	<?php $pathCode = $this->getPath() . 'template/code/_' . $headingPrimary . '.html' ?>
+	<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
+	<?php include 'template/_' . $headingPrimary . '.php' ?>
 	<?php foreach ($secondary as $headingSecondary): ?>
 
 				<div class="container-secondary">
 					<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
 
 		<?php $pathCode = $this->getPath() . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
-		<?php if (file_exists($pathCode)): ?>
-			<?php $html = file_get_contents($pathCode) ?>
-		<?php else: ?>
-			<?php unset($html) ?>
-		<?php endif ?>
+		<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
 		<?php include 'template/' . $headingPrimary . '/_' . $headingSecondary . '.php' ?>
 
 				</div>
@@ -58,7 +54,7 @@
 
 		</div>
 	</div>
-	<script>var urlBase = <?php echo $this->url->generate() ?>;</script>
+	<script>var urlBase = '<?php echo $this->url->generate() ?>';</script>
 
 <?php include $this->getPathTemplate('footer/_js') ?>
 

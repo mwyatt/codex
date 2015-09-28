@@ -1,4 +1,4 @@
-<?php $html = file_get_contents($this->getPath() . 'template/code/form/_input.html') ?>
+<?php $code = file_get_contents($this->getPath() . 'template/code/form/_input.html') ?>
 
 <div class="typography">
     <p>Acceptable input types:</p>
@@ -9,5 +9,5 @@
         <li>email</li>
     </ul>
 </div>
-<div class="example-code"><?php echo $html ?></div>
-<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities($html) ?></code></pre>
+<div class="example-code"><?php echo $code ?></div>
+<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities($code) ?></code></pre>

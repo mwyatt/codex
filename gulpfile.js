@@ -47,6 +47,7 @@ gulp.task('js', function(done) {
       return browserify({
         entries: [entry],
         paths: [
+          'js',
           'node_modules',
           'bower_components'
         ]

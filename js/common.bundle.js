@@ -1,15 +1,7 @@
-var dialogue = require('dialogue');
+$ = require('jquery/dist/jquery');
+require('test/utility/testUrl');
 
-dialogue.create({
-  positionTo: 'body',
-  title: 'Foo Bar',
-  description: 'Foo Bar.',
-  actions: [
-    {name: 'Cancel', action: function() {
-      console.log('Cancel');
-    }},
-    {name: 'Ok', action: function() {
-      console.log('Ok');
-    }}
-  ]
+$('.rainbow-pre').on('click', function() {
+  $(this).select();
+  console.log('value');
 });

@@ -1397,17 +1397,15 @@ fieldset {
 }
 
 .content-container {
-  float: right;
-  width: 70%;
 }
 
 .menu-container {
+  display: none;
   float: left;
   width: 25%;
 }
 
 .rainbow-pre {
-  padding: 1em;
 }
 
 .rainbow {
@@ -1415,16 +1413,10 @@ fieldset {
 }
 
 .site-heading {
-  text-align: center;
-  margin: 0 0 1em;
-  font-size: 2em;
-  text-transform: uppercase;
-  padding: 20px;
-  font-size: 3em;
-  color: rgb(128, 128, 128);
-  border-radius: 0 0 3px 3px;
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  font-size: 18px;
+  color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.03);
+  padding: 14px 18px;
 }
 
 .heading-primary {
@@ -1488,3 +1480,28 @@ fieldset {
 .color-secondary-2-2 { background-color: rgb(111, 15, 24); }
 .color-secondary-2-3 { background-color: rgb(230, 86, 99); }
 .color-secondary-2-4 { background-color: rgb(238, 143, 151); }
+
+.container-primary {
+    padding: 5%;
+    border-bottom: 1px solid #ccc;
+}
+
+.color-palette-column {
+    float: left;
+    width: 33.333%;
+    padding-left: 20px;
+}.color-palette-column {}
+
+.color-palette-column:first-child {
+    padding-left: 0;
+}
+.rainbow-pre {
+  padding: 1em;
+    border: 1px dashed #ccc;
+    color: rgba(0, 0, 0, 0.4);
+    transition: color 200ms;
+}
+
+.rainbow-pre:hover {
+    color: rgba(0, 0, 0, 0.75);
+}
