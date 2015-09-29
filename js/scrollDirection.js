@@ -1,6 +1,3 @@
-var $ = require('jquery');
-
-
 var ScrollDirection = function (options) {};
 
 
@@ -41,4 +38,4 @@ ScrollDirection.prototype.refreshEvents = function(data) {
 };
 
 
-module.exports = new ScrollDirection;
+module.exports = ScrollDirection;

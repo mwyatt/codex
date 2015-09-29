@@ -1,15 +1,37 @@
 
 
-var ScrollTop = function(options) {
-	var defaults = {
-		minHeight: 500
-	}
-	var options = $.extend(defaults, options);
-	if (! $('.to-top').length) {
-		$(body).append('<a href="#" class="to-top hide">Top</a>');
-	}
-	setEvents();
+/**
+ * watches the scrollwindow and displays a to top button when moving down
+ * over a threshold
+ * dependancy $
+ */
+var ScrollTop = function (options) {
+  var defaults = {
+    threshold: 100,
+    button: '.null',
+    classLabel: 'is-active',
+    delay: 200
+  };
+  this.options = $.extend(defaults, options);
+  this.timer;
+  this.events(this);
 };
 
 
-module.exports = new ScrollTop;
+ScrollTop.prototype.events = function(data) {
+  var button = $(data.options.button);
+  $(window).on('scroll.button-to-top', function(event) {
+    clearTimeout(data.timer);
+    data.timer = setTimeout(function(event) {
+      documentPosition = $(document).scrollTop();
+      if (documentPosition > data.options.threshold) {
+        button.addClass(data.options.classLabel);
+      } else {
+        button.removeClass(data.options.classLabel);
+      }
+    }, data.options.delay);
+  });
+};
+
+
+module.exports = ScrollTop;

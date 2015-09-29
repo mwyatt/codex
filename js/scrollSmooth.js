@@ -4,10 +4,10 @@
  * scrolls the page smoothly when a target is clicked
  * @param {object} options 
  */
-var SmoothScroll = function () {};
+var ScrollSmooth = function () {};
 
 
-SmoothScroll.prototype.init = function(options) {
+ScrollSmooth.prototype.init = function(options) {
 	var defaults = {
 		target: '.js-smooth-scroll',
 
@@ -44,7 +44,7 @@ SmoothScroll.prototype.init = function(options) {
  * @param  {object} event
  * @param  {string} target
  */
-SmoothScroll.prototype.scrollTo = function(event, target) {
+ScrollSmooth.prototype.scrollTo = function(event, target) {
 	var timer = 0;
 	var destination = 0;
 	if ($(target).offset().top > $(document).height() - $(window).height()) {
@@ -66,4 +66,4 @@ SmoothScroll.prototype.scrollTo = function(event, target) {
 };
 
 
-module.exports = new SmoothScroll;
+module.exports = ScrollSmooth;

@@ -1,7 +1,11 @@
 {
 	"url": [],
-	"messageLoop": [],
-	"scrollToTop": [],
-	"smoothScroll": [],
-	"keycode": []
+	"keycode": [],
+	"dialogue": [],
+	"lightbox": [],
+	"equalHeight": [],
+	"feedbackQueue": [],
+	"scrollTop": [],
+	"scrollDirection": [],
+	"scrollSmooth": []
 }

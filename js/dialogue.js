@@ -15,7 +15,6 @@ var intWindowWidth;
  * built each time mustache
  * can be simple message 'ok'
  * can be ok / cancel with callback
- * 
  */
 var Dialogue = function () {};
 
@@ -112,4 +111,4 @@ Dialogue.prototype.close = function(data) {
 };
 
 
-module.exports = new Dialogue;
+module.exports = Dialogue;

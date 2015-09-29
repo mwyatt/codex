@@ -1,7 +1,8 @@
 <?php
 
 define('PATH_BASE', (string) (__DIR__ . '/'));
-include 'vendor/autoload.php';
+include PATH_BASE . 'vendor/autoload.php';
+$config = include PATH_BASE . 'config.php';
 
 // settings
 $registry = \Mwyatt\Core\Registry::getInstance();
@@ -14,8 +15,7 @@ $route->path = '';
 $route->controller = 'Mwyatt\\Codex\\Controller\\Index';
 $route->method = 'home';
 
-$urlBase = '192.168.1.24/codex/';
-$url = new \Mwyatt\Core\Url($urlBase);
+$url = new \Mwyatt\Core\Url($config['urlBase']);
 $url->setRoutes([$route]);
 $registry->set('url', $url);
 
