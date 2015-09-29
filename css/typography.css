@@ -70,7 +70,7 @@ $(selector):focus {
   margin-left: 1em;
   padding-left: 1em;
   list-style-type: disc;
-  list-style-position: outside;
+  list-style-position: inside;
 }
 
 .typography ol {
@@ -78,6 +78,7 @@ $(selector):focus {
   margin-left: 1em;
   padding-left: 1em;
   list-style: decimal;
+  list-style-position: inside;
 }
 
 .typography pre,
@@ -146,7 +147,9 @@ $(selector):focus {
   @mixin typography-heading .75em;
 }
 
-.p {
+.p,
+.unordered-list,
+.ordered-list {
   margin: 1em 0;
   line-height: $font-line-height-common;
 }
@@ -159,4 +162,19 @@ $(selector):focus {
 
 .underline {
   text-decoration: underline;
+}
+
+.ordered-list {
+  list-style: decimal;
+}
+
+.unordered-list {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.unordered-list,
+.ordered-list {
+  margin-left: 1em;
+  padding-left: 1em;
 }

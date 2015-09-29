@@ -3,5 +3,5 @@
 </div>
 <pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities('<div class="clearfix"></div>') ?></code></pre>
 <pre class="rainbow-pre"><code data-language="css"><?php echo htmlentities('.hello-world {
-    @include clearfix;
+    @mixin clearfix .foo-bar;
 }') ?></code></pre>

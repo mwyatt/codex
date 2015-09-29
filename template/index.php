@@ -31,7 +31,6 @@
 			<div id="<?php echo $headingPrimary ?>" class="container-primary">
 				<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
 
-	<?php include 'template/_' . $headingPrimary . '.php' ?>
 	<?php $pathCode = $this->getPath() . 'template/code/_' . $headingPrimary . '.html' ?>
 	<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
 	<?php include 'template/_' . $headingPrimary . '.php' ?>

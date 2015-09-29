@@ -14,7 +14,7 @@ $route->path = '';
 $route->controller = 'Mwyatt\\Codex\\Controller\\Index';
 $route->method = 'home';
 
-$urlBase = '192.168.1.185/codex/';
+$urlBase = '192.168.1.24/codex/';
 $url = new \Mwyatt\Core\Url($urlBase);
 $url->setRoutes([$route]);
 $registry->set('url', $url);
