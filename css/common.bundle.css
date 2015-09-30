@@ -21,11 +21,7 @@
 .content-container {
 }
 
-.menu-container {
-  display: none;
-  float: left;
-  width: 25%;
-}
+.menu-container {}
 
 .rainbow-pre {
 }
@@ -106,13 +102,79 @@
 .rainbow-pre {
   padding: 1em;
     border: 1px dashed #ccc;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(0, 0, 0, 0.75);
     transition: color 200ms;
 }
 
-.rainbow-pre:hover {
-    color: rgba(0, 0, 0, 0.75);
-}
 .container-primary > h1 {
     margin-top: 0;
+}
+
+.menu-hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52px;
+    height: 52px;
+    padding: 14px;
+    fill: #A0A0A0;
+}
+
+.menu-hamburger svg {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-container:hover .menu-hamburger {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-primary {
+    position: absolute;
+    top: 52px;
+    left: -200px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px 0;
+    transition: left 200ms ease;
+}
+
+.menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu-primary-item {}
+
+.menu-primary-item-link {
+    display: block;
+    padding: 10px 16px;
+    color: #666;
+}
+
+.menu-primary-item-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container:hover .menu-primary {
+    left: 0;
+}
+.site-heading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.site-heading-container:hover .site-heading {
+    background-color: #eee;
+}
+
+.site-heading {
+    transition: background 200ms ease;
+}
+
+.menu-primary-item-link {
+    padding: 5px 10px;
 }

@@ -108,22 +108,22 @@
         },
         {
             "name": "corneltek/codegen",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/c9s/CodeGen.git",
-                "reference": "5458c2ce84b1dd8c3d8c0705c3cd1b89a8937857"
+                "reference": "0fe3e022596f9954fdae5c7dc60ab53a7869f0ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/c9s/CodeGen/zipball/5458c2ce84b1dd8c3d8c0705c3cd1b89a8937857",
-                "reference": "5458c2ce84b1dd8c3d8c0705c3cd1b89a8937857",
+                "url": "https://api.github.com/repos/c9s/CodeGen/zipball/0fe3e022596f9954fdae5c7dc60ab53a7869f0ce",
+                "reference": "0fe3e022596f9954fdae5c7dc60ab53a7869f0ce",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "*",
                 "php": ">=5.3.0",
-                "twig/twig": "*"
+                "twig/twig": "^1.21"
             },
             "require-dev": {
                 "corneltek/phpunit-testmore": "dev-master"
@@ -147,7 +147,7 @@
             ],
             "description": "PHP Code Generation Library",
             "homepage": "http://github.com/c9s/CodeGen",
-            "time": "2015-08-25 03:48:03"
+            "time": "2015-09-28 16:54:27"
         },
         {
             "name": "corneltek/getoptionkit",
@@ -344,12 +344,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mwyatt/core.git",
-                "reference": "81a2052469bb8ece0d1978c00c11dafc719eff53"
+                "reference": "525714fe17fed94dd2c99ecc70a7f26cb8de6c4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mwyatt/core/zipball/81a2052469bb8ece0d1978c00c11dafc719eff53",
-                "reference": "81a2052469bb8ece0d1978c00c11dafc719eff53",
+                "url": "https://api.github.com/repos/mwyatt/core/zipball/525714fe17fed94dd2c99ecc70a7f26cb8de6c4b",
+                "reference": "525714fe17fed94dd2c99ecc70a7f26cb8de6c4b",
                 "shasum": ""
             },
             "require": {
@@ -385,7 +385,7 @@
                 "source": "https://github.com/mwyatt/core/tree/master",
                 "issues": "https://github.com/mwyatt/core/issues"
             },
-            "time": "2015-09-27 08:39:29"
+            "time": "2015-09-30 09:58:26"
         },
         {
             "name": "pimple/pimple",

@@ -16,6 +16,11 @@ var processes = [
   autoprefixer({browsers: ['last 1 version']})
 ];
 
+gulp.task('copy-media', function() {
+  return gulp.src('media/**')
+    .pipe(gulp.dest('asset'));
+});
+
 gulp.task('css', function () {
   return gulp.src('css/**.bundle.css')
     .pipe(gulpPlugin.postcss(processes))

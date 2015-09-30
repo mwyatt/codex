@@ -10,19 +10,22 @@
 </head>
 <body>
 	<div class="body-inner-container">
-		<h1 class="site-heading"><?php echo $siteTitle ?></h1>
-		<div class="menu-container">
-			<nav class="menu-primary">
-				<ul>
-	
-<?php foreach ($structure as $headingPrimary => $secondary): ?>
-	
-					<li class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></li>
+		<div class="site-heading-container">
+			<h1 class="site-heading"><?php echo $siteTitle ?></h1>
+			<div class="menu-container">
+				<div class="menu-hamburger"><?php include $this->getPath('asset/hamburger.svg') ?></div>
+				<nav class="menu-primary">
+					<ul>
+		
+	<?php foreach ($structure as $headingPrimary => $secondary): ?>
+		
+						<li class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></li>
 
-<?php endforeach ?>
+	<?php endforeach ?>
 
-				</ul>
-			</nav>
+					</ul>
+				</nav>
+			</div>
 		</div>
 		<div class="content-container">
 	
@@ -56,6 +59,7 @@
 	<script>var urlBase = '<?php echo $this->url->generate() ?>';</script>
 
 <?php include $this->getPathTemplate('footer/_js') ?>
+<?php include $this->getPathTemplate('footer/_mustache') ?>
 
 </body>
 </html>

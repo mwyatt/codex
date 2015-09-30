@@ -1,6 +1,6 @@
 <div class="typography">
-	<p>This grid was obtained from <a href="#">somewhere</a> and allows you to generate a grid using mixins.</p>
-	<p>The grid can only be created using mixins to allow flexibility for rwd. When the layout needs to change this can be managed with media queries.</p>
+	<p>There is no grid system but just a method of creating columns easily.</p>
+	<p>Once I understand more about flexbox perhaps replace this?</p>
 </div>
 <div class="example-code">
 	<div class="cols">
@@ -13,6 +13,21 @@
 		<div class="col-four">4 Columns</div>
 	</div>
 </div>
-<pre class="rainbow-pre"><code data-language="css">@include row;
-@include col(6);
-@include last;</code></pre>
+<pre class="rainbow-pre"><code data-language="css">.container {
+    clearfix;
+}
+
+.column-container {
+    float: left;
+    width: 33.33%;
+    padding-left: 20px;
+}
+
+.column-container:first-child {
+    padding-left: 0;
+}
+
+.column {
+    whatever;
+}
+</code></pre>
