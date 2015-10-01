@@ -5,7 +5,6 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var eventStream = require('event-stream');
 var glob = require('glob');
-var pathBase = '/var/www/html/codex/';
 var autoprefixer = require('autoprefixer-core');
 var colorFunction = require('postcss-color-function');
 var processes = [
@@ -31,9 +30,9 @@ gulp.task('css', function () {
 });
 
 gulp.task('css-tidy', function() {
-  return gulp.src('css/')
+  return gulp.src('./css')
     .pipe(gulpPlugin.csscomb())
-    .pipe(gulp.dest('done-it/'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('css-min', function () {

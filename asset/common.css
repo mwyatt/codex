@@ -1577,3 +1577,15 @@ fieldset {
     left: 0;
     right: 0;
 }
+
+.site-heading-container:hover .site-heading {
+    background-color: #eee;
+}
+
+.site-heading {
+    transition: background 200ms ease;
+}
+
+.menu-primary-item-link {
+    padding: 5px 10px;
+}

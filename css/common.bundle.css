@@ -134,7 +134,7 @@
     top: 52px;
     left: -200px;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: #eee;
     padding: 10px 0;
     transition: left 200ms ease;
 }
