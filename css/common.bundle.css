@@ -8,6 +8,9 @@
 @import "alert.css";
 @import "blankslate.css";
 
+/* extras */
+@import "dialogue.css";
+
 @mixin clearfix .container;
 @mixin clearfix .example-code;
 @mixin clearfix .color-palette-container;

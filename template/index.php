@@ -59,7 +59,7 @@
 	<script>var urlBase = '<?php echo $this->url->generate() ?>';</script>
 
 <?php include $this->getPathTemplate('footer/_js') ?>
-<?php include $this->getPathTemplate('footer/_mustache') ?>
+<?php include $this->getPathTemplate('footer/_mst') ?>
 
 </body>
 </html>

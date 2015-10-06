@@ -2,6 +2,7 @@ var mustache = require('mustache');
 var keycode = require('keycode');
 var data;
 var $dialogue;
+var $mask;
 var $positionTo;
 var intTargetLeftOffset;
 var calculatedLeft;
@@ -26,8 +27,8 @@ var Dialogue = function () {};
  */
 Dialogue.prototype.create = function(options) {
 	var defaults = {
-		className: 'foo-bar',
-		positionTo: '.selector',
+		className: '', // foo-bar
+		positionTo: '', // .selector
 		width: 150,
 		title: '',
 		description: '',
@@ -47,13 +48,14 @@ Dialogue.prototype.create = function(options) {
 	data = this;
 
 	// render
-	$('body').append(mustache.render($('#admin-dialogue').html(), data.options));
+	$('body').append(mustache.render($('#mst-dialogue').html(), data.options));
 
 	// events
 	$('.js-dialogue-close').on('click.dialogue', function() {
 		data.close(data);
 	});
 	$dialogue = $('.js-dialogue');
+	$mask = $('.js-dialogue-mask');
 	$dialogue.on('click.dialogue', function(event) {
 		event.stopPropagation();
 	});
@@ -72,6 +74,7 @@ Dialogue.prototype.create = function(options) {
 	for (var index = data.options.actions.length - 1; index >= 0; index--) {
 		$dialogue
 			.find('.js-dialogue-action-' + data.options.actions[index]['name']).on('click.dialogue', function() {
+				console.log(data.options.actions[index]);
 				data.options.actions[index]['action'].call();
 			});
 	};
@@ -108,6 +111,7 @@ Dialogue.prototype.create = function(options) {
 Dialogue.prototype.close = function(data) {
 	data.options.onClose.call();
 	$dialogue.remove();
+	$mask.remove();
 };
 
 
