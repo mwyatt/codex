@@ -1,3 +1,4 @@
+var getMotionEventName = require('utility/getMotionEventName');
 var mustache = require('mustache');
 var keycode = require('keycode');
 var data;
@@ -9,6 +10,7 @@ var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
 
+console.log(getMotionEventName('animation'), getMotionEventName('transition'));
 
 /**
  * requirements

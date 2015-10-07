@@ -5,7 +5,7 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var eventStream = require('event-stream');
 var glob = require('glob');
-var autoprefixer = require('autoprefixer-core');
+var autoprefixer = require('gulp-autoprefixer');
 var colorFunction = require('postcss-color-function');
 var processes = [
   require('postcss-import'),
@@ -17,6 +17,11 @@ var processes = [
 
 gulp.task('copy-media', function() {
   return gulp.src('media/**')
+    .pipe(gulp.dest('asset'));
+});
+
+gulp.task('copy-js-vendor', function() {
+  return gulp.src('js/vendor/**')
     .pipe(gulp.dest('asset'));
 });
 
@@ -43,7 +48,7 @@ gulp.task('css-min', function () {
 });
 
 gulp.task('js', function(done) {
-  glob('js/**.bundle.js', function(err, files) {
+  glob('**.bundle.js', function(err, files) {
     if (err) {
       done(err);
     };
@@ -51,9 +56,8 @@ gulp.task('js', function(done) {
       return browserify({
         entries: [entry],
         paths: [
-          'js',
-          'node_modules',
-          'bower_components'
+          '.',
+          'node_modules'
         ]
       })
       .bundle()
