@@ -46,7 +46,13 @@ Dialogue.prototype.create = function(options) {
 		onClose: function() {}
 	};
 	this.options = $.extend(defaults, options);
-	$positionTo = $(this.options.positionTo);
+
+	// where to position to?
+	var $positionalElement = $(this.options.positionTo);
+	if (!$positionalElement.length) {
+		$positionalElement = $('body');
+	};
+
 	data = this;
 
 	// render
