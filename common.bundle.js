@@ -10,6 +10,7 @@ $('.rainbow-pre').on('click', function() {
 var dialogue1 = new dialogueFactory();
 $('.js-dialogue-1').on('click', function() {
   dialogue1.create({
+    mask: true,
     className: 'js-dialogue-1',
     positionTo: 'body',
     width: 200,

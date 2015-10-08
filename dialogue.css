@@ -1,0 +1,46 @@
+$animationDuration: 300ms;
+
+.dialogue-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #eee;
+}
+
+.dialogue {
+    animation-fill-mode: forwards;
+    animation-name: flipInX;
+    animation-duration: $animationDuration;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0 3px #ccc;
+    padding: 20px;
+    z-index: 2px;
+    border: 1px solid #ccc;
+}
+
+.dialogue-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 0.6;
+    font-size: 26px;
+    font-weight: 100;
+    width: 35px;
+    text-align: center;
+    height: 35px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dialogue-remove {
+    animation-fill-mode: forwards;
+    animation-name: fadeOut;
+    animation-duration: $animationDuration;
+}

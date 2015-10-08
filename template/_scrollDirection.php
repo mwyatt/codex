@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPath() . 'js/scrollDirection.js') ?>
+<?php $code = file_get_contents($this->getPath() . 'scrollDirection.js') ?>
 
 <div class="typography">
 	<p>Looks at the direction that the user is scrolling and can add a class.</p>

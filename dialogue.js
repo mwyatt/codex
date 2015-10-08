@@ -10,7 +10,6 @@ var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
 
-console.log(getMotionEventName('animation'), getMotionEventName('transition'));
 
 /**
  * requirements
@@ -29,6 +28,7 @@ var Dialogue = function () {};
  */
 Dialogue.prototype.create = function(options) {
 	var defaults = {
+		mask: false, // foo-bar
 		className: '', // foo-bar
 		positionTo: '', // .selector
 		width: 150,
@@ -117,9 +117,16 @@ Dialogue.prototype.create = function(options) {
  * @return {null}      
  */
 Dialogue.prototype.close = function(data) {
-	data.options.onClose.call();
-	$dialogue.remove();
-	$mask.remove();
+	var removeClassName = 'dialogue-remove';
+	$dialogue.addClass(removeClassName);
+	$mask.addClass(removeClassName);
+	$dialogue.on(getMotionEventName('animation'), function() {
+		$(this).remove();
+		data.options.onClose.call();
+	});
+	$mask.on(getMotionEventName('animation'), function() {
+		$(this).remove();
+	});
 };
 
 

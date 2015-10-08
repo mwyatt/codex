@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPath() . 'js/keycode.js') ?>
+<?php $code = file_get_contents($this->getPath() . 'keycode.js') ?>
 
 <div class="typography">
 	<p>Allows easy reference of keycodes.</p>

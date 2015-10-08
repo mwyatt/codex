@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPath() . 'js/dialogue.js') ?>
+<?php $code = file_get_contents($this->getPath() . 'dialogue.js') ?>
 
 <div class="typography">
 	<p>Flexible generation of dialogues. Examples:</p>
