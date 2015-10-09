@@ -1,3 +1,7 @@
+
+// idea
+// have var which stores data in a keyed array by claassname or soemthing
+
 var mustache = require('mustache');
 var keyCode = require('./keyCode');
 var getMotionEventName = require('./utility/getMotionEventName');
@@ -28,20 +32,20 @@ var Dialogue = function () {};
 Dialogue.prototype.create = function(options) {
 	var defaults = {
 		mstTemplate: '#mst-dialogue',
-		hardClose: false,
-		mask: false, // foo-bar
+		hardClose: false, // make it difficult to close the dialogue
+		mask: false, // mask the page below
 		className: '', // foo-bar
 		positionTo: '', // .selector
 		width: 150,
 		title: '',
 		description: '',
 		actions: [
-		  {name: 'Cancel', action: function() {
-		    console.log('Cancel');
-		  }},
-		  {name: 'Ok', action: function() {
-		    console.log('Ok');
-		  }}
+		  // {name: 'Cancel', action: function() {
+		  //   console.log('Cancel');
+		  // }},
+		  // {name: 'Ok', action: function() {
+		  //   console.log('Ok');
+		  // }}
 		],
 		onComplete: function() {},
 		onClose: function() {}

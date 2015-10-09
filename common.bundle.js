@@ -1,6 +1,7 @@
 $ = require('jquery/dist/jquery');
 require('test/utility/testUrl');
 var dialogue = require('dialogue');
+var feedbackQueueFactory = require('feedbackQueue');
 var dialogue1 = new dialogue();
 var dialogue2 = new dialogue();
 var dialogue3 = new dialogue();
@@ -66,4 +67,10 @@ $('.js-dialogue-3').on('click', function() {
       }}
     ]
   });
+});
+
+// feedback queue
+$('.js-feedback-queue-1').on('click', function() {
+  console.log('value');
+  var feedbackQueue = new feedbackQueueFactory({message: 'message', type: 'positive'});
 });
