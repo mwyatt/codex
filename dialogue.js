@@ -1,6 +1,6 @@
-var getMotionEventName = require('utility/getMotionEventName');
 var mustache = require('mustache');
-var keyCode = require('keyCode');
+var keyCode = require('./keyCode');
+var getMotionEventName = require('./utility/getMotionEventName');
 var data;
 var $dialogue;
 var $mask;
