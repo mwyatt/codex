@@ -15,10 +15,12 @@ var eventStream = require('event-stream');
 var glob = require('glob');
 var autoprefixer = require('autoprefixer');
 var colorFunction = require('postcss-color-function');
+var hexrgba = require('postcss-hexrgba');
 var processes = [
   require('postcss-import'),
   require('postcss-mixins'),
   require('postcss-simple-vars'),
+  hexrgba(),
   colorFunction(),
   autoprefixer({browsers: ['last 1 version']})
 ];
@@ -43,9 +45,9 @@ gulp.task('css', function () {
 });
 
 gulp.task('css-tidy', function() {
-  return gulp.src('./css')
+  return gulp.src('.')
     .pipe(csscomb())
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('css-min', function () {

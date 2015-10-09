@@ -7,7 +7,11 @@ $animationDuration: 300ms;
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: #eee;
+background-color: rgba(#eee, 0.5);
+animation-fill-mode: forwards;
+animation-name: fadeIn;
+animation-duration: $animationDuration;
+
 }
 
 .dialogue {
