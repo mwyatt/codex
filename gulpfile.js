@@ -45,9 +45,9 @@ gulp.task('css', function () {
 });
 
 gulp.task('css-tidy', function() {
-  return gulp.src('.')
+  return gulp.src('**.css')
     .pipe(csscomb())
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('css-min', function () {

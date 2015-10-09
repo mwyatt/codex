@@ -1,14 +1,13 @@
 var getMotionEventName = require('utility/getMotionEventName');
 var mustache = require('mustache');
-var keycode = require('keycode');
+var keyCode = require('keyCode');
 var data;
 var $dialogue;
 var $mask;
-var $positionTo;
-var intTargetLeftOffset;
 var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
+var css = {};
 
 
 /**
@@ -28,6 +27,7 @@ var Dialogue = function () {};
  */
 Dialogue.prototype.create = function(options) {
 	var defaults = {
+		hardClose: false,
 		mask: false, // foo-bar
 		className: '', // foo-bar
 		positionTo: '', // .selector
@@ -47,68 +47,103 @@ Dialogue.prototype.create = function(options) {
 	};
 	this.options = $.extend(defaults, options);
 
-	// where to position to?
-	var $positionalElement = $(this.options.positionTo);
-	if (!$positionalElement.length) {
-		$positionalElement = $('body');
-	};
-
+	// store globally
 	data = this;
+	css.width = data.options.width;
 
 	// render
 	$('body').append(mustache.render($('#mst-dialogue').html(), data.options));
 
-	// events
+	// store dom objects
+	$dialogue = $('.js-dialogue');
+	if (data.options.mask) {
+		$mask = $('.js-dialogue-mask');
+	};
+
+	// set width
+	$dialogue.css(css);
+
+	// position dialogue
+	var $positionalElement = $(data.options.positionTo);
+	var frame = {
+		position: $(document.body).scrollTop(),
+		height: $(window).height(),
+		width: $(window).width()
+	};
+
+	// position to element or centrally window
+	if ($positionalElement.length) {
+		var target = {
+			position: 'absolute',
+			top: $positionalElement.offset().top,
+			left: $positionalElement.offset().left
+		};
+
+		// left out of viewport to the right adjust
+		if ((target.left + $dialogue.width()) > frame.width) {
+			target.left = frame.width - 50;
+			target.left = target.left - $dialogue.width();
+		};
+
+		// position
+		css = target;
+
+	// no positional element so center to window
+	} else {
+		css.position = 'fixed';
+		css.top = (frame.height / 2) - ($dialogue.height() / 2);
+		css.left = (frame.width / 2) - ($dialogue.width() / 2);
+	};
+
+	// position it
+	$dialogue.css(css);
+
+	// set events
+	// closing x
 	$('.js-dialogue-close').on('click.dialogue', function() {
 		data.close(data);
 	});
-	$dialogue = $('.js-dialogue');
-	$mask = $('.js-dialogue-mask');
-	$dialogue.on('click.dialogue', function(event) {
-		event.stopPropagation();
-	});
-	$(document).off('keyup.dialogue').on('keyup.dialogue', function(event) {
-		if (event.which == keycode.esc) {
-			data.close(data);
-		} 
-	});
-	$(document).off('mouseup.dialogue').on('mouseup.dialogue', function(event) {
-		if (! $(event.target).closest('.js-dialogue').length) {
-			data.close(data);
-		}
-	});
 
-	// events - actions
+	// easy close events
+	if (!data.options.hardClose) {
+
+		// clicking dialogue
+		$dialogue.on('click.dialogue', function(event) {
+			event.stopPropagation();
+		});
+
+		// hit esc
+		$(document).off('keyup.dialogue').on('keyup.dialogue', function(event) {
+			if (event.which == keyCode.esc) {
+				data.close(data);
+			} 
+		});
+
+		// click outside of dialogue
+		$(document).off('mouseup.dialogue').on('mouseup.dialogue', function(event) {
+			if (!$(event.target).closest('.js-dialogue').length) {
+				data.close(data);
+			}
+		});
+	};
+
+	// actions in options
 	for (var index = data.options.actions.length - 1; index >= 0; index--) {
-		$dialogue
-			.find('.js-dialogue-action-' + data.options.actions[index]['name']).on('click.dialogue', function() {
-				console.log(data.options.actions[index]);
-				data.options.actions[index]['action'].call();
-			});
+		setDialogueActionEvent(data.options.actions[index]);
 	};
-
-	// position
-	intTargetLeftOffset = parseInt($positionTo.offset().left);
-	calculatedLeft = intTargetLeftOffset;
-	intPopWidth = parseInt(this.options.width);
-
-	// out of viewport, move just inside
-	intWindowWidth = parseInt($(window).width());
-	if ((intTargetLeftOffset + intPopWidth) > (intWindowWidth - 20)) {
-		calculatedLeft = intWindowWidth - 50;
-		calculatedLeft = calculatedLeft - intPopWidth;
-	};
-
-	// position
-	$dialogue.css({
-		width: this.options.width,
-		top: $positionTo.offset().top + 20,
-		left: calculatedLeft
-	});
 
 	// completed build
-	this.options.onComplete.call();
+	data.options.onComplete.call();
 };
+
+
+function setDialogueActionEvent (action) {
+	$dialogue
+		.find('.js-dialogue-action-' + action.name).on('click.dialogue', function() {
+			console.log(action);
+			action.action.call();
+		});
+}
 
 
 /**
@@ -119,14 +154,16 @@ Dialogue.prototype.create = function(options) {
 Dialogue.prototype.close = function(data) {
 	var removeClassName = 'dialogue-remove';
 	$dialogue.addClass(removeClassName);
-	$mask.addClass(removeClassName);
 	$dialogue.on(getMotionEventName('animation'), function() {
 		$(this).remove();
 		data.options.onClose.call();
 	});
-	$mask.on(getMotionEventName('animation'), function() {
-		$(this).remove();
-	});
+	if (data.options.mask) {
+		$mask.addClass(removeClassName);
+		$mask.on(getMotionEventName('animation'), function() {
+			$(this).remove();
+		});
+	};
 };
 
 

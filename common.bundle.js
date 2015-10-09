@@ -1,21 +1,24 @@
 $ = require('jquery/dist/jquery');
 require('test/utility/testUrl');
-var dialogueFactory = require('dialogue');
+var dialogue = require('dialogue');
+var dialogue1 = new dialogue();
+var dialogue2 = new dialogue();
+var dialogue3 = new dialogue();
+
 
 $('.rainbow-pre').on('click', function() {
   $(this).select();
   console.log('value');
 });
 
-var dialogue1 = new dialogueFactory();
+// masked
 $('.js-dialogue-1').on('click', function() {
   dialogue1.create({
     mask: true,
-    className: 'js-dialogue-1',
-    positionTo: 'body',
+    className: 'dialogue-1',
     width: 200,
-    title: 'Title',
-    description: 'Description',
+    title: 'Masked',
+    description: 'Positioned to the window and fixed, this masks the current window.',
     actions: [
       {name: 'Cancel', action: function() {
         console.log('Cancel');
@@ -30,5 +33,37 @@ $('.js-dialogue-1').on('click', function() {
     onClose: function() {
       console.log('dialogue.onClose');
     }
+  });
+});
+
+// positioned
+$('.js-dialogue-2').on('click', function() {
+  dialogue2.create({
+    className: 'dialogue-2',
+    positionTo: '.js-dialogue-2',
+    width: 200,
+    title: 'Positioned',
+    description: 'This dialogue is positioned to the selector \'.js-dialogue-2\'.',
+    actions: [
+      {name: 'Ok', action: function() {
+        dialogue2.close(dialogue2);
+      }}
+    ]
+  });
+});
+
+// well-hard only closable via action or cross
+$('.js-dialogue-3').on('click', function() {
+  dialogue3.create({
+    hardClose: true,
+    className: 'dialogue-3',
+    width: 250,
+    title: 'Well Hard To Close',
+    description: 'Harder than usual to close.',
+    actions: [
+      {name: 'Close', action: function() {
+        dialogue3.close(dialogue3);
+      }}
+    ]
   });
 });

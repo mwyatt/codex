@@ -1,7 +1,7 @@
 <?php $code = file_get_contents($this->getPath() . 'dialogue.js') ?>
 
 <div class="typography">
-	<p>Flexible generation of dialogues. Examples:</p>
+	<p>Flexible generation with a variety of options.</p>
 	<ol>
 
 <?php foreach ([1, 2, 3] as $key): ?>
