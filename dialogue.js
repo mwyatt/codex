@@ -27,6 +27,7 @@ var Dialogue = function () {};
  */
 Dialogue.prototype.create = function(options) {
 	var defaults = {
+		mstTemplateId: '#mst-dialogue',
 		hardClose: false,
 		mask: false, // foo-bar
 		className: '', // foo-bar
@@ -52,7 +53,7 @@ Dialogue.prototype.create = function(options) {
 	css.width = data.options.width;
 
 	// render
-	$('body').append(mustache.render($('#mst-dialogue').html(), data.options));
+	$('body').append(mustache.render($(data.options.mstTemplateId).html(), data.options));
 
 	// store dom objects
 	$dialogue = $('.js-dialogue');
