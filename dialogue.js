@@ -31,12 +31,13 @@ var Dialogue = function () {};
  */
 Dialogue.prototype.create = function(options) {
 	var defaults = {
-		mstTemplate: '#mst-dialogue',
+		mstTemplate: '#mst-dialogue', // the mustache template for ui
 		hardClose: false, // make it difficult to close the dialogue
 		mask: false, // mask the page below
 		className: '', // foo-bar
 		positionTo: '', // .selector
 		width: 150,
+		html: '', // raw html to be placed in to body area, under description
 		title: '',
 		description: '',
 		actions: [
@@ -47,8 +48,8 @@ Dialogue.prototype.create = function(options) {
 		  //   console.log('Ok');
 		  // }}
 		],
-		onComplete: function() {},
-		onClose: function() {}
+		onComplete: function() {}, // when dialogue has been rendered fully
+		onClose: function() {} // when dialogue has been closed fully (animationend)
 	};
 	this.options = $.extend(defaults, options);
 
