@@ -103,6 +103,7 @@ Dialogue.prototype.create = function(options) {
 	};
 
 	// position it
+	console.log('css before positionioning', css);
 	$dialogue.css(css);
 
 	// set events

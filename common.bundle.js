@@ -5,6 +5,7 @@ var feedbackQueueFactory = require('feedbackQueue');
 var dialogue1 = new dialogue();
 var dialogue2 = new dialogue();
 var dialogue3 = new dialogue();
+var dialogue4 = new dialogue();
 
 
 $('.rainbow-pre').on('click', function() {
@@ -66,6 +67,17 @@ $('.js-dialogue-3').on('click', function() {
         dialogue3.close(dialogue3);
       }}
     ]
+  });
+});
+
+// edge case testing
+$('.js-dialogue-4').on('click', function() {
+  dialogue4.create({
+    hardClose: true,
+    mask: true,
+    width: 550,
+    title: 'Create Shipment',
+    html: '<p></p>'
   });
 });
 
