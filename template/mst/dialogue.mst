@@ -13,6 +13,11 @@
 	<p class="dialogue-description">{{description}}</p>
 
 {{/description}}
+{{#html}}
+
+	<p class="dialogue-html">{{html}}</p>
+
+{{/html}}
 
 	<div class="dialogue-actions">
 
