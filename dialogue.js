@@ -76,6 +76,7 @@ Dialogue.prototype.create = function(options) {
 		height: $(window).height(),
 		width: $(window).width()
 	};
+	console.log('frame', frame);
 
 	// position to element or centrally window
 	if ($positionalElement.length) {
@@ -170,6 +171,11 @@ Dialogue.prototype.close = function(data) {
 			$(this).remove();
 		});
 	};
+
+	// cleanse events
+	$(document)
+		.off('keyup.dialogue')
+		.off('mouseup.dialogue');
 };
 
 
