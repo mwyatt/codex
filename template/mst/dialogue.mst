@@ -15,7 +15,7 @@
 {{/description}}
 {{#html}}
 
-	<p class="dialogue-html">{{html}}</p>
+	<p class="dialogue-html">{{{html}}}</p>
 
 {{/html}}
 

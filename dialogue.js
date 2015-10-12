@@ -76,7 +76,6 @@ Dialogue.prototype.create = function(options) {
 		height: $(window).height(),
 		width: $(window).width()
 	};
-	console.log('frame', frame);
 
 	// position to element or centrally window
 	if ($positionalElement.length) {
@@ -103,7 +102,6 @@ Dialogue.prototype.create = function(options) {
 	};
 
 	// position it
-	console.log('css before positionioning', css);
 	$dialogue.css(css);
 
 	// set events
@@ -148,7 +146,6 @@ Dialogue.prototype.create = function(options) {
 function setDialogueActionEvent (action) {
 	$dialogue
 		.find('.js-dialogue-action-' + action.name).on('click.dialogue', function() {
-			console.log(action);
 			action.action.call();
 		});
 }
