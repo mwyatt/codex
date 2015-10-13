@@ -59,8 +59,8 @@
 	</div>
 	<script>var urlBase = '<?php echo $this->url->generate() ?>';</script>
 
-<?php include $this->getPathTemplate('footer/_js') ?>
 <?php include $this->getPathTemplate('footer/_mst') ?>
+<?php include $this->getPathTemplate('footer/_js') ?>
 
 </body>
 </html>

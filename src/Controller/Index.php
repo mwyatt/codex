@@ -20,6 +20,7 @@ class Index extends \Mwyatt\Core\Controller
 			->appendAsset('css', 'common')
 			->appendAsset('mustache', 'dialogue')
 			->appendAsset('mustache', 'feedback')
+			->appendAsset('mustache', 'feedback/single')
 			->setDataKey('siteTitle', 'mwyatt/codex')
 			->setDataKey('structure', $structure);
 		return new \Mwyatt\Core\Response($this->view->getTemplate('index'));

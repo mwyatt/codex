@@ -1,4 +1,5 @@
 var mustache = require('mustache');
+var getMotionEventName = require('./utility/getMotionEventName');
 
 
 /**
@@ -6,14 +7,27 @@ var mustache = require('mustache');
  * them on top of one another, then fades away after a period of time
  * @param {object} options 
  */
-var FeedbackQueue = function (config) {
-	console.log(config);
-	this.createMessage(config);
+var FeedbackQueue = function (options) {
+	var defaults = {
+		singleLife: 5000, // how long will it last?
+		templateContainer: '', // mustache
+		templateSingle: '', // mustache
+		message: '', // anything goes string
+		type: '' // success, fail, neutral or anything?
+	};
+	this.options = $.extend(defaults, options);
+
+	// render container
+	$('body').prepend(mustache.render(this.options.templateContainer));
+
+	// fast message
+	this.createMessage(this.options);
 };
 
 
 /**
  * builds html required for standard message
+ * only message needed
  * @param  {object} config type, message
  * @return {object}        jquery
  */
@@ -23,32 +37,31 @@ FeedbackQueue.prototype.createMessage = function(config) {
 	if (typeof config === 'undefined') {
 		return console.warn('FeedbackQueue.createMessage', 'config must be passed');
 	};
-	if (! config.hasOwnProperty('message')) {
+	if (!config.hasOwnProperty('message')) {
 		return console.warn('FeedbackQueue.createMessage', 'config must have \'message\' property');
-	};
-	if (! config.message) {
-		return;
 	};
 
 	// default type
-	if (! config.hasOwnProperty('type')) {
+	if (!config.hasOwnProperty('type')) {
 		config.type = 'neutral';
+	};
+	if (!config.message) {
+		return;
 	};
 
 	// resources
 	var newElement;
-	var $this;
 	var data = this;
 
 	// render
-	newElement = $(mustache.render($('#mst-feedback').html(), config));
-	$('.js-feedback-stream-position').prepend(newElement);
+	newElement = $(mustache.render(data.options.templateSingle, config));
+	$('.js-feedback-queue-position').prepend(newElement);
 
 	// timeout for removal
 	setTimeout(function() {
 		newElement.addClass('is-removed');
 		data.removeAfterAnimation(data, newElement);
-	}, 5000);
+	}, data.options.singleLife);
 
 	// click message to remove
 	newElement.on('click.feedback-stream', function() {
@@ -58,11 +71,12 @@ FeedbackQueue.prototype.createMessage = function(config) {
 };
 
 
+/**
+ * remove the queue item when its time up!
+ */
 FeedbackQueue.prototype.removeAfterAnimation = function(data, trigger) {
-
-	// remove after animation
-	trigger.on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function(event) {
-	    trigger.remove();
+	trigger.on(getMotionEventName('animation'), function() {
+		trigger.remove();
 	});
 };
 

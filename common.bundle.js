@@ -1,7 +1,7 @@
 $ = require('jquery/dist/jquery');
 require('test/utility/testUrl');
-var dialogue = require('dialogue');
 var feedbackQueueFactory = require('feedbackQueue');
+var dialogue = require('dialogue');
 var dialogue1 = new dialogue();
 var dialogue2 = new dialogue();
 var dialogue3 = new dialogue();
@@ -82,7 +82,16 @@ $('.js-dialogue-4').on('click', function() {
 });
 
 // feedback queue
+var feedbackQueue = new feedbackQueueFactory({
+  templateContainer: $('#mst-feedback').html(),
+  templateSingle: $('#mst-feedback-single').html()
+});
 $('.js-feedback-queue-1').on('click', function() {
-  console.log('value');
-  var feedbackQueue = new feedbackQueueFactory({message: 'message', type: 'positive'});
+  feedbackQueue.createMessage({message: 'test 1'});
+});
+$('.js-feedback-queue-2').on('click', function() {
+  feedbackQueue.createMessage({type: 'success', message: 'test 2'});
+});
+$('.js-feedback-queue-3').on('click', function() {
+  feedbackQueue.createMessage({type: 'fail', message: 'test 3'});
 });

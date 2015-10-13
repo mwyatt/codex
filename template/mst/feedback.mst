@@ -1,6 +1,3 @@
-<div class="feedback-stream-single js-feedback-stream-single is-{{type}}">
-	<span class="feedback-stream-single-cross">&times;</span>
-
-{{message}}
-
+<div class="feedback-queue js-feedback-queue">
+	<div class="feedback-queue-position js-feedback-queue-position"></div>
 </div>
