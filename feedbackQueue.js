@@ -17,8 +17,10 @@ var FeedbackQueue = function (options) {
 	};
 	this.options = $.extend(defaults, options);
 
-	// render container
-	$('body').prepend(mustache.render(this.options.templateContainer));
+	// render container if not already
+	if (!$('.js-feedback-queue').length) {
+		$('body').prepend(mustache.render(this.options.templateContainer));
+	};
 
 	// fast message
 	this.createMessage(this.options);
