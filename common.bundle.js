@@ -1,6 +1,7 @@
 $ = require('jquery/dist/jquery');
 require('test/utility/testUrl');
 var feedbackQueueFactory = require('feedbackQueue');
+var carouselFactory = require('carousel');
 var dialogue = require('dialogue');
 var dialogue1 = new dialogue();
 var dialogue2 = new dialogue();
@@ -95,3 +96,6 @@ $('.js-feedback-queue-2').on('click', function() {
 $('.js-feedback-queue-3').on('click', function() {
   feedbackQueue.createMessage({type: 'fail', message: 'test 3'});
 });
+
+
+window.carousel = new carouselFactory();
