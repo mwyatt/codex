@@ -9,7 +9,6 @@ background-color: rgba(#eee, 0.5);
 animation-fill-mode: forwards;
 animation-name: fadeIn;
 animation-duration: $animationDuration;
-
 }
 
 .dialogue {

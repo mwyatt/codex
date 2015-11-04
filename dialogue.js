@@ -1,17 +1,15 @@
-
-// idea
-// have var which stores data in a keyed array by claassname or soemthing
-
 var mustache = require('mustache');
-var keyCode = require('./keyCode');
-var getMotionEventName = require('./utility/getMotionEventName');
+var keyCode = require('keyCode');
+var getMotionEventName = require('utility/getMotionEventName');
 var data;
 var $dialogue;
-var $mask;
+var $dialogueHtml;
+var $dialogueMask;
 var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
 var css = {};
+var spinFactory = require('spin');
 
 
 /**
@@ -40,6 +38,7 @@ Dialogue.prototype.create = function(options) {
 		html: '', // raw html to be placed in to body area, under description
 		title: '',
 		description: '',
+		ajaxConfig: false,
 		actions: [
 		  // {name: 'Cancel', action: function() {
 		  //   console.log('Cancel');
@@ -62,47 +61,16 @@ Dialogue.prototype.create = function(options) {
 
 	// store dom objects
 	$dialogue = $('.js-dialogue');
+	$dialogueHtml = $('.js-dialogue-html');
 	if (data.options.mask) {
-		$mask = $('.js-dialogue-mask');
+		$dialogueMask = $('.js-dialogue-mask');
 	};
 
 	// set width
 	$dialogue.css(css);
 
-	// position dialogue
-	var $positionalElement = $(data.options.positionTo);
-	var frame = {
-		position: $(document.body).scrollTop(),
-		height: $(window).height(),
-		width: $(window).width()
-	};
-
-	// position to element or centrally window
-	if ($positionalElement.length) {
-		var target = {
-			position: 'absolute',
-			top: $positionalElement.offset().top,
-			left: $positionalElement.offset().left
-		};
-
-		// left out of viewport to the right adjust
-		if ((target.left + $dialogue.width()) > frame.width) {
-			target.left = frame.width - 50;
-			target.left = target.left - $dialogue.width();
-		};
-
-		// position
-		css = target;
-
-	// no positional element so center to window
-	} else {
-		css.position = 'fixed';
-		css.top = (frame.height / 2) - ($dialogue.height() / 2);
-		css.left = (frame.width / 2) - ($dialogue.width() / 2);
-	};
-
-	// position it
-	$dialogue.css(css);
+	// position
+	positionIt();
 
 	// set events
 	// closing x
@@ -138,9 +106,56 @@ Dialogue.prototype.create = function(options) {
 		setDialogueActionEvent(data.options.actions[index]);
 	};
 
-	// completed build
-	data.options.onComplete.call();
+	// ajax
+	if (data.options.ajaxConfig) {
+		ajaxCall();
+
+	// no ajax
+	} else {
+
+		// completed build
+		data.options.onComplete.call();
+	};
 };
+
+
+function positionIt () {
+
+	// position dialogue
+	var $positionalElement = $(data.options.positionTo);
+	var frame = {
+		position: $(document.body).scrollTop(),
+		height: $(window).height(),
+		width: $(window).width()
+	};
+
+	// position to element or centrally window
+	if ($positionalElement.length) {
+		var target = {
+			position: 'absolute',
+			top: $positionalElement.offset().top,
+			left: $positionalElement.offset().left
+		};
+
+		// left out of viewport to the right adjust
+		if ((target.left + $dialogue.width()) > frame.width) {
+			target.left = frame.width - 50;
+			target.left = target.left - $dialogue.width();
+		};
+
+		// position
+		css = target;
+
+	// no positional element so center to window
+	} else {
+		css.position = 'fixed';
+		css.top = (frame.height / 2) - ($dialogue.height() / 2);
+		css.left = (frame.width / 2) - ($dialogue.width() / 2);
+	};
+
+	// position it
+	$dialogue.css(css);
+}
 
 
 function setDialogueActionEvent (action) {
@@ -148,6 +163,34 @@ function setDialogueActionEvent (action) {
 		.find('.js-dialogue-action-' + action.name).on('click.dialogue', function() {
 			action.action.call();
 		});
+}
+
+
+/**
+ * maps the ajax config with an ajax call
+ * @return {null} 
+ */
+function ajaxCall () {
+	var config = data.options.ajaxConfig;
+	var spin = new spinFactory($dialogueHtml);
+	positionIt();
+	$.ajax({
+		type: config.type,
+		url: config.url,
+		dataType: config.dataType,
+		data: config.data,
+		complete: function() {
+			data.options.onComplete.call();
+		},
+		success: function(response) {
+			config.success(response);
+			positionIt();
+		},
+		error: function(response) {
+			config.error(response);
+			positionIt();
+		}
+	});
 }
 
 
@@ -164,8 +207,8 @@ Dialogue.prototype.close = function(data) {
 		data.options.onClose.call();
 	});
 	if (data.options.mask) {
-		$mask.addClass(removeClassName);
-		$mask.on(getMotionEventName('animation'), function() {
+		$dialogueMask.addClass(removeClassName);
+		$dialogueMask.on(getMotionEventName('animation'), function() {
 			$(this).remove();
 		});
 	};

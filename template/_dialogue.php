@@ -4,7 +4,7 @@
 	<p>Flexible generation with a variety of options.</p>
 	<ol>
 
-<?php foreach ([1, 2, 3, 4] as $key): ?>
+<?php foreach ([1, 2, 3, 4, 5] as $key): ?>
 	
 		<li><span class="link-primary js-dialogue-<?php echo $key ?>">Open</span></li>
 

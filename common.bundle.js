@@ -3,10 +3,12 @@ require('test/utility/testUrl');
 var feedbackQueueFactory = require('feedbackQueue');
 var carouselFactory = require('carousel');
 var dialogue = require('dialogue');
+var url = require('utility/url');
 var dialogue1 = new dialogue();
 var dialogue2 = new dialogue();
 var dialogue3 = new dialogue();
 var dialogue4 = new dialogue();
+var dialogue5 = new dialogue();
 
 
 $('.rainbow-pre').on('click', function() {
@@ -79,6 +81,27 @@ $('.js-dialogue-4').on('click', function() {
     width: 550,
     title: 'Create Shipment',
     html: '<p></p>'
+  });
+});
+
+// ajax
+$('.js-dialogue-5').on('click', function() {
+  dialogue5.create({
+    mask: true,
+    width: 250,
+    ajaxConfig: {
+      type: 'get',
+      url: url.getUrlBase('asset/common.css'),
+      dataType: 'text',
+      data: {},
+      success: function(response) {
+        $('.js-dialogue-html').html(response);
+        console.log('dialogue5 success', response);
+      },
+      error: function(response) {
+        console.log('dialogue5 error', response);
+      }
+    }
   });
 });
 
