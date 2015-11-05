@@ -34,7 +34,7 @@ Dialogue.prototype.create = function(options) {
 		mask: false, // mask the page below
 		className: '', // foo-bar
 		positionTo: '', // .selector
-		width: 150,
+		width: false, // int
 		html: '', // raw html to be placed in to body area, under description
 		title: '',
 		description: '',

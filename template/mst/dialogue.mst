@@ -1,6 +1,6 @@
 {{#mask}}
 
-<div class="dialogue-mask js-dialogue-mask {{className}}"></div>
+<div class="dialogue-mask js-dialogue-mask {{className}}-mask"></div>
 
 {{/mask}}
 
