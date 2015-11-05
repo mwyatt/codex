@@ -15,11 +15,10 @@ animation-duration: $animationDuration;
     animation-fill-mode: forwards;
     animation-name: flipInX;
     animation-duration: $animationDuration;
-    z-index: 1;
     background-color: #fff;
     box-shadow: 0 0 3px #ccc;
     padding: 20px;
-    z-index: 2px;
+    z-index: 2;
     border: 1px solid #ccc;
 }
 
@@ -37,7 +36,8 @@ animation-duration: $animationDuration;
     cursor: pointer;
 }
 
-.dialogue-remove {
+.dialogue-remove .dialogue-mask,
+.dialogue-remove .dialogue {
     animation-fill-mode: forwards;
     animation-name: fadeOut;
     animation-duration: $animationDuration;
@@ -45,4 +45,12 @@ animation-duration: $animationDuration;
 
 .dialogue-action {
     cursor: pointer;
+}
+
+.dialogue-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
 }

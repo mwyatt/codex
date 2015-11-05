@@ -105,6 +105,15 @@ $('.js-dialogue-5').on('click', function() {
   });
 });
 
+// auto width scrollable
+$('.js-dialogue-6').on('click', function() {
+  dialogue5.create({
+    mask: true,
+    title: '6',
+    description: 'auto width and scrollable'
+  });
+});
+
 // feedback queue
 var feedbackQueue = new feedbackQueueFactory({
   templateContainer: $('#mst-feedback').html(),

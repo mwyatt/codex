@@ -3,6 +3,7 @@ var keyCode = require('./keyCode');
 var getMotionEventName = require('./utility/getMotionEventName');
 var data;
 var $dialogue;
+var $dialogueContainer;
 var $dialogueHtml;
 var $dialogueMask;
 var calculatedLeft;
@@ -54,13 +55,14 @@ Dialogue.prototype.create = function(options) {
 
 	// store globally
 	data = this;
-	css.width = data.options.width;
+	css['max-width'] = data.options.width;
 
 	// render
 	$('body').append(mustache.render($(data.options.mstTemplate).html(), data.options));
 
 	// store dom objects
 	$dialogue = $('.js-dialogue');
+	$dialogueContainer = $('.js-dialogue-container');
 	$dialogueHtml = $('.js-dialogue-html');
 	if (data.options.mask) {
 		$dialogueMask = $('.js-dialogue-mask');
@@ -70,7 +72,7 @@ Dialogue.prototype.create = function(options) {
 	$dialogue.css(css);
 
 	// position
-	positionIt();
+	positionThings();
 
 	// set events
 	// closing x
@@ -119,15 +121,20 @@ Dialogue.prototype.create = function(options) {
 };
 
 
-function positionIt () {
+function positionThings () {
 
 	// position dialogue
 	var $positionalElement = $(data.options.positionTo);
 	var frame = {
-		position: $(document.body).scrollTop(),
+		positionVertical: $(document.body).scrollTop(),
 		height: $(window).height(),
 		width: $(window).width()
 	};
+
+	// position container
+	$dialogueContainer.css({
+		top: frame.positionVertical
+	});
 
 	// position to element or centrally window
 	if ($positionalElement.length) {
@@ -148,9 +155,13 @@ function positionIt () {
 
 	// no positional element so center to window
 	} else {
-		css.position = 'fixed';
-		css.top = (frame.height / 2) - ($dialogue.height() / 2);
-		css.left = (frame.width / 2) - ($dialogue.width() / 2);
+		css.position = 'relative';
+		css.margin = '0 auto';
+
+		// if width set then center vertically, good?
+		if (data.options.width) {
+			css.top = (frame.height / 2) - ($dialogue.height() / 2) - 20 /*padding of container*/;
+		};
 	};
 
 	// position it
@@ -173,7 +184,7 @@ function setDialogueActionEvent (action) {
 function ajaxCall () {
 	var config = data.options.ajaxConfig;
 	var spin = new spinner($dialogueHtml);
-	positionIt();
+	positionThings();
 	$.ajax({
 		type: config.type,
 		url: config.url,
@@ -184,11 +195,11 @@ function ajaxCall () {
 		},
 		success: function(response) {
 			config.success(response);
-			positionIt();
+			positionThings();
 		},
 		error: function(response) {
 			config.error(response);
-			positionIt();
+			positionThings();
 		}
 	});
 }
@@ -201,17 +212,11 @@ function ajaxCall () {
  */
 Dialogue.prototype.close = function(data) {
 	var removeClassName = 'dialogue-remove';
-	$dialogue.addClass(removeClassName);
+	$dialogueContainer.addClass(removeClassName);
 	$dialogue.on(getMotionEventName('animation'), function() {
-		$(this).remove();
+		$dialogueContainer.remove();
 		data.options.onClose.call();
 	});
-	if (data.options.mask) {
-		$dialogueMask.addClass(removeClassName);
-		$dialogueMask.on(getMotionEventName('animation'), function() {
-			$(this).remove();
-		});
-	};
 
 	// cleanse events
 	$(document)
