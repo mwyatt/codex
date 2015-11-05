@@ -157,10 +157,14 @@ function positionThings () {
 	} else {
 		css.position = 'relative';
 		css.margin = '0 auto';
+		css.left = 'auto';
 
-		// if width set then center vertically, good?
-		if (data.options.width) {
-			css.top = (frame.height / 2) - ($dialogue.height() / 2) - 20 /*padding of container*/;
+		// center vertically if there is room
+		// otherwise send to top and then just scroll
+		if ($dialogue.height() < frame.height) {
+			css.top = (frame.height / 2) - ($dialogue.height() / 2) - 20;
+		} else {
+			css.top = 0;
 		};
 	};
 
