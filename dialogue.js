@@ -1,6 +1,6 @@
 var mustache = require('mustache');
-var keyCode = require('keyCode');
-var getMotionEventName = require('utility/getMotionEventName');
+var keyCode = require('./keyCode');
+var getMotionEventName = require('./utility/getMotionEventName');
 var data;
 var $dialogue;
 var $dialogueHtml;
@@ -9,7 +9,7 @@ var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
 var css = {};
-var spinner = require('spinner');
+var spinner = require('./spinner');
 
 
 /**
