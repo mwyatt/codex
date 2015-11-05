@@ -9,7 +9,7 @@ var calculatedLeft;
 var intPopWidth;
 var intWindowWidth;
 var css = {};
-var spinFactory = require('spin');
+var spinner = require('spinner');
 
 
 /**
@@ -172,7 +172,7 @@ function setDialogueActionEvent (action) {
  */
 function ajaxCall () {
 	var config = data.options.ajaxConfig;
-	var spin = new spinFactory($dialogueHtml);
+	var spin = new spinner($dialogueHtml);
 	positionIt();
 	$.ajax({
 		type: config.type,
