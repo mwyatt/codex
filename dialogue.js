@@ -138,9 +138,11 @@ function positionThings () {
 
 	// position to element or centrally window
 	if ($positionalElement.length) {
+
+		// calc top
 		var target = {
 			position: 'absolute',
-			top: $positionalElement.offset().top,
+			top: parseInt($positionalElement.offset().top) - parseInt($dialogueContainer.offset().top),
 			left: $positionalElement.offset().left
 		};
 
