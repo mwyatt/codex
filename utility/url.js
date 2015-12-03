@@ -52,9 +52,7 @@ Url.prototype.generate = function(key, config) {
   };
 
   // trim off start '/'
-  route.substring(0, 1);
-
-  return this.getBase(route); 
+  return this.getBase(route.substring(1)); 
 };
 
 
