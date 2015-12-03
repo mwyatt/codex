@@ -10,6 +10,8 @@ $router = new \Mwyatt\Core\Router($mux);
 $database = new \Mwyatt\Core\Database;
 $router->appendMuxRoutes([PATH_BASE . 'routes.php'], $database, $view, $url);
 $url->setRoutes($router->getUrlRoutes());
+echo "<script>var hihi = " . json_encode($url) . "</script>";
+
 if ($route = $router->getRoute($url->getPath())) {
 	$response = $router->executeRoute($route);
 } else {

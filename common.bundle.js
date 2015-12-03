@@ -1,4 +1,4 @@
-$ = require('jquery/dist/jquery');
+$ = require('jquery');
 require('test/utility/testUrl');
 var feedbackQueueFactory = require('feedbackQueue');
 var carouselFactory = require('carousel');
@@ -9,7 +9,6 @@ var dialogue2 = new dialogue();
 var dialogue3 = new dialogue();
 var dialogue4 = new dialogue();
 var dialogue5 = new dialogue();
-
 
 $('.rainbow-pre').on('click', function() {
   $(this).select();
@@ -91,7 +90,7 @@ $('.js-dialogue-5').on('click', function() {
     width: 250,
     ajaxConfig: {
       type: 'get',
-      url: url.getUrlBase('asset/common.css'),
+      url: url.getBase('asset/common.css'),
       dataType: 'text',
       data: {},
       success: function(response) {

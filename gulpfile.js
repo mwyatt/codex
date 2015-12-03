@@ -69,8 +69,7 @@ gulp.task('js', function(done) {
       return browserify({
         entries: [entry],
         paths: [
-          '.',
-          'node_modules'
+          '.'
         ]
       })
       .bundle()

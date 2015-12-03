@@ -57,7 +57,8 @@
 
 		</div>
 	</div>
-	<script>var urlBase = '<?php echo $this->url->generate() ?>';</script>
+	<script>var url;</script>
+	<script>var phpUrl = <?php echo json_encode($this->url) ?></script>
 
 <?php include $this->getPathTemplate('footer/_mst') ?>
 <?php include $this->getPathTemplate('footer/_js') ?>

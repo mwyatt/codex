@@ -115,11 +115,11 @@
   page-break-inside: avoid;
 }
 
-.button-smaller {
+.text-size-smaller {
   font-size: 75%;
 }
 
-.button-larger {
+.text-size-larger {
   font-size: 125%;
 }
 

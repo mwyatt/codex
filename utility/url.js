@@ -2,13 +2,16 @@
 
 /**
  * handles all url operations
- * urlBase must be defined to proceed
+ * phpUrl must be defined to proceed
  */
 var Url = function () {
-  if (typeof urlBase === 'undefined') {
-    return console.warn('variable urlBase must be defined');
+  if (typeof phpUrl === 'undefined') {
+    return console.warn('variable phpUrl must be defined');
   };
-	this.urlBase = urlBase;
+  this.protocol = phpUrl.protocol;
+  this.base = phpUrl.base;
+  this.path = phpUrl.path;
+	this.routes = phpUrl.routes;
 };
 
 
@@ -17,19 +20,51 @@ var Url = function () {
  * @param  {string} append path/query
  * @return {string}        
  */
-Url.prototype.getUrlBase = function(append) {
+Url.prototype.getBase = function(append) {
   var append = typeof append === 'undefined' ? '' : append;
-	return this.urlBase + append;
+	return this.protocol + this.base + append;
 };
 
 
 /**
- * jump to urlBase + a specified url
+ * generate a url using the routes stored
+ * @param  {string} key    
+ * @param  {object} config 
+ * @return {string}        
+ */
+Url.prototype.generate = function(key, config) {
+  var key = typeof key === 'undefined' ? '' : key;
+  var config = typeof config === 'undefined' ? {} : config;
+
+  // no key means home
+  if (!key) {
+    return this.getBase();
+  };
+
+  // generate route and replace any config
+  var route = this.routes[key];
+  if (config) {
+    for (var property in config) {
+      if (config.hasOwnProperty(property)) {
+        route = route.replace(':' + property, config[property]);
+      };
+    };
+  };
+
+  // trim off start '/'
+  route.substring(0, 1);
+
+  return this.getBase(route); 
+};
+
+
+/**
+ * jump to phpUrl + a specified url
  * @param  {string} path combine base and relative
  * @return {null}              
  */
 Url.prototype.redirect = function(path) {
-	window.location.href = this.getUrlBase(path);
+	window.location.href = this.getBase(path);
 };
 
 
