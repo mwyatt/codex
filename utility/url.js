@@ -51,8 +51,8 @@ Url.prototype.generate = function(key, config) {
     };
   };
 
-  // trim off start '/'
-  return this.getBase(route.substring(1)); 
+  // pass base plus route
+  return this.getBase(route);
 };
 
 

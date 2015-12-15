@@ -2,13 +2,13 @@ $ = require('jquery');
 require('test/utility/testUrl');
 var feedbackQueueFactory = require('feedbackQueue');
 var carouselFactory = require('carousel');
-var dialogue = require('dialogue');
+var dialogueFactory = require('dialogue');
 var url = require('utility/url');
-var dialogue1 = new dialogue();
-var dialogue2 = new dialogue();
-var dialogue3 = new dialogue();
-var dialogue4 = new dialogue();
-var dialogue5 = new dialogue();
+var dialogue1 = new dialogueFactory();
+var dialogue2 = new dialogueFactory();
+var dialogue3 = new dialogueFactory();
+var dialogue4 = new dialogueFactory();
+var dialogue5 = new dialogueFactory();
 
 $('.rainbow-pre').on('click', function() {
   $(this).select();
