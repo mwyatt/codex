@@ -14,7 +14,7 @@
 		<div class="site-heading-container">
 			<h1 class="site-heading"><?php echo $siteTitle ?></h1>
 			<div class="menu-container">
-				<div class="menu-hamburger"><?php include $this->getPath('asset/hamburger.svg') ?></div>
+				<div class="menu-hamburger"><?php // include $this->getPath('asset/hamburger.svg') ?></div>
 				<nav class="menu-primary">
 					<ul>
 		
@@ -35,7 +35,7 @@
 			<div id="<?php echo $headingPrimary ?>" class="container-primary">
 				<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
 
-	<?php $pathCode = $this->getPath() . 'template/code/_' . $headingPrimary . '.html' ?>
+	<?php $pathCode = PATH_BASE . 'template/code/_' . $headingPrimary . '.html' ?>
 	<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
 	<?php include 'template/_' . $headingPrimary . '.php' ?>
 	<?php foreach ($secondary as $headingSecondary): ?>
@@ -43,7 +43,7 @@
 				<div class="container-secondary">
 					<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
 
-		<?php $pathCode = $this->getPath() . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
+		<?php $pathCode = PATH_BASE . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
 		<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
 		<?php include 'template/' . $headingPrimary . '/_' . $headingSecondary . '.php' ?>
 

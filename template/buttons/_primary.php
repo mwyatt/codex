@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPath() . 'template/code/buttons/_primary.html') ?>
+<?php $code = file_get_contents(PATH_BASE . 'template/code/buttons/_primary.html') ?>
 
 <div class="typography">
 	<p>Vanilla buttons can be used on all elements for a variety of implementations.</p>

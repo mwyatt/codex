@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPath() . 'template/code/buttons/_disabled.html') ?>
+<?php $code = file_get_contents(PATH_BASE . 'template/code/buttons/_disabled.html') ?>
 
 <div class="typography">
 	<p>Buttons can be disabled using the 'disabled' element attribute. Alternatively using the '.disabled' class.</p>
