@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'carousel.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'carousel.js') ?>
 
 <div class="typography">
 	<p>Needs to</p>

@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'lightbox.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'lightbox.js') ?>
 
 <div class="typography">
 	<p></p>

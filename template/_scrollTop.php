@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'scrollTop.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'scrollTop.js') ?>
 
 <div class="typography">
 	<p>Allows easy reference of keycodes.</p>

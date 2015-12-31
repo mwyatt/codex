@@ -25,13 +25,10 @@ var processes = [
   autoprefixer({browsers: ['last 1 version']})
 ];
 
-gulp.task('copy-media', function() {
+gulp.task('copy', function() {
+  gulp.src('jsVendor/**')
+    .pipe(gulp.dest('asset/vendor'));
   return gulp.src('media/**')
-    .pipe(gulp.dest('asset'));
-});
-
-gulp.task('copy-js-vendor', function() {
-  return gulp.src('jsVendor/**')
     .pipe(gulp.dest('asset'));
 });
 

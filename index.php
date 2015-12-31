@@ -1,23 +1,40 @@
 <?php
 
-define('PATH_BASE', (string) (__DIR__ . '/'));
-include PATH_BASE . 'vendor/autoload.php';
-$url = new \Mwyatt\Core\Url($_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'], 'codex/');
-$view = new \Mwyatt\Core\View($url);
-$view->prependTemplatePath(PATH_BASE . 'template/');
-$mux = new \Pux\Mux;
-$router = new \Mwyatt\Core\Router($mux);
-$database = new \Mwyatt\Core\Database;
-$router->appendMuxRoutes([PATH_BASE . 'routes.php'], $database, $view, $url);
-$url->setRoutes($router->getUrlRoutes());
-echo "<script>var hihi = " . json_encode($url) . "</script>";
+session_start();
+$pathBase = (string) (__DIR__ . '/');
+include $pathBase . 'vendor/autoload.php';
 
-if ($route = $router->getRoute($url->getPath())) {
-	$response = $router->executeRoute($route);
+$url = new \Mwyatt\Core\Url($_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'], 'codex/');
+$request = new \Mwyatt\Core\Request;
+
+$view = new \Mwyatt\Core\View;
+$view->appendTemplatePath($pathBase . 'template/');
+$view->setPathBase($pathBase);
+
+$view->data->offsetSet('url', $url);
+
+$routes = array_merge(
+    include $view->getPathBase('routes.php')
+);
+
+$router = new \Mwyatt\Core\Router(new \Pux\Mux);
+
+$router->appendMuxRoutes($routes);
+
+$url->setRoutes($router->getMux());
+
+$route = $router->getMuxRouteCurrent($url->getPath());
+
+if ($route) {
+	$request->setMuxUrlVars($route);
+	$controllerNs = $router->getMuxRouteCurrentController();
+	$controllerMethod = $router->getMuxRouteCurrentControllerMethod();
+
+	$controller = new $controllerNs(new \Mwyatt\Core\ServiceFactory, $view);
+	$response = $controller->$controllerMethod($request);
 } else {
 	$response = new \Mwyatt\Core\Response('Not Found', 404);
 }
 
-// render
 $router->setHeaders($response);
 echo $response->getContent();

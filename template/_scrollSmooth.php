@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'scrollSmooth.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'scrollSmooth.js') ?>
 
 <div class="typography">
 	<p>Point this to links which visit the document you are currently on and it will smoothly transition to that location.</p>

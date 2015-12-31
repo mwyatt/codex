@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'utility/url.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'utility/url.js') ?>
 
 <div class="typography">
 	<p>Handles all url retrieval and operations.</p>

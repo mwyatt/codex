@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'browserify-example.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'browserify-example.js') ?>
 
 <div class="typography">
 	<p>All js which is not specific to a particular page should be split into packages which can be required. Here will be a list of all pacAkages which are mostly universal across projects.</p>

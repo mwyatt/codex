@@ -14,10 +14,9 @@
         }
     ],
     "require": {
-        "mwyatt/core": "dev-master"
+        "mwyatt/core": "1.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
         "squizlabs/php_codesniffer": "^2.3"
     },
     "autoload": {

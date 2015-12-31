@@ -1,4 +1,4 @@
-<?php $code = file_get_contents(PATH_BASE . 'template/code/typography/_heading.html') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'template/code/typography/_heading.html') ?>
 
 <div class="typography">
 	<p>Encapsulates all loose typography and styles accordingly.</p>
