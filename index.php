@@ -3,9 +3,9 @@
 session_start();
 $pathBase = (string) (__DIR__ . '/');
 include $pathBase . 'vendor/autoload.php';
-
-$url = new \Mwyatt\Core\Url($_SERVER['HTTP_HOST'], $_SERVER['REQUEST_URI'], 'codex/');
 $request = new \Mwyatt\Core\Request;
+
+$url = new \Mwyatt\Core\Url($request->getServer('HTTP_HOST'), $request->getServer('REQUEST_URI'), 'codex/');
 
 $view = new \Mwyatt\Core\View;
 $view->appendTemplatePath($pathBase . 'template/');

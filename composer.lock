@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e8c3b65e21df9ef4e107aa12c478b657",
-    "content-hash": "3b64311571e3770a7c124574f9adf3f4",
+    "hash": "97369feaedd05f9bb308768ddfaa2412",
+    "content-hash": "f593ea8e95fc88626c2536787304fea5",
     "packages": [
         {
             "name": "corneltek/class-template",
@@ -341,16 +341,16 @@
         },
         {
             "name": "mwyatt/core",
-            "version": "1.0.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mwyatt/core.git",
-                "reference": "b669f5194698811c1a7f5ee376134bb4d9bfd6a2"
+                "reference": "9d22a6f1e8f55c32fb6a1771608cf0525e19e95e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mwyatt/core/zipball/b669f5194698811c1a7f5ee376134bb4d9bfd6a2",
-                "reference": "b669f5194698811c1a7f5ee376134bb4d9bfd6a2",
+                "url": "https://api.github.com/repos/mwyatt/core/zipball/9d22a6f1e8f55c32fb6a1771608cf0525e19e95e",
+                "reference": "9d22a6f1e8f55c32fb6a1771608cf0525e19e95e",
                 "shasum": ""
             },
             "require": {
@@ -384,10 +384,10 @@
             ],
             "description": "core classes and methods for common patterns when creating a project",
             "support": {
-                "source": "https://github.com/mwyatt/core/tree/master",
+                "source": "https://github.com/mwyatt/core/tree/1.1.2",
                 "issues": "https://github.com/mwyatt/core/issues"
             },
-            "time": "2015-12-31 11:06:14"
+            "time": "2016-01-11 10:54:11"
         },
         {
             "name": "pimple/pimple",
