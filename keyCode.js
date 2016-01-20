@@ -2,11 +2,12 @@
 
 /**
  * event.which keyboard mapping
+ * keydown event.
  * @type {Object}
  */
 module.exports = {
   numpad: {
-    minus: 173,
+    minus: 109,
     plus: 107
   },
   down: 40,
@@ -18,8 +19,8 @@ module.exports = {
   f2: 113,
   f3: 114,
   f4: 115,
-  minus: 109,
-  plus: 61,
+  minus: 189,
+  plus: 187,
 
   // works as android enter / next
   tab: 9

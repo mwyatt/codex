@@ -97,8 +97,10 @@ Dialogue.prototype.create = function(options) {
 			} 
 		});
 
-		// click outside of dialogue
-		$(document).off('mouseup.dialogue').on('mouseup.dialogue', function(event) {
+		// mousedown outside of dialogue
+		// down used because when clicking and dragging an input value will
+		// close it
+		$(document).off('mouseup.dialogue').on('mousedown.dialogue', function(event) {
 			if (!$(event.target).closest('.js-dialogue').length) {
 				data.close(data);
 			}
@@ -223,8 +225,10 @@ Dialogue.prototype.close = function(data) {
 	$dialogueContainer.addClass(removeClassName);
 	$dialogue.on(getMotionEventName('animation'), function() {
 		$dialogueContainer.remove();
-		data.options.onClose.call();
 	});
+
+	// not after anim because sometimes no anim
+	data.options.onClose.call();
 
 	// cleanse events
 	$(document)
