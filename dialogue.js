@@ -223,9 +223,9 @@ function ajaxCall () {
 Dialogue.prototype.close = function(data) {
 	var removeClassName = 'dialogue-remove';
 	$dialogueContainer.addClass(removeClassName);
-	$dialogue.on(getMotionEventName('animation'), function() {
-		$dialogueContainer.remove();
-	});
+	// $dialogue.on(getMotionEventName('animation'), function() {
+	// });
+	$dialogueContainer.remove();
 
 	// not after anim because sometimes no anim
 	data.options.onClose.call();
