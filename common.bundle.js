@@ -3,12 +3,14 @@ require('test/utility/testUrl');
 var feedbackQueueFactory = require('feedbackQueue');
 var carouselFactory = require('carousel');
 var dialogueFactory = require('dialogue');
+var spinnerFactory = require('spinner');
 var url = require('utility/url');
 var dialogue1 = new dialogueFactory();
 var dialogue2 = new dialogueFactory();
 var dialogue3 = new dialogueFactory();
 var dialogue4 = new dialogueFactory();
 var dialogue5 = new dialogueFactory();
+var spinner1 = new spinnerFactory();
 
 $('.rainbow-pre').on('click', function() {
   $(this).select();
@@ -127,6 +129,8 @@ $('.js-feedback-queue-2').on('click', function() {
 $('.js-feedback-queue-3').on('click', function() {
   feedbackQueue.createMessage({type: 'fail', message: 'test 3'});
 });
+
+
 
 
 window.carousel = new carouselFactory();

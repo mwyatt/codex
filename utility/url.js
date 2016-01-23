@@ -57,12 +57,16 @@ Url.prototype.generate = function(key, config) {
 
 
 /**
- * jump to phpUrl + a specified url
- * @param  {string} path combine base and relative
- * @return {null}              
+ * redirect to generated url
+ * @param  {string} key    
+ * @param  {object} config 
+ * @return {string}        
  */
-Url.prototype.redirect = function(path) {
-	window.location.href = this.getBase(path);
+Url.prototype.redirect = function(key, config) {
+  var key = typeof key === 'undefined' ? '' : key;
+  var config = typeof config === 'undefined' ? {} : config;
+
+	window.location.href = this.generate(key, config);
 };
 
 
