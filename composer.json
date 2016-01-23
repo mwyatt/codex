@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "mwyatt/core": "1.0.0"
+        "mwyatt/core": "@dev"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.3"

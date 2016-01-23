@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e8c3b65e21df9ef4e107aa12c478b657",
-    "content-hash": "3b64311571e3770a7c124574f9adf3f4",
+    "hash": "b151aaa4637f7c1f87145fa3b22be255",
+    "content-hash": "039fd4a5880472e9fa48be2e42efaf29",
     "packages": [
         {
             "name": "corneltek/class-template",
@@ -831,7 +831,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mwyatt/core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
