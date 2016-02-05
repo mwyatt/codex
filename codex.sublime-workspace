@@ -3,6 +3,14 @@
 	{
 		"selected_items":
 		[
+			[
+				"posscsim",
+				"postcssSimpleVars"
+			],
+			[
+				"poscimp",
+				"postcssImport"
+			]
 		]
 	},
 	"buffers":
@@ -11,7 +19,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 537,
+				"buffer_size": 633,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,7 +27,7 @@
 			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 772,
+				"buffer_size": 1414,
 				"line_ending": "Windows"
 			}
 		}
@@ -56,11 +64,27 @@
 	},
 	"expanded_folders":
 	[
-		"/var/www/html/codex"
+		"/var/www/html/codex",
+		"/var/www/html/codex/asset"
 	],
 	"file_history":
 	[
-		"/var/www/html/codex/package.json"
+		"/var/www/html/codex/node_modules/gulp-util/node_modules/lodash.template/node_modules/lodash.keys/package.json",
+		"/var/www/html/codex/template/header/_css.php",
+		"/var/www/html/codex/template/index.php",
+		"/var/www/html/codex/src/Controller/Index.php",
+		"/var/www/html/codex/vendor/mwyatt/core/src/Url.php",
+		"/var/www/html/codex/index.php",
+		"/var/www/html/codex/template/typography/_body.php",
+		"/var/www/html/codex/mixin.css",
+		"/var/www/html/codex/settings.css",
+		"/var/www/html/codex/gulpfile.js",
+		"/var/www/html/codex/package.json",
+		"/var/www/html/codex/asset/common.css",
+		"/var/www/html/codex/reset.css",
+		"/var/www/html/codex/common.js",
+		"/var/www/html/codex/asset/common.js",
+		"/var/www/html/codex/feedbackQueue.js"
 	],
 	"find":
 	{
@@ -68,9 +92,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"*.css",
+			""
 		]
 	},
 	"find_state":
@@ -78,6 +104,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gulp_src",
+			"require",
+			"postcss",
+			"$color-primary-0:",
+			"color-primary",
+			"before",
+			"carouselFactory",
+			"require('carou"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -95,7 +129,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -104,15 +138,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 537,
+						"buffer_size": 633,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								410,
-								416
+								0,
+								633
 							]
 						],
 						"settings":
@@ -134,15 +168,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 772,
+						"buffer_size": 1414,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								336,
-								336
+								0,
+								1414
 							]
 						],
 						"settings":
@@ -214,8 +248,56 @@
 				"gulpfile.js"
 			],
 			[
+				"gulkp",
+				"node_modules/gulp-util/node_modules/lodash.template/node_modules/lodash.keys/package.json"
+			],
+			[
 				"packa",
 				"package.json"
+			],
+			[
+				"coreurl",
+				"vendor/mwyatt/core/src/Url.php"
+			],
+			[
+				"controller/",
+				"src/Controller/Index.php"
+			],
+			[
+				"headercss",
+				"template/header/_css.php"
+			],
+			[
+				"inde",
+				"template/index.php"
+			],
+			[
+				"tembod",
+				"template/typography/_body.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"common",
+				"asset/common.css"
+			],
+			[
+				"",
+				"gulpfile.js"
+			],
+			[
+				"mixin",
+				"mixin.css"
+			],
+			[
+				"asscommon",
+				"asset/common.js"
+			],
+			[
+				"feedback",
+				"feedbackQueue.js"
 			],
 			[
 				"pakca",
@@ -227,19 +309,19 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "dia",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"dia",
+				"",
 				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
-				"",
-				"/var/www/html/codex/codex.sublime-project"
+				"dialo",
+				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
-				"dialo",
+				"dia",
 				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
@@ -281,7 +363,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":

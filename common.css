@@ -5,7 +5,6 @@
 @import "mixin.css";
 
 /* things which insert code */
-@import "normalize.css/normalize.css";
 @import "reset.css";
 @import "reusable.css";
 @import "keyframe.css";
