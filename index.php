@@ -6,7 +6,7 @@ include $pathBase . 'vendor/autoload.php';
 $request = new \Mwyatt\Core\Request;
 
 $url = new \Mwyatt\Core\Url($request->getServer('HTTP_HOST'), $request->getServer('REQUEST_URI'), 'codex/');
-
+print_r($url);
 $view = new \Mwyatt\Core\View;
 $view->appendTemplatePath($pathBase . 'template/');
 $view->setPathBase($pathBase);

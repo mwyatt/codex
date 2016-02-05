@@ -11,7 +11,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 146,
+				"buffer_size": 537,
 				"line_ending": "Unix"
 			}
 		},
@@ -60,8 +60,7 @@
 	],
 	"file_history":
 	[
-		"/var/www/html/codex/package.json",
-		"/var/www/html/codex/gulpfile.js"
+		"/var/www/html/codex/package.json"
 	],
 	"find":
 	{
@@ -79,8 +78,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"pkg",
-			"pngquant"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -107,26 +104,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 146,
+						"buffer_size": 537,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								94,
-								94
+								410,
+								416
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -142,8 +141,8 @@
 						"selection":
 						[
 							[
-								772,
-								772
+								336,
+								336
 							]
 						],
 						"settings":
@@ -156,7 +155,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -228,20 +227,24 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "dialo",
+		"last_filter": "dia",
 		"selected_items":
 		[
+			[
+				"dia",
+				"/var/www/html/dialogue/dialogue.sublime-project"
+			],
+			[
+				"",
+				"/var/www/html/codex/codex.sublime-project"
+			],
 			[
 				"dialo",
 				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
-				"gir",
+				"grid",
 				"/var/www/html/grid/grid.sublime-project"
-			],
-			[
-				"",
-				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
 				"coe",
@@ -256,16 +259,8 @@
 				"/var/www/html/codex/codex.sublime-project"
 			],
 			[
-				"grid",
-				"/var/www/html/grid/grid.sublime-project"
-			],
-			[
 				"gri",
 				"/var/www/html/grid/grid.sublime-project"
-			],
-			[
-				"dia",
-				"/var/www/html/dialogue/dialogue.sublime-project"
 			]
 		],
 		"width": 380.0

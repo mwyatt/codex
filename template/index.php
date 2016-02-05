@@ -7,7 +7,6 @@
 
 <?php include $this->getPathTemplate('header/_css') ?>
 
-	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/vendor/modernizr.min.js') ?>"></script>
 </head>
 <body>
 	<div class="body-inner-container">
