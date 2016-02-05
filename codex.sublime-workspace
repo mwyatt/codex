@@ -11,7 +11,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 150,
+				"buffer_size": 146,
 				"line_ending": "Unix"
 			}
 		},
@@ -19,7 +19,7 @@
 			"file": "gulpfile.js",
 			"settings":
 			{
-				"buffer_size": 2667,
+				"buffer_size": 772,
 				"line_ending": "Windows"
 			}
 		}
@@ -60,7 +60,8 @@
 	],
 	"file_history":
 	[
-		"/var/www/html/codex/package.json"
+		"/var/www/html/codex/package.json",
+		"/var/www/html/codex/gulpfile.js"
 	],
 	"find":
 	{
@@ -78,6 +79,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pkg",
+			"pngquant"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -95,7 +98,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -104,15 +107,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 150,
+						"buffer_size": 146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								94,
+								94
 							]
 						],
 						"settings":
@@ -132,15 +135,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2667,
+						"buffer_size": 772,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								772,
+								772
 							]
 						],
 						"settings":
@@ -225,9 +228,17 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "",
+		"last_filter": "dialo",
 		"selected_items":
 		[
+			[
+				"dialo",
+				"/var/www/html/dialogue/dialogue.sublime-project"
+			],
+			[
+				"gir",
+				"/var/www/html/grid/grid.sublime-project"
+			],
 			[
 				"",
 				"/var/www/html/dialogue/dialogue.sublime-project"
@@ -247,10 +258,6 @@
 			[
 				"grid",
 				"/var/www/html/grid/grid.sublime-project"
-			],
-			[
-				"dialo",
-				"/var/www/html/dialogue/dialogue.sublime-project"
 			],
 			[
 				"gri",
