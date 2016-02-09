@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 module.exports = function(container) {
   var currentTallest = 0,
        currentRowStart = 0,
