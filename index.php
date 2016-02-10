@@ -5,10 +5,15 @@ $pathBase = (string) (__DIR__ . '/');
 include $pathBase . 'vendor/autoload.php';
 $request = new \Mwyatt\Core\Request;
 
+if ($request->getServer('HTTP_HOST') === '192.168.1.6') {
+	ini_set('display_startup_errors',1);
+	ini_set('display_errors',1);
+	error_reporting(-1);
+}
+
 $url = new \Mwyatt\Core\Url($request->getServer('HTTP_HOST'), $request->getServer('REQUEST_URI'), 'codex/');
-print_r($url);
 $view = new \Mwyatt\Core\View;
-$view->appendTemplatePath($pathBase . 'template/');
+$view->prependTemplatePath($pathBase . 'template/');
 $view->setPathBase($pathBase);
 
 $view->data->offsetSet('url', $url);
@@ -30,7 +35,7 @@ if ($route) {
 	$controllerNs = $router->getMuxRouteCurrentController();
 	$controllerMethod = $router->getMuxRouteCurrentControllerMethod();
 
-	$controller = new $controllerNs(new \Mwyatt\Core\ServiceFactory, $view);
+	$controller = new $controllerNs(new \Pimple\Container, $view);
 	$response = $controller->$controllerMethod($request);
 } else {
 	$response = new \Mwyatt\Core\Response('Not Found', 404);
