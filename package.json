@@ -1,25 +1,31 @@
 {
-  "name": "codex",
+  "name": "mwyatt-codex",
   "author": "Martin Wyatt <martin.wyatt@gmail.com>",
+  "description": "Collection of reusable css and js.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwyatt/codex.git"
+  },
+  "license": "ISC",
   "dependencies": {
     "jquery": "1.11.2",
     "mustache": "~2.2.1",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {
-    "gulp": "3.9.0",
-    "browserify": "11.2.0",
     "autoprefixer": "6.0.3",
-    "vinyl-source-stream": "1.1.0",
-    "postcss-mixins": "^1.0.1",
-    "gulp-plumber": "~1.0.1",
-    "gulp-util": "~3.0.7",
+    "browserify": "11.2.0",
+    "es6-promise": "^3.0.2",
+    "gulp": "3.9.0",
+    "gulp-plumber": "^1.0.2",
     "gulp-postcss": "^6.0.1",
+    "gulp-util": "~3.0.7",
     "postcss-color-function": "^2.0.0",
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^7.0.0",
+    "postcss-mixins": "^1.0.1",
     "postcss-simple-vars": "^1.0.1",
-    "es6-promise": "~3.0.2"
+    "vinyl-source-stream": "1.1.0"
   }
 }

@@ -14,7 +14,6 @@
 @import "blankslate.css";
 
 /* extras */
-@import "dialogue.css";
 @import "feedback-queue.css";
 
 @mixin clearfix .container;
