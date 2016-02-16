@@ -12,6 +12,7 @@
 @import "typography.css";
 @import "alert.css";
 @import "blankslate.css";
+@import "spinner.css";
 
 /* extras */
 @import "feedback-queue.css";
