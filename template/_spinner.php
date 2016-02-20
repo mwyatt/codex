@@ -1,4 +1,5 @@
-<?php $code = file_get_contents($this->getPathBase() . 'spinner.js') ?>
+<?php $codeJs = file_get_contents($this->getPathBase() . 'spinner.js') ?>
+<?php $codeHtml = file_get_contents($this->getPathBase() . 'template/code/_spinner.html') ?>
 
 <div class="typography">
 	<ul>
@@ -6,4 +7,8 @@
 		<li>must be able to set multiple spinners</li>
 	</ul>
 </div>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>
+<div class="spinner-container">
+    <div class="spinner"></div>
+</div>
+<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($codeHtml) ?></code></pre>
+<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($codeJs) ?></code></pre>

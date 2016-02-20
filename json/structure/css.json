@@ -34,5 +34,6 @@
 		"checkbox",
 		"action"
 	],
-	"alert": []
+	"alert": [],
+	"spinner": []
 }

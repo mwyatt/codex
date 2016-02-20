@@ -1,12 +1,14 @@
 .spinner {
-  height: 15px;
-  width: 15px;
+  animation: rotateFull 0.5s infinite linear;
+  height: 26px;
+  width: 26px;
   margin: 0 auto;
   position: relative;
-  animation: rotation 0.5s infinite linear;
-  border-left: 6px solid #ccc;
-  border-right: 6px solid #ccc;
-  border-bottom: 6px solid #ccc;
-  border-top: 6px solid #eee;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  border-bottom-color: #ccc;
+  border-top-color: #eee;
   border-radius: 100%;
+  border-width: 4px;
+  border-style: solid;
 }
