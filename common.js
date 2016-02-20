@@ -8,7 +8,6 @@ var spinner1 = new spinnerFactory();
 
 $('.rainbow-pre').on('click', function() {
   $(this).select();
-  console.log('value');
 });
 
 // feedback queue

@@ -1,3 +1,3 @@
 <div class="typography">
-	<p>layout information</p>
+	<p>Various helper classes for laying out elements in a common way.</p>
 </div>

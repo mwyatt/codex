@@ -23,9 +23,9 @@
 
 .alert.fail
 {
-    color: $color-secondary-1-0;
-    border-color: color($color-secondary-1-0 tint(50%));
-    background-color: color($color-secondary-1-0 tint(80%));
+    color: $color-secondary-2-0;
+    border-color: color($color-secondary-2-0 tint(50%));
+    background-color: color($color-secondary-2-0 tint(80%));
 }
 
 .alert.success

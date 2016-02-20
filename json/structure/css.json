@@ -7,7 +7,6 @@
 	],
 	"palette": [],
 	"layout": [
-		"grid",
 		"floats",
 		"clearfix",
 		"text-align"
@@ -35,6 +34,5 @@
 		"checkbox",
 		"action"
 	],
-	"alert": [],
-	"blankslate": []
+	"alert": []
 }
