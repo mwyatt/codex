@@ -1,3 +1,4 @@
+var $ = require('jquery');
 var mustache = require('mustache');
 var getMotionEventName = require('./utility/getMotionEventName');
 
@@ -10,8 +11,8 @@ var getMotionEventName = require('./utility/getMotionEventName');
 var FeedbackQueue = function (options) {
 	var defaults = {
 		singleLife: 5000, // how long will it last?
-		templateContainer: '', // mustache
-		templateSingle: '', // mustache
+		templateContainer: '<div class="feedback-queue js-feedback-queue"><div class="feedback-queue-position js-feedback-queue-position"></div></div>', // mustache
+		templateSingle: '<div class="feedback-queue-single js-feedback-queue-single is-{{type}}"><span class="feedback-queue-single-cross">&times;</span>{{message}}</div>', // mustache
 		message: '', // anything goes string
 		type: '' // success, fail, neutral or anything?
 	};
