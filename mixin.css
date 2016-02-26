@@ -44,6 +44,7 @@
     border-bottom-style: solid;
     color: $color;
     border-bottom-color: $color;
+    cursor: pointer; /* when will this not be needed? */
     /*// @upgrade @mixin text-decoration-line(underline);*/
     /*// @upgrade @mixin text-decoration-color(rgba($color, .5));*/
   }

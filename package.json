@@ -22,6 +22,7 @@
     "gulp-postcss": "^6.0.1",
     "gulp-util": "~3.0.7",
     "postcss-color-function": "^2.0.0",
+    "postcss-conditionals": "^2.0.1",
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^7.0.0",
     "postcss-mixins": "^1.0.1",

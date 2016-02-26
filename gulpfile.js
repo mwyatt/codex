@@ -9,6 +9,7 @@ var postcssSimpleVars = require('postcss-simple-vars');
 var postcssMixins = require('postcss-mixins');
 var postcssColorFunction = require('postcss-color-function');
 var postcssHexrgba = require('postcss-hexrgba');
+var postcssConditionals = require('postcss-conditionals');
 var autoprefixer = require('autoprefixer');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -16,6 +17,7 @@ var processes = [
   postcssImport,
   postcssMixins,
   postcssSimpleVars,
+  postcssConditionals,
   postcssHexrgba(),
   postcssColorFunction(),
   autoprefixer({browsers: ['last 1 version']})
