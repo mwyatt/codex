@@ -66,8 +66,9 @@ Url.prototype.generate = function(key, config) {
 Url.prototype.redirect = function(key, config) {
   var key = typeof key === 'undefined' ? '' : key;
   var config = typeof config === 'undefined' ? {} : config;
-
-	window.location.href = this.generate(key, config);
+  var destination = this.generate(key, config);
+	window.location.href = destination;
+  return 'redirecting to \'' + destination + '\'';
 };
 
 
