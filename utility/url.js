@@ -53,7 +53,7 @@ Url.prototype.generate = function(key, config) {
   };
 
   // pass base plus route
-  return this.getBase(route);
+  return this.getBase(route).replace('//', '/');
 };
 
 
