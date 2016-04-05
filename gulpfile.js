@@ -7,6 +7,7 @@ var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import');
 var postcssSimpleVars = require('postcss-simple-vars');
 var postcssMixins = require('postcss-mixins');
+var postcssCsscomb = require('postcss-csscomb');
 var postcssColorFunction = require('postcss-color-function');
 var postcssHexrgba = require('postcss-hexrgba');
 var postcssConditionals = require('postcss-conditionals');
@@ -40,6 +41,37 @@ gulp.task('css', function () {
     .pipe(gulp.dest('asset'));
 });
 
+gulp.task('cssTidy', function () {
+  return gulp.src('common.css')
+    .pipe(postcss([csscomb([
+      "remove-empty-rulesets": true,
+      "always-semicolon": true,
+      "color-case": "lower",
+      "block-indent": "  ",
+      "color-shorthand": false,
+      "element-case": "lower",
+      "eof-newline": true,
+      "leading-zero": true,
+      "quotes": "single",
+      "sort-order-fallback": "abc",
+      "space-before-colon": "",
+      "space-after-colon": " ",
+      "space-before-combinator": " ",
+      "space-after-combinator": " ",
+      "space-between-declarations": "\n",
+      "space-before-opening-brace": " ",
+      "space-after-opening-brace": "\n",
+      "space-after-selector-delimiter": "\n",
+      "space-before-selector-delimiter": "",
+      "space-before-closing-brace": "\n",
+      "strip-spaces": true,
+      "tab-size": true,
+      "unitless-zero": true,
+      "vendor-prefix-align": true
+    ])]))
+    .pipe(gulp.dest());
+});
+
 gulp.task('js', function(done) {
   return browserify({paths: '.'})
     .add('common.js')
@@ -47,3 +79,5 @@ gulp.task('js', function(done) {
     .pipe(source('common.js'))
     .pipe(gulp.dest('asset'));
 });
+
+
