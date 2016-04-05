@@ -1,5 +1,6 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
 var gulp = require('gulp');
+var gulpConcat = require('gulp-concat');
 var gulpSrc = gulp.src;
 var buffer = require('gulp-buffer');
 var plumber = require('gulp-plumber');
@@ -54,7 +55,7 @@ var postcssProcesses = [
 ];
  
 gulp.task('css', function () {
-  return gulp.src('**/*.bundle.css')
+  return gulp.src('css/**/*.bundle.css')
     .pipe(postcss(postcssProcesses))
     .pipe(tap(function(file) {
       gutil.log('build ' + file.path);
@@ -71,8 +72,8 @@ gulp.task('cssMin', function () {
     .pipe(gulp.dest('asset'));
 });
 
-gulp.task('cssTidy', function(done) {
-  return gulp.src(['**/*.css', '!asset/**', '!node_modules/**'])
+gulp.task('cssTidy', function() {
+  return gulp.src('css/**/*.css')
     .pipe(postcss([postcssCsscomb(postcssCombOptions)]))
     .pipe(tap(function(file) {
       gutil.log('tidy ' + file.path);
@@ -80,14 +81,26 @@ gulp.task('cssTidy', function(done) {
     .pipe(gulp.dest(''));
 });
 
-gulp.task('js', function(done) {
-  return gulp.src(['**/*.bundle.js', '!asset/**'], {read: false})
+gulp.task('js', function() {
+  return gulp.src('js/**/*.bundle.js', {read: false})
     .pipe(tap(function(file) {
       file.contents = browserify(file.path, {debug: true}).bundle();
+      gutil.log(file.contents);
       gutil.log('build ' + file.path);
     }))
     .pipe(buffer())
     .pipe(uglify())
+    .pipe(gulp.dest('asset'));
+});
+
+gulp.task('jsLib', function() {
+  gulp.src([
+      'node_modules/jquery/dist/jquery.js'
+    ])
+    .pipe(tap(function(file) {
+      gutil.log('concat ' + file.path);
+    }))
+    .pipe(gulpConcat('lib.js'))
     .pipe(gulp.dest('asset'));
 });
 
@@ -106,6 +119,6 @@ gulp.task('jsTidy', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('*.css', ['css']);
-  gulp.watch('*.js', ['js']);
+  gulp.watch('css/**/*.css', ['css']);
+  gulp.watch('js/**/*.js', ['js']);
 });

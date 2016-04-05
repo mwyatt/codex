@@ -24,5 +24,4 @@ $('.js-feedback-queue-2').on('click', function() {
 $('.js-feedback-queue-3').on('click', function() {
   feedbackQueue.createMessage({type: 'fail', message: 'test 3'});
 });
-
 window.carousel = new carouselFactory();

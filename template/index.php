@@ -56,10 +56,8 @@
 
 		</div>
 	</div>
-	<input type="hidden" value="<?php echo json_encode($url) ?>" class="">
-	<script>var phpUrl = </script>
+	<script>var phpUrl = <?php echo json_encode($url) ?></script>
 
-<?php include $this->getPathTemplate('footer/_mst') ?>
 <?php include $this->getPathTemplate('footer/_js') ?>
 
 </body>
