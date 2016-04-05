@@ -1,160 +1,160 @@
-@import "_settings.css";
-@import "_dependencies.css";
+@import '_settings.css';
+@import '_dependencies.css';
 
 .color-primary {
-	color: var(--color-primary-0);
+  color: var(--color-primary-0);
 }
 
 .color-secondary {
-	color: var(--color-secondary-1-0);
+  color: var(--color-secondary-1-0);
 }
 
 .color-tertiary {
-	color: var(--color-secondary-2-0);
+  color: var(--color-secondary-2-0);
 }
 
 .color-gray-30 {
-	color: var(--color-secondary-1-0);
+  color: var(--color-secondary-1-0);
 }
 
 .color-text {
-	color: var(--color-secondary-1-0);
+  color: var(--color-secondary-1-0);
 }
 
 .no-spacing {
-	/*@include email-no-spacing;*/
+  /*@include email-no-spacing;*/
 }
 
 .padding {
-	padding-top: var(--font-size) + px;
-	padding-right: var(--font-size) + px;
-	padding-bottom: var(--font-size) + px;
-	padding-left: var(--font-size) + px;
+  padding-top: var(--font-size) + px;
+  padding-right: var(--font-size) + px;
+  padding-bottom: var(--font-size) + px;
+  padding-left: var(--font-size) + px;
 }
 
 .footer-p {
-	/*@include email-typography-small;*/
+  /*@include email-typography-small;*/
 }
 
 .a {
-	/*@include email-a;*/
+  /*@include email-a;*/
 }
 
 .a-small {
-	/*@include email-a;*/
-	/*@include email-typography-small;*/
-	font-weight: bold;
+  /*@include email-a;*/
+  /*@include email-typography-small;*/
+  font-weight: bold;
 }
 
 .h1 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * 2px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 2px;
 }
 
 .h2 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * 1.5px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 1.5px;
 }
 
 .h3 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * 1.17px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 1.17px;
 }
 
 .h4 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * 1px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 1px;
 }
 
 .h5 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * .83px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 0.83px;
 }
 
 .h6 {
-	/*@include email-heading;*/
-	font-size: var(--font-size) * .75px;
+  /*@include email-heading;*/
+  font-size: var(--font-size) * 0.75px;
 }
 
 .p {
-	/*@include email-typography;*/
-	margin-top: var(--font-size) + px;
-	margin-right: 0;
-	margin-bottom: var(--font-size) + px;
-	margin-left: 0;
+  /*@include email-typography;*/
+  margin-top: var(--font-size) + px;
+  margin-right: 0;
+  margin-bottom: var(--font-size) + px;
+  margin-left: 0;
 }
 
 .ul {
-	/*@include email-typography;*/
-	margin-top: var(--font-size) + px;
-	margin-right: 0;
-	margin-bottom: var(--font-size) + px;
-	margin-left: 0;
-	padding-left: var(--font-size) * 3px;
+  /*@include email-typography;*/
+  margin-top: var(--font-size) + px;
+  margin-right: 0;
+  margin-bottom: var(--font-size) + px;
+  margin-left: 0;
+  padding-left: var(--font-size) * 3px;
 }
 
 .li {
-	/*@include email-typography;*/
-	margin-top: var(--font-size) * .5px;
-	margin-right: 0;
-	margin-bottom: var(--font-size) * .5px;
-	margin-left: 0;
+  /*@include email-typography;*/
+  margin-top: var(--font-size) * 0.5px;
+  margin-right: 0;
+  margin-bottom: var(--font-size) * 0.5px;
+  margin-left: 0;
 }
 
 .background-table {
-	/*@include email-no-spacing;*/
-	width: 100%;
-	line-height: 100%;
+  /*@include email-no-spacing;*/
+  width: 100%;
+  line-height: 100%;
 }
 
 .table {
-	/*@include email-table;*/
+  /*@include email-table;*/
 }
 
 .table-spaced {
-	/*@include email-table;*/
-	margin-top: var(--font-size) + px;
-	margin-bottom: var(--font-size) + px;
+  /*@include email-table;*/
+  margin-top: var(--font-size) + px;
+  margin-bottom: var(--font-size) + px;
 }
 
 .td {
-	/*@include email-td;*/
+  /*@include email-td;*/
 }
 
 .th {
-	/*@include email-td;*/
-	font-weight: bold;
+  /*@include email-td;*/
+  font-weight: bold;
 }
 
 .body {
-	/*@include email-no-spacing;*/
-	color: #fff;
-	border-color: #fff;	
-	width: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+  /*@include email-no-spacing;*/
+  color: #ffffff;
+  border-color: #ffffff;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 }
 
 .img {
-	/*@include email-image;*/
+  /*@include email-image;*/
 }
 
 .img-block {
-	/*@include email-image;*/
-	display: block;
+  /*@include email-image;*/
+  display: block;
 }
 
 .message {
-	background-color: var(--color-secondary-1-0);
-	padding: var(--font-size) + px;
-	border: 1px solid var(--color-secondary-1-0);
-	display: block;
+  background-color: var(--color-secondary-1-0);
+  padding: var(--font-size) + px;
+  border: 1px solid var(--color-secondary-1-0);
+  display: block;
 }
 
 .typography-small {
-	/*@include email-typography-small;*/
+  /*@include email-typography-small;*/
 }
 
 .typography {
-	/*@include email-typography;*/
+  /*@include email-typography;*/
 }

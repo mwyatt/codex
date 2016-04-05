@@ -54,31 +54,49 @@ var postcssProcesses = [
 ];
  
 gulp.task('css', function () {
-  return gulp.src('common.css')
+  return gulp.src('**/*.bundle.css')
     .pipe(postcss(postcssProcesses))
+    .pipe(tap(function(file) {
+      gutil.log('build ' + file.path);
+    }))
     .pipe(gulp.dest('asset'));
 });
 
 gulp.task('cssMin', function () {
-  return gulp.src('asset/**.css')
+  return gulp.src('asset/**/*.css')
     .pipe(cssmin())
+    .pipe(tap(function(file) {
+      gutil.log('minify ' + file.path);
+    }))
     .pipe(gulp.dest('asset'));
 });
 
 gulp.task('cssTidy', function(done) {
-  return gulp.src('*.css')
+  return gulp.src(['**/*.css', '!asset/**', '!node_modules/**'])
     .pipe(postcss([postcssCsscomb(postcssCombOptions)]))
-    .pipe(gulp.dest('.'));
+    .pipe(tap(function(file) {
+      gutil.log('tidy ' + file.path);
+    }))
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('js', function(done) {
-  return gulp.src(['**/*.bundle.js', '!asset/*'], {read: false})
-    .pipe(tap(function (file) {
-      gutil.log('bundling ' + file.path);
+  return gulp.src(['**/*.bundle.js', '!asset/**'], {read: false})
+    .pipe(tap(function(file) {
       file.contents = browserify(file.path, {debug: true}).bundle();
+      gutil.log('build ' + file.path);
     }))
     .pipe(buffer())
     .pipe(uglify())
+    .pipe(gulp.dest('asset'));
+});
+
+gulp.task('jsMin', function () {
+  return gulp.src('asset/**.js')
+    .pipe(uglify())
+    .pipe(tap(function(file) {
+      gutil.log('minify ' + file.path);
+    }))
     .pipe(gulp.dest('asset'));
 });
 
@@ -87,12 +105,7 @@ gulp.task('jsTidy', function () {
   // to google spec
 });
 
-gulp.task('jsMin', function () {
-  return gulp.src('asset/**.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('asset'));
-});
-
 gulp.task('watch', function () {
   gulp.watch('*.css', ['css']);
+  gulp.watch('*.js', ['js']);
 });
