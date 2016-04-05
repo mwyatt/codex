@@ -6,7 +6,7 @@
 
 <?php foreach ([1, 2, 3, 4, 5, 6] as $key): ?>
 	
-		<li><span class="link-primary js-dialogue-<?php echo $key ?>">Open</span></li>
+		<li><span class="link js-dialogue-<?php echo $key ?>">Open</span></li>
 
 <?php endforeach ?>
 

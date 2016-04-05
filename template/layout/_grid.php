@@ -2,7 +2,7 @@
 	<p>There is no grid system but just a method of creating columns easily.</p>
 	<p>Once I understand more about flexbox perhaps replace this?</p>
 </div>
-<div class="example-code">
+<div class="clearfix example-code">
 	<div class="cols">
 		<div class="col-six">6 Columns</div>
 		<div class="col-six">6 Columns</div>

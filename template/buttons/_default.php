@@ -3,5 +3,5 @@
 <div class="typography">
 	<p>Vanilla buttons can be used on all elements for a variety of implementations.</p>
 </div>
-<div class="example-code"><?php echo $code ?></div>
+<div class="clearfix example-code"><?php echo $code ?></div>
 <pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities($code) ?></code></pre>

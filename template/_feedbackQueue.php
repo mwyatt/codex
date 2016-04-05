@@ -6,7 +6,7 @@
 
 <?php foreach ([1, 2, 3] as $key): ?>
 	
-		<li><span class="link-primary js-feedback-queue-<?php echo $key ?>">Create <?php echo $key ?></span></li>
+		<li><span class="link js-feedback-queue-<?php echo $key ?>">Create <?php echo $key ?></span></li>
 
 <?php endforeach ?>
 
