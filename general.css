@@ -107,7 +107,9 @@
 }
 
 .container-primary {
-  padding: 5%;
+  padding: 5%;    max-width: 1024px;
+    margin: 0 auto;
+
   border-bottom: 1px solid #cccccc;
 }
 
@@ -198,4 +200,7 @@
 
 .menu-primary-item-link {
   padding: 5px 10px;
+}
+
+.container-primary {
 }

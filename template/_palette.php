@@ -1,7 +1,7 @@
 <div class="typography">
 	<p>The colour palette is as follows:</p>
 </div>
-<div class="color-palette-container">
+<div class="clearfix">
 
 <?php foreach (['primary', 'secondary 1', 'secondary 2'] as $group): ?>
 

@@ -1,5 +1,6 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
 var gulp = require('gulp');
+var glob = require('glob');
 var gulpSrc = gulp.src;
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
@@ -66,9 +67,14 @@ gulp.task('css', function () {
 });
 
 gulp.task('cssTidy', function () {
-  return gulp.src('button.css')
-    .pipe(postcss([postcssCsscomb(postcssOptions)]))
-    .pipe(gulp.dest('.'));
+  glob('*.css', function(err, files) {
+    var tasks = files.map(function(entry) {
+      return gulp.src(entry)
+        .pipe(postcss([postcssCsscomb(postcssOptions)]))
+        .pipe(gulp.dest('.'));
+    });
+    es.merge(tasks).on('end', done);
+  });
 });
 
 gulp.task('js', function(done) {

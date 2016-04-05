@@ -32,7 +32,7 @@
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
 			<div id="<?php echo $headingPrimary ?>" class="container-primary">
-				<h1 class="heading-primary"><?php echo $headingPrimary ?></h1>
+				<h1 class="heading-primary"><?php echo ucwords($headingPrimary) ?></h1>
 
 	<?php $pathCode = $this->getPathBase() . 'template/code/_' . $headingPrimary . '.html' ?>
 	<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
@@ -40,7 +40,7 @@
 	<?php foreach ($secondary as $headingSecondary): ?>
 
 				<div class="container-secondary">
-					<h2 class="heading-secondary"><?php echo $headingSecondary ?></h2>
+					<h2 class="heading-secondary"><?php echo ucwords($headingSecondary) ?></h2>
 
 		<?php $pathCode = $this->getPathBase() . 'template/code/' . $headingPrimary . '/_' . $headingSecondary . '.html' ?>
 		<?php $code = file_exists($pathCode) ? file_get_contents($pathCode) : null ?>
@@ -56,8 +56,8 @@
 
 		</div>
 	</div>
-	<script>var url;</script>
-	<script>var phpUrl = <?php echo json_encode($url) ?></script>
+	<input type="hidden" value="<?php echo json_encode($url) ?>" class="">
+	<script>var phpUrl = </script>
 
 <?php include $this->getPathTemplate('footer/_mst') ?>
 <?php include $this->getPathTemplate('footer/_js') ?>
