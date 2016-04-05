@@ -1,11 +1,11 @@
 
 @keyframes rotateFull {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .spinner {
@@ -14,10 +14,10 @@
   width: 26px;
   margin: 0 auto;
   position: relative;
-  border-left-color: #ccc;
-  border-right-color: #ccc;
-  border-bottom-color: #ccc;
-  border-top-color: #eee;
+  border-left-color: #cccccc;
+  border-right-color: #cccccc;
+  border-bottom-color: #cccccc;
+  border-top-color: #eeeeee;
   border-radius: 100%;
   border-width: 4px;
   border-style: solid;

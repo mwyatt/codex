@@ -5,7 +5,7 @@
 }
 
 .rainbow {
-  font-size: $font-size-body;
+  font-size: var(--font-size-body);
 }
 
 .site-heading {
@@ -48,68 +48,68 @@
 }
 
 .color-primary-0 {
-  background-color: $color-primary-0;
+  background-color: var(--color-primary-0);
 }
 
 .color-primary-1 {
-  background-color: $color-primary-1;
+  background-color: var(--color-primary-1);
 }
 
 .color-primary-2 {
-  background-color: $color-primary-2;
+  background-color: var(--color-primary-2);
 }
 
 .color-primary-3 {
-  background-color: $color-primary-3;
+  background-color: var(--color-primary-3);
 }
 .color-primary-4 {
-  background-color: $color-primary-4;
+  background-color: var(--color-primary-4);
 }
 
 .color-secondary-1-0 {
-  background-color: $color-secondary-1-0;
+  background-color: var(--color-secondary-1-0);
 }
 
 .color-secondary-1-1 {
-  background-color: $color-secondary-1-1;
+  background-color: var(--color-secondary-1-1);
 }
 
 .color-secondary-1-2 {
-  background-color: $color-secondary-1-2;
+  background-color: var(--color-secondary-1-2);
 }
 
 .color-secondary-1-3 {
-  background-color: $color-secondary-1-3;
+  background-color: var(--color-secondary-1-3);
 }
 
 .color-secondary-1-4 {
-  background-color: $color-secondary-1-4;
+  background-color: var(--color-secondary-1-4);
 }
 
 .color-secondary-2-0 {
-  background-color: $color-secondary-2-0;
+  background-color: var(--color-secondary-2-0);
 }
 
 .color-secondary-2-1 {
-  background-color: $color-secondary-2-1;
+  background-color: var(--color-secondary-2-1);
 }
 
 .color-secondary-2-2 {
-  background-color: $color-secondary-2-2;
+  background-color: var(--color-secondary-2-2);
 }
 
 .color-secondary-2-3 {
-  background-color: $color-secondary-2-3;
+  background-color: var(--color-secondary-2-3);
 }
 
 .color-secondary-2-4 {
-  background-color: $color-secondary-2-4;
+  background-color: var(--color-secondary-2-4);
 }
 
 .container-primary {
-  padding: 5%;    max-width: 1024px;
-    margin: 0 auto;
-
+  padding: 5%;
+  max-width: 1024px;
+  margin: 0 auto;
   border-bottom: 1px solid #cccccc;
 }
 
@@ -200,7 +200,4 @@
 
 .menu-primary-item-link {
   padding: 5px 10px;
-}
-
-.container-primary {
 }

@@ -1,25 +1,24 @@
 @import "_settings.css";
-$font-size: 14;
 @import "_dependencies.css";
 
 .color-primary {
-	color: $color-primary-0;
+	color: var(--color-primary-0);
 }
 
 .color-secondary {
-	color: $color-secondary-1-0;
+	color: var(--color-secondary-1-0);
 }
 
 .color-tertiary {
-	color: $color-secondary-2-0;
+	color: var(--color-secondary-2-0);
 }
 
 .color-gray-30 {
-	color: $color-secondary-1-0;
+	color: var(--color-secondary-1-0);
 }
 
 .color-text {
-	color: $color-secondary-1-0;
+	color: var(--color-secondary-1-0);
 }
 
 .no-spacing {
@@ -27,10 +26,10 @@ $font-size: 14;
 }
 
 .padding {
-	padding-top: $font-size + px;
-	padding-right: $font-size + px;
-	padding-bottom: $font-size + px;
-	padding-left: $font-size + px;
+	padding-top: var(--font-size) + px;
+	padding-right: var(--font-size) + px;
+	padding-bottom: var(--font-size) + px;
+	padding-left: var(--font-size) + px;
 }
 
 .footer-p {
@@ -49,56 +48,56 @@ $font-size: 14;
 
 .h1 {
 	/*@include email-heading;*/
-	font-size: $font-size * 2px;
+	font-size: var(--font-size) * 2px;
 }
 
 .h2 {
 	/*@include email-heading;*/
-	font-size: $font-size * 1.5px;
+	font-size: var(--font-size) * 1.5px;
 }
 
 .h3 {
 	/*@include email-heading;*/
-	font-size: $font-size * 1.17px;
+	font-size: var(--font-size) * 1.17px;
 }
 
 .h4 {
 	/*@include email-heading;*/
-	font-size: $font-size * 1px;
+	font-size: var(--font-size) * 1px;
 }
 
 .h5 {
 	/*@include email-heading;*/
-	font-size: $font-size * .83px;
+	font-size: var(--font-size) * .83px;
 }
 
 .h6 {
 	/*@include email-heading;*/
-	font-size: $font-size * .75px;
+	font-size: var(--font-size) * .75px;
 }
 
 .p {
 	/*@include email-typography;*/
-	margin-top: $font-size + px;
+	margin-top: var(--font-size) + px;
 	margin-right: 0;
-	margin-bottom: $font-size + px;
+	margin-bottom: var(--font-size) + px;
 	margin-left: 0;
 }
 
 .ul {
 	/*@include email-typography;*/
-	margin-top: $font-size + px;
+	margin-top: var(--font-size) + px;
 	margin-right: 0;
-	margin-bottom: $font-size + px;
+	margin-bottom: var(--font-size) + px;
 	margin-left: 0;
-	padding-left: $font-size * 3px;
+	padding-left: var(--font-size) * 3px;
 }
 
 .li {
 	/*@include email-typography;*/
-	margin-top: $font-size * .5px;
+	margin-top: var(--font-size) * .5px;
 	margin-right: 0;
-	margin-bottom: $font-size * .5px;
+	margin-bottom: var(--font-size) * .5px;
 	margin-left: 0;
 }
 
@@ -114,8 +113,8 @@ $font-size: 14;
 
 .table-spaced {
 	/*@include email-table;*/
-	margin-top: $font-size + px;
-	margin-bottom: $font-size + px;
+	margin-top: var(--font-size) + px;
+	margin-bottom: var(--font-size) + px;
 }
 
 .td {
@@ -146,9 +145,9 @@ $font-size: 14;
 }
 
 .message {
-	background-color: $color-secondary-1-0;
-	padding: $font-size + px;
-	border: 1px solid $color-secondary-1-0;
+	background-color: var(--color-secondary-1-0);
+	padding: var(--font-size) + px;
+	border: 1px solid var(--color-secondary-1-0);
 	display: block;
 }
 

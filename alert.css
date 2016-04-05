@@ -2,10 +2,9 @@
   line-height: 1.5;
   margin: 1em 0;
   padding: 1em;
-  color: $color-body;
-  border: 1px solid color($color-body tint(50%));
-  border-radius: $border-radius;
-  background-color: color($color-body tint(80%));
+  color: var(--color-body);
+  border: 1px solid color(var(--color-body) tint(50%));
+  background-color: color(var(--color-body) tint(80%));
 }
 
 .alert *:first-child {
@@ -17,15 +16,15 @@
 }
 
 .alert.fail {
-  color: $color-secondary-2-0;
-  border-color: color($color-secondary-2-0 tint(50%));
-  background-color: color($color-secondary-2-0 tint(80%));
+  color: var(--color-secondary-2-0);
+  border-color: color(var(--color-secondary-2-0) tint(50%));
+  background-color: color(var(--color-secondary-2-0) tint(80%));
 }
 
 .alert.success {
-  color: color($color-primary-0 shade(20%));
-  border-color: color($color-primary-0 tint(50%));
-  background-color: color($color-primary-0 tint(80%));
+  color: color(var(--color-primary-0) shade(20%));
+  border-color: color(var(--color-primary-0) tint(50%));
+  background-color: color(var(--color-primary-0) tint(80%));
 }
 
 .alert p {

@@ -13,7 +13,7 @@
 
 .feedback-queue-single {
   transition: all 200ms;
-animation-duration: $animation-duration;
+  animation-duration: 200ms;
   animation-fill-mode: forwards;
   animation-name: fadeInTop;
   background-color: white;
@@ -22,17 +22,17 @@ animation-duration: $animation-duration;
   border-radius: 5px;
   cursor: pointer;
   margin: 1em 0;
-  background-color: #666;
+  background-color: #666666;
 }
 
 .feedback-queue-single:hover {
-  opacity: .8;
-  background-color: color(#666 tint(2%));
+  opacity: 0.8;
+  background-color: color(#666666 tint(2%));
 }
 
 .feedback-queue-single:active {
   transform: scale(0.8);
-  background-color: color(#666 shade(2%));
+  background-color: color(#666666 shade(2%));
 }
 
 .feedback-queue-single.is-removed {
@@ -41,7 +41,7 @@ animation-duration: $animation-duration;
 
 .feedback-queue-single-cross {
   font-size: 1.6em;
-  line-height: .5;
+  line-height: 0.5;
   width: 44px;
   height: 44px;
   padding: 15px;
@@ -52,25 +52,25 @@ animation-duration: $animation-duration;
 }
 
 .feedback-queue-single.is-success {
-  background-color: $color-primary-0;
+  background-color: var(--color-primary-0);
 }
 
 .feedback-queue-single.is-success:hover {
-  background-color: color($color-primary-0 tint(2%));
+  background-color: color(var(--color-primary-0) tint(2%));
 }
 
 .feedback-queue-single.is-success:active {
-  background-color: color($color-primary-0 shade(2%));
+  background-color: color(var(--color-primary-0) shade(2%));
 }
 
 .feedback-queue-single.is-fail {
-  background-color: $color-primary-1;
+  background-color: var(--color-primary-1);
 }
 
 .feedback-queue-single.is-fail:hover {
-  background-color: color($color-primary-1 tint(2%));
+  background-color: color(var(--color-primary-1) tint(2%));
 }
 
 .feedback-queue-single.is-fail:active {
-  background-color: color($color-primary-1 shade(2%));
+  background-color: color(var(--color-primary-1) shade(2%));
 }

@@ -18,15 +18,16 @@
     "browserify": "11.2.0",
     "es6-promise": "^3.0.2",
     "gulp": "3.9.0",
+    "gulp-cssmin": "^0.1.7",
     "gulp-plumber": "^1.0.2",
     "gulp-postcss": "^6.1.0",
     "gulp-util": "~3.0.7",
     "postcss-color-function": "^2.0.0",
     "postcss-conditionals": "^2.0.1",
     "postcss-csscomb": "0.0.0",
+    "postcss-custom-properties": "^5.0.0",
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^7.0.0",
-    "postcss-simple-vars": "^1.0.1",
     "vinyl-source-stream": "1.1.0"
   }
 }

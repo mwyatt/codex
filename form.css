@@ -14,56 +14,56 @@
 
 .form-textarea,
 .form textarea,
-.form input[type="url"],
-.form input[type="email"],
-.form input[type="tel"],
-.form input[type="password"],
-.form input[type="text"],
+.form input[type='url'],
+.form input[type='email'],
+.form input[type='tel'],
+.form input[type='password'],
+.form input[type='text'],
 .form-input {
   font-size: 1em;
   box-sizing: border-box;
   appearance: none;
-  color: $color-body;
-  font-family: $font-family-body;
-  border: 1px solid $color-secondary-1-0;
+  color: var(--color-body);
+  font-family: var(--font-family-body);
+  border: 1px solid var(--color-secondary-1-0);
   padding: 5px;
   margin: 0;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
 }
 
 .form-textarea:focus,
 .form textarea:focus,
-.form input[type="url"]:focus,
-.form input[type="email"]:focus,
-.form input[type="tel"]:focus,
-.form input[type="password"]:focus,
-.form input[type="text"]:focus,
+.form input[type='url']:focus,
+.form input[type='email']:focus,
+.form input[type='tel']:focus,
+.form input[type='password']:focus,
+.form input[type='text']:focus,
 .form-input:focus {
-  box-shadow: 0 0 3px rgba(#000, .2);
-  border-color: $color-secondary-1-0;
-  color: $color-body;
+  box-shadow: 0 0 3px rgba(#000000, 0.2);
+  border-color: var(--color-secondary-1-0);
+  color: var(--color-body);
 }
 
-.form label > input[type="checkbox"],
-.form label > input[type="radio"] {
+.form label > input[type='checkbox'],
+.form label > input[type='radio'] {
   margin-right: 10px;
 }
 
 .form-select {
   font-size: 1em;
   box-sizing: border-box;
-  color: $color-body;
-  font-family: $font-family-body;
-  border: 1px solid $color-secondary-1-0;
+  color: var(--color-body);
+  font-family: var(--font-family-body);
+  border: 1px solid var(--color-secondary-1-0);
   padding: 1px 2px;
   margin: 0;
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
 }
 
 .form-select:focus {
-  box-shadow: 0 0 3px rgba(#000, .2);
-  border-color: $color-secondary-1-0;
-  color: $color-body;
+  box-shadow: 0 0 3px rgba(#000000, 0.2);
+  border-color: var(--color-secondary-1-0);
+  color: var(--color-body);
 }
 
 .form-action .left {

@@ -1,28 +1,16 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
 var gulp = require('gulp');
-var glob = require('glob');
 var gulpSrc = gulp.src;
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
-var postcss = require('gulp-postcss');
-var postcssImport = require('postcss-import');
-var postcssSimpleVars = require('postcss-simple-vars');
-var postcssCsscomb = require('postcss-csscomb');
-var postcssColorFunction = require('postcss-color-function');
-var postcssHexrgba = require('postcss-hexrgba');
-var postcssConditionals = require('postcss-conditionals');
+var cssmin = require('gulp-cssmin');
 var autoprefixer = require('autoprefixer');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var processes = [
-  postcssImport,
-  postcssSimpleVars,
-  postcssConditionals,
-  postcssHexrgba(),
-  postcssColorFunction(),
-  autoprefixer({browsers: ['last 1 version']})
-];
-var postcssOptions = {
+var postcss = require('gulp-postcss');
+var postcssImport = require('postcss-import');
+var postcssCsscomb = require('postcss-csscomb');
+var postcssCombOptions = {
   "remove-empty-rulesets": true,
   "always-semicolon": true,
   "color-case": "lower",
@@ -48,33 +36,35 @@ var postcssOptions = {
   "unitless-zero": true,
   "vendor-prefix-align": true
 };
+var postcssColorFunction = require('postcss-color-function');
+var postcssHexrgba = require('postcss-hexrgba');
+var postcssConditionals = require('postcss-conditionals');
+var postcssCustomProperties = require('postcss-custom-properties');
+var postcssProcesses = [
+  postcssImport,
+  postcssCustomProperties(),
+  postcssConditionals,
+  postcssHexrgba(),
+  postcssColorFunction(),
+  autoprefixer({browsers: ['last 1 version']})
+];
  
-// gulp.src = function() {
-//   return gulpSrc.apply(gulp, arguments)
-//     .pipe(plumber(function(error) {
-//       // Output an error message
-//       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
-//       // emit the end event, to properly end the task
-//       this.emit('end');
-//     })
-//   );
-// };
-
 gulp.task('css', function () {
   return gulp.src('common.css')
-    .pipe(postcss(processes))
+    .pipe(postcss(postcssProcesses))
     .pipe(gulp.dest('asset'));
 });
 
-gulp.task('cssTidy', function () {
-  glob('*.css', function(err, files) {
-    var tasks = files.map(function(entry) {
-      return gulp.src(entry)
-        .pipe(postcss([postcssCsscomb(postcssOptions)]))
-        .pipe(gulp.dest('.'));
-    });
-    es.merge(tasks).on('end', done);
-  });
+gulp.task('cssMin', function () {
+  return gulp.src('asset/**.css')
+    .pipe(cssmin())
+    .pipe(gulp.dest('asset'));
+});
+
+gulp.task('cssTidy', function(done) {
+  return gulp.src(['*.css'])
+    .pipe(postcss([postcssCsscomb(postcssCombOptions)]))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('js', function(done) {
@@ -85,6 +75,24 @@ gulp.task('js', function(done) {
     .pipe(gulp.dest('asset'));
 });
 
+gulp.task('jsMin', function () {
+  return gulp.src('asset/**.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('asset'));
+});
+
 gulp.task('watch', function () {
   gulp.watch('*.css', ['css']);
 });
+
+
+// gulp.src = function() {
+//   return gulpSrc.apply(gulp, arguments)
+//     .pipe(plumber(function(error) {
+//       // Output an error message
+//       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
+//       // emit the end event, to properly end the task
+//       this.emit('end');
+//     })
+//   );
+// };

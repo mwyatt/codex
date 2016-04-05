@@ -26,9 +26,9 @@
 .typography h5,
 .h6,
 .typography h6 {
-  color: $color-heading;
-  font-family: $font-family-heading;
-  font-weight: $font-weight-heading;
+  color: var(--color-heading);
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-heading);
   margin: 1em 0 0.5em;
   line-height: 1;
 }
@@ -62,22 +62,22 @@
 
 .h5,
 .typography h5 {
-  font-size: .83em;
+  font-size: 0.83em;
 }
 
 .h6,
 .typography h6 {
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
 .typography p {
   margin: 1em 0;
-  line-height: $font-line-height-common;
+  line-height: var(--font-line-height-common);
 }
 
 .typography p.lead {
   font-size: 20px;
-  color: color($color-body tint(20%));
+  color: color(var(--color-body) tint(20%));
 }
 
 .typography ul {
@@ -102,8 +102,8 @@
 }
 
 .typography mark {
-  background-color: $color-primary-0;
-  color: #fff;
+  background-color: var(--color-primary-0);
+  color: #ffffff;
 }
 
 .text-left {
@@ -123,18 +123,18 @@
 }
 
 .text-size-smaller {
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .p,
 .unordered-list,
 .ordered-list {
   margin: 1em 0;
-  line-height: $font-line-height-common;
+  line-height: var(--font-line-height-common);
 }
 
 .blockquote {
-  border-left: 2px solid color($color-body tint(50%));
+  border-left: 2px solid color(var(--color-body) tint(50%));
   padding: 1em 1em 1em 1.5em;
   margin: 0;
 }
