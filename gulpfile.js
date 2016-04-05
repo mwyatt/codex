@@ -6,7 +6,6 @@ var gutil = require('gulp-util');
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import');
 var postcssSimpleVars = require('postcss-simple-vars');
-var postcssMixins = require('postcss-mixins');
 var postcssCsscomb = require('postcss-csscomb');
 var postcssColorFunction = require('postcss-color-function');
 var postcssHexrgba = require('postcss-hexrgba');
@@ -16,24 +15,49 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var processes = [
   postcssImport,
-  postcssMixins,
   postcssSimpleVars,
   postcssConditionals,
   postcssHexrgba(),
   postcssColorFunction(),
   autoprefixer({browsers: ['last 1 version']})
 ];
- 
-gulp.src = function() {
-  return gulpSrc.apply(gulp, arguments)
-    .pipe(plumber(function(error) {
-      // Output an error message
-      gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
-      // emit the end event, to properly end the task
-      this.emit('end');
-    })
-  );
+var postcssOptions = {
+  "remove-empty-rulesets": true,
+  "always-semicolon": true,
+  "color-case": "lower",
+  "block-indent": "  ",
+  "color-shorthand": false,
+  "element-case": "lower",
+  "eof-newline": true,
+  "leading-zero": true,
+  "quotes": "single",
+  "sort-order-fallback": "abc",
+  "space-before-colon": "",
+  "space-after-colon": " ",
+  "space-before-combinator": " ",
+  "space-after-combinator": " ",
+  "space-between-declarations": "\n",
+  "space-before-opening-brace": " ",
+  "space-after-opening-brace": "\n",
+  "space-after-selector-delimiter": "\n",
+  "space-before-selector-delimiter": "",
+  "space-before-closing-brace": "\n",
+  "strip-spaces": true,
+  "tab-size": 1,
+  "unitless-zero": true,
+  "vendor-prefix-align": true
 };
+ 
+// gulp.src = function() {
+//   return gulpSrc.apply(gulp, arguments)
+//     .pipe(plumber(function(error) {
+//       // Output an error message
+//       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
+//       // emit the end event, to properly end the task
+//       this.emit('end');
+//     })
+//   );
+// };
 
 gulp.task('css', function () {
   return gulp.src('common.css')
@@ -42,34 +66,9 @@ gulp.task('css', function () {
 });
 
 gulp.task('cssTidy', function () {
-  return gulp.src('common.css')
-    .pipe(postcss([csscomb([
-      "remove-empty-rulesets": true,
-      "always-semicolon": true,
-      "color-case": "lower",
-      "block-indent": "  ",
-      "color-shorthand": false,
-      "element-case": "lower",
-      "eof-newline": true,
-      "leading-zero": true,
-      "quotes": "single",
-      "sort-order-fallback": "abc",
-      "space-before-colon": "",
-      "space-after-colon": " ",
-      "space-before-combinator": " ",
-      "space-after-combinator": " ",
-      "space-between-declarations": "\n",
-      "space-before-opening-brace": " ",
-      "space-after-opening-brace": "\n",
-      "space-after-selector-delimiter": "\n",
-      "space-before-selector-delimiter": "",
-      "space-before-closing-brace": "\n",
-      "strip-spaces": true,
-      "tab-size": true,
-      "unitless-zero": true,
-      "vendor-prefix-align": true
-    ])]))
-    .pipe(gulp.dest());
+  return gulp.src('button.css')
+    .pipe(postcss([postcssCsscomb(postcssOptions)]))
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('js', function(done) {
@@ -80,4 +79,6 @@ gulp.task('js', function(done) {
     .pipe(gulp.dest('asset'));
 });
 
-
+gulp.task('watch', function () {
+  gulp.watch('*.css', ['css']);
+});

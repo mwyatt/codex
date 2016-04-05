@@ -1,35 +1,52 @@
-$selector: .form label;
-@mixin form-label $selector;
-@mixin form-input .form-input;
-@mixin form-input .form-input;
+.form-label,
+.form label {
+  font-weight: 600;
+  margin-right: 1em;
+  line-height: 1.8;
+}
+
+.form-label,
+.form label.block {
+  margin-bottom: 6px;
+  margin-right: 0;
+  line-height: 1.5;
+}
+
+.form-textarea,
+.form textarea,
+.form input[type="url"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="password"],
+.form input[type="text"],
+.form-input {
+  font-size: 1em;
+  box-sizing: border-box;
+  appearance: none;
+  color: $color-body;
+  font-family: $font-family-body;
+  border: 1px solid $color-secondary-1-0;
+  padding: 5px;
+  margin: 0;
+  border-radius: $border-radius;
+}
+
+.form-textarea:focus,
+.form textarea:focus,
+.form input[type="url"]:focus,
+.form input[type="email"]:focus,
+.form input[type="tel"]:focus,
+.form input[type="password"]:focus,
+.form input[type="text"]:focus,
+.form-input:focus {
+  box-shadow: 0 0 3px rgba(#000, .2);
+  border-color: $color-secondary-1-0;
+  color: $color-body;
+}
 
 .form label > input[type="checkbox"],
 .form label > input[type="radio"] {
   margin-right: 10px;
-}
-
-$selector: .form input[type="url"];
-@mixin form-input $selector;
-$selector: .form input[type="email"];
-@mixin form-input $selector;
-$selector: .form input[type="tel"];
-@mixin form-input $selector;
-$selector: .form input[type="password"];
-@mixin form-input $selector;
-$selector: .form input[type="text"];
-@mixin form-input $selector;
-
-$selector: .form button[type="submit"];
-@mixin button $selector, #fff, $color-primary-0;
-
-$selector: .form textarea;
-@mixin form-input $selector;
-
-@mixin form-label .form-label;
-@mixin form-input .form-textarea;
-
-@media only screen and (min-width: 200px) {
-  color: red;
 }
 
 .form-select {
@@ -48,8 +65,6 @@ $selector: .form textarea;
   border-color: $color-secondary-1-0;
   color: $color-body;
 }
-
-@mixin clearfix .form-action;
 
 .form-action .left {
   margin-right: 1em;

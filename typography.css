@@ -1,20 +1,3 @@
-@mixin link .a, $color-primary-0;
-@mixin link .link, $color-primary-0;
-@mixin link .link-primary, $color-primary-0;
-@mixin link .link-secondary, $color-secondary-1-0;
-
-$selector: .typography a;
-@mixin link $selector, $color-primary-0;
-$selector {
-  line-height: $font-line-height-common;
-  word-break: break-all;
-}
-$(selector):hover,
-$(selector):focus { 
-  color: $color-link-hover;
-  border-bottom-color: $color-link-hover;
-}
-
 .typography *:focus {
   outline: none;
 }
@@ -29,30 +12,62 @@ $(selector):focus {
   font-weight: 700;
 }
 
-.typography h1 {
-  @mixin typography-heading 2em;
-}
-
-.typography h2 {
-  @mixin typography-heading 1.5em;
-}
-
-.typography h3 {
-  @mixin typography-heading 1.17em;
-}
-
+.h1,
+.typography h1,
+.h2,
+.typography h2,
+.h3,
 .typography h3,
+.h3,
+.typography h3,
+.h4,
+.typography h4,
+.h5,
+.typography h5,
+.h6,
+.typography h6 {
+  color: $color-heading;
+  font-family: $font-family-heading;
+  font-weight: $font-weight-heading;
+  margin: 1em 0 0.5em;
+  line-height: 1;
+}
+
+.h1,
+.typography h1 {
+  font-size: 2em;
+}
+
+.h2,
+.typography h2 {
+  font-size: 1.5em;
+}
+
+.h3,
+.typography h3 {
+  font-size: 1.17em;
+}
+
+.h3,
+.typography h3,
+.h4,
 .typography h4 {
-  @mixin typography-heading 1em;
   line-height: 1.3;
 }
 
-.typography h5 {
-  @mixin typography-heading .83em;
+.h4,
+.typography h4 {
+  font-size: 1em;
 }
 
+.h5,
+.typography h5 {
+  font-size: .83em;
+}
+
+.h6,
 .typography h6 {
-  @mixin typography-heading .75em;
+  font-size: .75em;
 }
 
 .typography p {
@@ -91,16 +106,6 @@ $(selector):focus {
   color: #fff;
 }
 
-.page-primary-title {
-  @mixin typography-heading 2em;
-  margin-top: 0;
-}
-
-.page-primary-description {
-  margin: 1em 0;
-  line-height: $font-line-height-common;
-}
-
 .text-left {
   text-align: left;
 }
@@ -119,32 +124,6 @@ $(selector):focus {
 
 .text-size-smaller {
   font-size: .8em;
-}
-
-.h1 {
-  @mixin typography-heading 2em;
-}
-
-.h2 {
-  @mixin typography-heading 1.5em;
-}
-
-.h3 {
-  @mixin typography-heading 1.17em;
-}
-
-.h3,
-.h4 {
-  @mixin typography-heading 1em;
-  line-height: 1.3;
-}
-
-.h5 {
-  @mixin typography-heading .83em;
-}
-
-.h6 {
-  @mixin typography-heading .75em;
 }
 
 .p,

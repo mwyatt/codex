@@ -1,3 +1,13 @@
+
+@keyframes rotateFull {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
 .spinner {
   animation: rotateFull 0.5s infinite linear;
   height: 26px;

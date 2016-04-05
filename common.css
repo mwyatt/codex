@@ -1,189 +1,20 @@
-@charset "utf-8";
+@charset 'utf-8';
 
 /* things which dont input any code*/
-@import "settings.css";
-@import "mixin.css";
+@import 'settings.css';
 
 /* things which insert code */
-@import "reset.css";
-@import "reusable.css";
-@import "keyframe.css";
-@import "form.css";
-@import "typography.css";
-@import "alert.css";
-@import "spinner.css";
+@import 'reset.css';
+@import 'reusable.css';
+@import 'keyframe.css';
+@import 'form.css';
+@import 'typography.css';
+@import 'spinner.css';
 
-/* extras */
-@import "feedback-queue.css";
-
-@mixin clearfix .container;
-@mixin clearfix .example-code;
-@mixin clearfix .color-palette-container;
-
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 2em;
-}
-
-.content-container {
-}
-
-.menu-container {}
-
-.rainbow-pre {
-}
-
-.rainbow {
-  font-size: $font-size-body;
-}
-
-.site-heading {
-  font-size: 18px;
-  color: rgba(0,0,0,0.4);
-  background-color: rgba(0,0,0,0.03);
-  padding: 14px 18px;
-  text-align: center;
-}
-
-.heading-primary {
-  @mixin typography-heading 2em;
-}
-
-.heading-secondary {
-  @mixin typography-heading 1.5em;
-}
-
-.example-code + .rainbow-pre {
-  margin-top: 0;
-  border-radius: 0 0 3px 3px;
-}
-
-.example-code {
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  border-radius: 3px 3px 0 0;
-  background-color: #fff;
-}
-
-.color-palette-heading {
-  @mixin typography-heading 1.17em;
-}
-
-.color-palette-color {
-  padding: 10px;
-  margin-top: 12px;
-  color: #fff;
-}
-
-.color-primary-0 { background-color: $color-primary-0; }
-.color-primary-1 { background-color: $color-primary-1; }
-.color-primary-2 { background-color: $color-primary-2; }
-.color-primary-3 { background-color: $color-primary-3; }
-.color-primary-4 { background-color: $color-primary-4; }
-.color-secondary-1-0 { background-color: $color-secondary-1-0; }
-.color-secondary-1-1 { background-color: $color-secondary-1-1; }
-.color-secondary-1-2 { background-color: $color-secondary-1-2; }
-.color-secondary-1-3 { background-color: $color-secondary-1-3; }
-.color-secondary-1-4 { background-color: $color-secondary-1-4; }
-.color-secondary-2-0 { background-color: $color-secondary-2-0; }
-.color-secondary-2-1 { background-color: $color-secondary-2-1; }
-.color-secondary-2-2 { background-color: $color-secondary-2-2; }
-.color-secondary-2-3 { background-color: $color-secondary-2-3; }
-.color-secondary-2-4 { background-color: $color-secondary-2-4; }
-
-.container-primary {
-    padding: 5%;
-    border-bottom: 1px solid #ccc;
-}
-
-.color-palette-column {
-    float: left;
-    width: 33.333%;
-    padding-left: 20px;
-}.color-palette-column {}
-
-.color-palette-column:first-child {
-    padding-left: 0;
-}
-.rainbow-pre {
-  padding: 1em;
-    border: 1px dashed #ccc;
-    color: rgba(0, 0, 0, 0.75);
-    transition: color 200ms;
-}
-
-.container-primary > h1 {
-    margin-top: 0;
-}
-
-.menu-hamburger {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 52px;
-    height: 52px;
-    padding: 14px;
-    fill: #A0A0A0;
-        background-color: #ccc;
-}
-
-.menu-hamburger svg {
-    width: 100%;
-    height: 100%;
-}
-
-.menu-container:hover .menu-hamburger {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.menu-primary {
-    position: absolute;
-    top: 52px;
-    left: -200px;
-    width: 200px;
-    background-color: #eee;
-    padding: 10px 0;
-    transition: left 200ms ease;
-}
-
-.menu-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.menu-primary-item {}
-
-.menu-primary-item-link {
-    display: block;
-    padding: 10px 16px;
-    color: #666;
-}
-
-.menu-primary-item-link:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.menu-container:hover .menu-primary {
-    left: 0;
-}
-.site-heading-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.site-heading-container:hover .site-heading {
-    background-color: #eee;
-}
-
-.site-heading {
-    transition: background 200ms ease;
-}
-
-.menu-primary-item-link {
-    padding: 5px 10px;
-}
+/* site specific */
+/* can be used to refer to as boilerplate solutions */
+@import 'feedback-queue.css';
+@import 'alert.css';
+@import 'button.css';
+@import 'link.css';
+@import 'general.css';

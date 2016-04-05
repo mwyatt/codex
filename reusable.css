@@ -1,10 +1,3 @@
-@mixin clearfix .example-code;
-@mixin clearfix .block-clear;
-@mixin button .button, #fff, $color-primary-0;
-@mixin button .button-primary, #fff, $color-primary-0;
-@mixin button .button-secondary, #fff, $color-secondary-1-0;
-@mixin table .table;
-
 .block {
   display: block;
 }
@@ -73,6 +66,10 @@
   margin: 1em;
 }
 
+.mt0 {
+  margin-top: 0;
+}
+
 .mt1 {
   margin-top: 1em;
 }
@@ -123,14 +120,27 @@
   font-size: 125%;
 }
 
-.ajax-loading-indicator {
-  animation: rotateFull .6s infinite linear;
-  border-style: solid;
-  border-width: 4px;
-  border-color: rgba(#000, 0.15);
-  border-top-color: rgba(#000, .3);
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  margin: 0 auto;
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.table {
+  width: 100%;
+}
+
+.table th {
+  font-weight: 600;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: .5em;
+  border: 1px solid $color-secondary-1-0;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
 }

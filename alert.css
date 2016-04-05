@@ -1,41 +1,33 @@
-.alert
-{
-    line-height: 1.5;
-
-    margin: 1em 0;
-    padding: 1em;
-
-    color: $color-body;
-    border: 1px solid color($color-body tint(50%));
-    border-radius: $border-radius;
-    background-color: color($color-body tint(80%));
+.alert {
+  line-height: 1.5;
+  margin: 1em 0;
+  padding: 1em;
+  color: $color-body;
+  border: 1px solid color($color-body tint(50%));
+  border-radius: $border-radius;
+  background-color: color($color-body tint(80%));
 }
 
-.alert *:first-child
-{
-    margin-top: 0;
+.alert *:first-child {
+  margin-top: 0;
 }
 
-.alert *:last-child
-{
-    margin-bottom: 0;
+.alert *:last-child {
+  margin-bottom: 0;
 }
 
-.alert.fail
-{
-    color: $color-secondary-2-0;
-    border-color: color($color-secondary-2-0 tint(50%));
-    background-color: color($color-secondary-2-0 tint(80%));
+.alert.fail {
+  color: $color-secondary-2-0;
+  border-color: color($color-secondary-2-0 tint(50%));
+  background-color: color($color-secondary-2-0 tint(80%));
 }
 
-.alert.success
-{
-    color: color($color-primary-0 shade(20%));
-    border-color: color($color-primary-0 tint(50%));
-    background-color: color($color-primary-0 tint(80%));
+.alert.success {
+  color: color($color-primary-0 shade(20%));
+  border-color: color($color-primary-0 tint(50%));
+  background-color: color($color-primary-0 tint(80%));
 }
 
-.alert p
-{
-    margin: 1em 0;
+.alert p {
+  margin: 1em 0;
 }
