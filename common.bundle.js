@@ -1,9 +1,9 @@
 $ = require('jquery');
-require('test/utility/testUrl');
-var feedbackQueueFactory = require('feedbackQueue');
-var carouselFactory = require('carousel');
-var spinnerFactory = require('spinner');
-var url = require('utility/url');
+require('./test/utility/testUrl');
+var feedbackQueueFactory = require('./feedbackQueue');
+var carouselFactory = require('./carousel');
+var spinnerFactory = require('./spinner');
+var url = require('./utility/url');
 var spinner1 = new spinnerFactory();
 
 $('.rainbow-pre').on('click', function() {

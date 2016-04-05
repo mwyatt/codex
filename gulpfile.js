@@ -1,10 +1,14 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
 var gulp = require('gulp');
 var gulpSrc = gulp.src;
+var buffer = require('gulp-buffer');
 var plumber = require('gulp-plumber');
+var tap = require('gulp-tap');
 var gutil = require('gulp-util');
+var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var autoprefixer = require('autoprefixer');
+var sourcemaps = require('gulp-sourcemaps');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var postcss = require('gulp-postcss');
@@ -62,17 +66,25 @@ gulp.task('cssMin', function () {
 });
 
 gulp.task('cssTidy', function(done) {
-  return gulp.src(['*.css'])
+  return gulp.src('*.css')
     .pipe(postcss([postcssCsscomb(postcssCombOptions)]))
     .pipe(gulp.dest('.'));
 });
 
 gulp.task('js', function(done) {
-  return browserify({paths: '.'})
-    .add('common.js')
-    .bundle()
-    .pipe(source('common.js'))
+  return gulp.src(['**/*.bundle.js', '!asset/*'], {read: false})
+    .pipe(tap(function (file) {
+      gutil.log('bundling ' + file.path);
+      file.contents = browserify(file.path, {debug: true}).bundle();
+    }))
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('asset'));
+});
+
+gulp.task('jsTidy', function () {
+
+  // to google spec
 });
 
 gulp.task('jsMin', function () {
@@ -84,15 +96,3 @@ gulp.task('jsMin', function () {
 gulp.task('watch', function () {
   gulp.watch('*.css', ['css']);
 });
-
-
-// gulp.src = function() {
-//   return gulpSrc.apply(gulp, arguments)
-//     .pipe(plumber(function(error) {
-//       // Output an error message
-//       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
-//       // emit the end event, to properly end the task
-//       this.emit('end');
-//     })
-//   );
-// };
