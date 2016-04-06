@@ -1,4 +1,4 @@
-<?php $codeJs = file_get_contents($this->getPathBase() . 'spinner.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'js/spinner.js') ?>
 <?php $codeHtml = file_get_contents($this->getPathBase() . 'template/code/_spinner.html') ?>
 
 <div class="typography">
@@ -11,4 +11,4 @@
     <div class="spinner"></div>
 </div>
 <pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($codeHtml) ?></code></pre>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($codeJs) ?></code></pre>
+<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>

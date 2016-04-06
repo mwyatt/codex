@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPathBase() . 'carousel.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'js/carousel.js') ?>
 
 <div class="typography">
 	<p>Still under development. Currently using   <a href="http://www.owlcarousel.owlgraphic.com/" target="_blank">Owl Carousel 2</a>.</p>

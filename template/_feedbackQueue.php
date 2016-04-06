@@ -1,4 +1,4 @@
-<?php $code = file_get_contents($this->getPathBase() . 'feedbackQueue.js') ?>
+<?php $code = file_get_contents($this->getPathBase() . 'js/feedbackQueue.js') ?>
 
 <div class="typography">
 	<p>Presents the user with a feedback bar briefly which explains a recent action.</p>
