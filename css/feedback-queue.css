@@ -12,8 +12,8 @@
 }
 
 .feedback-queue-single {
-  transition: all 200ms;
-  animation-duration: 200ms;
+  transition: all var(--animation-duration);
+  animation-duration: var(--animation-duration);
   animation-fill-mode: forwards;
   animation-name: fadeInTop;
   background-color: white;

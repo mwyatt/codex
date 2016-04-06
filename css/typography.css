@@ -26,7 +26,7 @@
 .typography h5,
 .h6,
 .typography h6 {
-  color: var(--color-heading);
+  color: var(--heading-color);
   font-family: var(--font-family-heading);
   font-weight: var(--font-weight-heading);
   margin: 1em 0 0.5em;
@@ -72,12 +72,12 @@
 
 .typography p {
   margin: 1em 0;
-  line-height: var(--font-line-height-common);
+  line-height: var(--font-line-height);
 }
 
 .typography p.lead {
   font-size: 20px;
-  color: color(var(--color-body) tint(20%));
+  color: color(var(--body-color) tint(20%));
 }
 
 .typography ul {
@@ -130,11 +130,11 @@
 .unordered-list,
 .ordered-list {
   margin: 1em 0;
-  line-height: var(--font-line-height-common);
+  line-height: var(--font-line-height);
 }
 
 .blockquote {
-  border-left: 2px solid color(var(--color-body) tint(50%));
+  border-left: 2px solid color(var(--body-color) tint(50%));
   padding: 1em 1em 1em 1.5em;
   margin: 0;
 }

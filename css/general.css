@@ -5,7 +5,7 @@
 }
 
 .rainbow {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size);
 }
 
 .site-heading {
@@ -126,7 +126,7 @@
   padding: 1em;
   border: 1px dashed #cccccc;
   color: rgba(0, 0, 0, 0.75);
-  transition: color 200ms;
+  transition: color var(--animation-duration);
 }
 
 .container-primary > h1 {
@@ -160,7 +160,7 @@
   width: 200px;
   background-color: #eeeeee;
   padding: 10px 0;
-  transition: left 200ms ease;
+  transition: left var(--animation-duration) ease;
 }
 
 .menu-container {
@@ -195,7 +195,7 @@
 }
 
 .site-heading {
-  transition: background 200ms ease;
+  transition: background var(--animation-duration) ease;
 }
 
 .menu-primary-item-link {
