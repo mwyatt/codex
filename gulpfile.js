@@ -1,19 +1,20 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
+
 var isLocal = true;
+
 var gulp = require('gulp');
-var gulpConcat = require('gulp-concat');
-var gulpSrc = gulp.src;
-var buffer = require('gulp-buffer');
-var plumber = require('gulp-plumber');
-var tap = require('gulp-tap');
 var gutil = require('gulp-util');
+var gulpConcat = require('gulp-concat');
+var tap = require('gulp-tap');
+var buffer = require('gulp-buffer');
+
+var browserify = require('browserify');
 var jscs = require('gulp-jscs');
 var uglify = require('gulp-uglify');
+
 var cssmin = require('gulp-cssmin');
 var autoprefixer = require('autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
+
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import');
 var postcssCsscomb = require('postcss-csscomb');
@@ -30,6 +31,11 @@ var postcssProcesses = [
   postcssColorFunction(),
   autoprefixer({browsers: ['last 1 version']})
 ];
+
+gulp.task('watch', function () {
+  gulp.watch('css/**/*.css', ['css']);
+  gulp.watch('js/**/*.js', ['js']);
+});
  
 gulp.task('css', function () {
   return gulp.src('css/**/*.bundle.css')
@@ -98,9 +104,4 @@ gulp.task('jsTidy', function () {
       fix: true
     }))
     .pipe(gulp.dest('js'));
-});
-
-gulp.task('watch', function () {
-  gulp.watch('css/**/*.css', ['css']);
-  gulp.watch('js/**/*.js', ['js']);
 });
