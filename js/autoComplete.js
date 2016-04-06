@@ -1,6 +1,5 @@
 var $ = require('jquery');
 
-
 // todo
 
 // searching for items

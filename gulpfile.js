@@ -7,6 +7,7 @@ var buffer = require('gulp-buffer');
 var plumber = require('gulp-plumber');
 var tap = require('gulp-tap');
 var gutil = require('gulp-util');
+var jscs = require('gulp-jscs');
 var uglify = require('gulp-uglify');
 var cssmin = require('gulp-cssmin');
 var autoprefixer = require('autoprefixer');

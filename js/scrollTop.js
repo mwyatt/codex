@@ -1,12 +1,11 @@
 var $ = require('jquery');
 
-
 /**
  * watches the scrollwindow and displays a to top button when moving down
  * over a threshold
  * dependancy $
  */
-var ScrollTop = function (options) {
+var ScrollTop = function(options) {
   var defaults = {
     threshold: 100,
     button: '.null',
@@ -17,7 +16,6 @@ var ScrollTop = function (options) {
   this.timer;
   this.events(this);
 };
-
 
 ScrollTop.prototype.events = function(data) {
   var button = $(data.options.button);
@@ -33,6 +31,5 @@ ScrollTop.prototype.events = function(data) {
     }, data.options.delay);
   });
 };
-
 
 module.exports = ScrollTop;
