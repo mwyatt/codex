@@ -15,15 +15,13 @@
 			<div class="menu-container">
 				<div class="menu-hamburger"><?php // include $this->getPath('asset/hamburger.svg') ?></div>
 				<nav class="menu-primary">
-					<ul>
 		
 	<?php foreach ($structure as $headingPrimary => $secondary): ?>
 		
-						<li class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></li>
+						<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></div>
 
 	<?php endforeach ?>
 
-					</ul>
 				</nav>
 			</div>
 		</div>
@@ -32,6 +30,7 @@
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 
 			<div id="<?php echo $headingPrimary ?>" class="container-primary">
+				<div class="container-primary-inner">
 				<h1 class="heading-primary"><?php echo ucwords($headingPrimary) ?></h1>
 
 	<?php $pathCode = $this->getPathBase() . 'template/code/_' . $headingPrimary . '.html' ?>
@@ -50,6 +49,7 @@
 
 	<?php endforeach ?>
 
+				</div>
 			</div>
 
 <?php endforeach ?>

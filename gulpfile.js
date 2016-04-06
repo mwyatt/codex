@@ -7,6 +7,7 @@ var gutil = require('gulp-util');
 var gulpConcat = require('gulp-concat');
 var tap = require('gulp-tap');
 var buffer = require('gulp-buffer');
+var runSequence = require('run-sequence');
 
 var browserify = require('browserify');
 var jscs = require('gulp-jscs');
@@ -32,12 +33,19 @@ var postcssProcesses = [
   autoprefixer({browsers: ['last 1 version']})
 ];
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch('css/**/*.css', ['css']);
   gulp.watch('js/**/*.js', ['js']);
 });
+
+gulp.task('min', function() {
+  runSequence(
+    'cssMin',
+    'jsMin'
+  );
+});
  
-gulp.task('css', function () {
+gulp.task('css', function() {
   return gulp.src('css/**/*.bundle.css')
     .pipe(postcss(postcssProcesses))
     .pipe(tap(function(file) {
@@ -46,7 +54,7 @@ gulp.task('css', function () {
     .pipe(gulp.dest('asset'));
 });
 
-gulp.task('cssMin', function () {
+gulp.task('cssMin', function() {
   return gulp.src('asset/**/*.css')
     .pipe(cssmin())
     .pipe(tap(function(file) {
@@ -88,7 +96,7 @@ gulp.task('jsLib', function() {
     .pipe(gulp.dest('asset'));
 });
 
-gulp.task('jsMin', function () {
+gulp.task('jsMin', function() {
   return gulp.src('asset/**.js')
     .pipe(uglify())
     .pipe(tap(function(file) {
@@ -97,7 +105,7 @@ gulp.task('jsMin', function () {
     .pipe(gulp.dest('asset'));
 });
 
-gulp.task('jsTidy', function () {
+gulp.task('jsTidy', function() {
   return gulp.src(['js/**', '!js/vendor/**', '!js/admin/vendor/**'])
     .pipe(jscs({
       configPath: '.jsTidyGoogle.json',

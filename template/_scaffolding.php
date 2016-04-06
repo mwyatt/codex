@@ -1,3 +1,3 @@
 <div class="typography">
-	<p>scaffolding information</p>
+	<p>Settings</p>
 </div>

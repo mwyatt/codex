@@ -1,10 +1,6 @@
 {
 	"introduction": [],
-	"scaffolding": [
-		"html5-doctype",
-		"box-sizing",
-		"normalize"
-	],
+	"settings": [],
 	"palette": [],
 	"layout": [
 		"floats",

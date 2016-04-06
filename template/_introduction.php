@@ -1,4 +1,17 @@
 <div class="typography">
-	<p>This is a boilerplate of functionality for css and js. You can access the <a href="https://github.com/mwyatt/codex">repository</a> here.</p>
-	<p>Now available on npm! Named <a href="https://www.npmjs.com/package/mwyatt-codex">mwyatt-codex</a>.</p>
+	<p>This is a lightweight starting point for css & js functionality.</p>
+    <ul>
+        <li><a href="https://github.com/mwyatt/codex" target="_blank">Github (mwyatt/codex)</a></li>
+        <li><a href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM (mwyatt-codex)</a></li>
+    </ul>
+    <p>Core gulp tasks</p>
+    <ul>
+    
+<?php foreach ($gulpTasks as $task): ?>
+    
+        <li><?php echo $task ?></li>
+    
+<?php endforeach ?>
+
+    </ul>
 </div>

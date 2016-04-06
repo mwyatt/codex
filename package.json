@@ -42,6 +42,7 @@
     "postcss-csscomb": "0.0.0",
     "postcss-custom-properties": "^5.0.0",
     "postcss-hexrgba": "^0.2.0",
-    "postcss-import": "^7.0.0"
+    "postcss-import": "^7.0.0",
+    "run-sequence": "^1.1.5"
   }
 }
