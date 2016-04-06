@@ -1,4 +1,5 @@
 require('es6-promise').polyfill(); // could be required to fix postcss-import?
+var isLocal = true;
 var gulp = require('gulp');
 var gulpConcat = require('gulp-concat');
 var gulpSrc = gulp.src;
@@ -15,32 +16,7 @@ var source = require('vinyl-source-stream');
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import');
 var postcssCsscomb = require('postcss-csscomb');
-var postcssCombOptions = {
-  "remove-empty-rulesets": true,
-  "always-semicolon": true,
-  "color-case": "lower",
-  "block-indent": "  ",
-  "color-shorthand": false,
-  "element-case": "lower",
-  "eof-newline": true,
-  "leading-zero": true,
-  "quotes": "single",
-  "sort-order-fallback": "abc",
-  "space-before-colon": "",
-  "space-after-colon": " ",
-  "space-before-combinator": " ",
-  "space-after-combinator": " ",
-  "space-between-declarations": "\n",
-  "space-before-opening-brace": " ",
-  "space-after-opening-brace": "\n",
-  "space-after-selector-delimiter": "\n",
-  "space-before-selector-delimiter": "",
-  "space-before-closing-brace": "\n",
-  "strip-spaces": true,
-  "tab-size": 1,
-  "unitless-zero": true,
-  "vendor-prefix-align": true
-};
+var postcssCombOptions = require('./.csscomb.json');
 var postcssColorFunction = require('postcss-color-function');
 var postcssHexrgba = require('postcss-hexrgba');
 var postcssConditionals = require('postcss-conditionals');
@@ -78,24 +54,25 @@ gulp.task('cssTidy', function() {
     .pipe(tap(function(file) {
       gutil.log('tidy ' + file.path);
     }))
-    .pipe(gulp.dest(''));
+    .pipe(gulp.dest('css'));
 });
 
 gulp.task('js', function() {
   return gulp.src('js/**/*.bundle.js', {read: false})
     .pipe(tap(function(file) {
-      file.contents = browserify(file.path, {debug: true}).bundle();
-      gutil.log(file.contents);
+      file.contents = browserify(file.path, {debug: isLocal})
+        .transform('browserify-shim', {global: true})
+        .bundle();
       gutil.log('build ' + file.path);
     }))
     .pipe(buffer())
-    .pipe(uglify())
     .pipe(gulp.dest('asset'));
 });
 
 gulp.task('jsLib', function() {
   gulp.src([
-      'node_modules/jquery/dist/jquery.js'
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/mustache/mustache.js'
     ])
     .pipe(tap(function(file) {
       gutil.log('concat ' + file.path);
@@ -114,8 +91,12 @@ gulp.task('jsMin', function () {
 });
 
 gulp.task('jsTidy', function () {
-
-  // to google spec
+  return gulp.src(['js/**', '!js/vendor/**', '!js/admin/vendor/**'])
+    .pipe(jscs({
+      configPath: '.jsTidyGoogle.json',
+      fix: true
+    }))
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('watch', function () {

@@ -58,7 +58,8 @@
 	</div>
 	<script>var phpUrl = <?php echo json_encode($url) ?></script>
 
-<?php include $this->getPathTemplate('footer/_js') ?>
+	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/lib.js') ?>"></script>
+	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/common.bundle.js') ?>" async></script>
 
 </body>
 </html>
