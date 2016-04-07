@@ -21,7 +21,7 @@
   },
   "browserify-shim": {
     "jquery": "global:$",
-    "mustache": "global:mustache"
+    "mustache": "global:Mustache"
   },
   "devDependencies": {
     "autoprefixer": "6.0.3",

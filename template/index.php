@@ -11,14 +11,14 @@
 <body>
 	<div class="body-inner-container">
 		<div class="site-heading-container">
-			<h1 class="site-heading"><?php echo $siteTitle ?></h1>
+			<h1 class="site-heading"><a href="#introduction" class="site-heading-link js-smooth-scroll"><?php echo $siteTitle ?></a></h1>
 			<div class="menu-container">
 				<div class="menu-hamburger"><?php // include $this->getPath('asset/hamburger.svg') ?></div>
 				<nav class="menu-primary">
 		
 	<?php foreach ($structure as $headingPrimary => $secondary): ?>
 		
-						<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo $headingPrimary ?></a></div>
+						<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link js-smooth-scroll"><?php echo $headingPrimary ?></a></div>
 
 	<?php endforeach ?>
 
@@ -59,7 +59,7 @@
 	<script>var phpUrl = <?php echo json_encode($url) ?></script>
 
 	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/lib.js') ?>"></script>
-	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/common.bundle.js') ?>" async></script>
+	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/common.bundle.js') ?>"></script>
 
 </body>
 </html>

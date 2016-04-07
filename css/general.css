@@ -15,11 +15,16 @@
   right: 0;
 }
 
+.site-heading-link {
+  color: #ffffff;
+}
+
 .site-heading {
-  background-color: #eeeeee;
+  background-color: var(--color-primary-0);
   transition: background var(--animation-duration) ease;
   padding: 10px;
   text-align: center;
+  font-size: 16px;
 }
 
 .color-palette-heading {
@@ -119,7 +124,7 @@
 
 .container-primary {
   padding: 40px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .color-palette-column {
@@ -146,11 +151,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 39px;
-  height: 39px;
+  width: 42px;
+  height: 42px;
   padding: 14px;
-  fill: #a0a0a0;
-  background-color: #cccccc;
+  background-color: var(--color-primary-1);
 }
 
 .menu-hamburger svg {
@@ -164,11 +168,10 @@
 
 .menu-primary {
   position: absolute;
-  top: 39px;
+  top: 42px;
   right: -200px;
   width: 200px;
-  background-color: #eeeeee;
-  padding: 10px 0;
+  background-color: var(--color-primary-0);
   transition: right var(--animation-duration) ease;
 }
 
@@ -182,7 +185,9 @@
 .menu-primary-item-link {
   display: block;
   padding: 10px 16px;
-  color: #666666;
+  color: #ffffff;
+  padding: 7px 10px;
+  border-top: 1px solid var(--color-primary-1);
 }
 
 .menu-primary-item-link:hover {
@@ -193,10 +198,6 @@
   right: 0;
 }
 
-.menu-primary-item-link {
-  padding: 5px 10px;
-}
-
 .content-container {
-    padding-top: 39px;
+  padding-top: 42px;
 }

@@ -4,7 +4,9 @@ var $ = require('jquery');
  * scrolls the page smoothly when a target is clicked
  * @param {object} options
  */
-var ScrollSmooth = function() {};
+var ScrollSmooth = function(options) {
+  this.init(options);
+};
 
 ScrollSmooth.prototype.init = function(options) {
   var defaults = {

@@ -6,12 +6,14 @@
     </ul>
     <p>Core gulp tasks</p>
     <ul>
-    
-<?php foreach ($gulpTasks as $task): ?>
+
+<?php if (!empty($gulpTasks)): ?>
+    <?php foreach ($gulpTasks as $task): ?>
     
         <li><?php echo $task ?></li>
     
-<?php endforeach ?>
+    <?php endforeach ?>
+<?php endif ?>    
 
     </ul>
 </div>
