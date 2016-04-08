@@ -3,4 +3,4 @@
 <div class="typography">
 	<p>Makes scroll top button appear after threshold.</p>
 </div>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>
+<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

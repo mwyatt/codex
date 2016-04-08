@@ -32,23 +32,27 @@
   box-shadow: 0 0 3px var(--color-primary-0);
 }
 
+.button.secondary {
+  background-color: var(--color-secondary-1-0);
+}
+
 .button.secondary:hover {
-  background-color: color(var(--color-primary-0) tint(20%));
-  border-color: color(var(--color-primary-0) tint(20%));
+  background-color: color(var(--color-secondary-1-0) tint(20%));
+  border-color: color(var(--color-secondary-1-0) tint(20%));
 }
 
 .button.secondary:active {
-  background-color: color(var(--color-primary-0) shade(20%));
-  border-color: color(var(--color-primary-0) shade(20%));
+  background-color: color(var(--color-secondary-1-0) shade(20%));
+  border-color: color(var(--color-secondary-1-0) shade(20%));
 }
 
 .button.secondary:focus {
-  border-color: var(--color-primary-0);
-  box-shadow: 0 0 3px var(--color-primary-0);
+  border-color: var(--color-secondary-1-0);
+  box-shadow: 0 0 3px var(--color-secondary-1-0);
 }
 
 .button.secondary.disabled,
 .button.secondary:disabled {
-  background-color: color(var(--color-primary-0) tint(50%));
-  border-color: color(var(--color-primary-0) tint(50%));
+  background-color: color(var(--color-secondary-1-0) tint(50%));
+  border-color: color(var(--color-secondary-1-0) tint(50%));
 }

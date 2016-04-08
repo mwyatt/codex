@@ -1,6 +1,6 @@
 <div class="typography">
 	<p>Quick alignment of text.</p>
 </div>
-<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities('<div class="text-left"></div>
+<syntax-highlight lang="html" theme="github-gist"><?php echo trim('<div class="text-left"></div>
 <div class="text-center"></div>
-<div class="text-right"></div>') ?></code></pre>
+<div class="text-right"></div>') ?></syntax-highlight>

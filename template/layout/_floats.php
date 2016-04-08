@@ -1,5 +1,5 @@
 <div class="typography">
 	<p>Handy classes for floating elements quickly.</p>
 </div>
-<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities('<div class="left"></div>
-<div class="right"></div>') ?></code></pre>
+<syntax-highlight lang="html" theme="github-gist"><?php echo trim('<div class="left"></div>
+<div class="right"></div>') ?></syntax-highlight>

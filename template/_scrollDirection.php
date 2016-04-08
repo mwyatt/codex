@@ -3,4 +3,4 @@
 <div class="typography">
 	<p>Looks at the direction that the user is scrolling and can add a class.</p>
 </div>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>
+<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

@@ -4,4 +4,4 @@
 	<p>Point this to links which visit the document you are currently on and it will smoothly transition to that location.</p>
 	<p>Also possible to programmatically go to a target element.</p>
 </div>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>
+<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

@@ -1,5 +1,5 @@
 {
-	"introduction": [],
+	"installation": [],
 	"settings": [],
 	"palette": [],
 	"layout": [
@@ -17,8 +17,7 @@
 	],
 	"buttons": [
 		"default",
-		"primary",
-		"outline",
+		"secondary",
 		"disabled"
 	],
 	"form": [

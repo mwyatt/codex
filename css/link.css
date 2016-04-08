@@ -6,16 +6,13 @@
   border-bottom-style: solid;
   color: var(--color-primary-0);
   border-bottom-color: var(--color-primary-0);
-  cursor: pointer; /* when will this not be needed? */
-  /*// @upgrade @mixin text-decoration-line(underline);*/
-  /*// @upgrade @mixin text-decoration-color(rgba(var(--color-primary-0), .5));*/
+  cursor: pointer;
 }
 
 .link:hover,
 .typography a:hover {
   color: color(var(--color-primary-0) shade(20%));
   border-bottom-color: color(var(--color-primary-0) shade(20%));
-  /*// @upgrade @mixin text-decoration-color(var(--color-primary-0));*/
 }
 
 .link:focus,
@@ -27,7 +24,6 @@
 .typography a:active {
   color: color(var(--color-primary-0) shade(50%));
   border-bottom-color: color(var(--color-primary-0) shade(50%));
-  /*// @upgrade @mixin text-decoration-color(mix(#000, $color, 20%));*/
 }
 
 .link.secondary:visited,

@@ -7,6 +7,11 @@ var settings = {
     css: 'css/**/*.css',
     js: 'js/**/*.js'
   },
+  nodeModules: 'node_modules/',
+  jsLibs: [
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/mustache/mustache.js'
+  ],
   css: 'css/',
   js: 'js/',
   media: ['media/']
@@ -106,10 +111,7 @@ function cssTidy() {
 }
 
 function jsLib() {
-  gulp.src([
-      'node_modules/jquery/dist/jquery.js',
-      'node_modules/mustache/mustache.js'
-    ])
+  gulp.src(settings.jsLibs)
     .pipe(tap(function(file) {
       gutil.log('concat ' + file.path);
     }))
@@ -147,4 +149,7 @@ function mediaTidy() {
 
 function copy() {
   gulp.src(settings.media + '**').pipe(gulp.dest(settings.assetDest));
+  gulp.src(settings.nodeModules + 'syntax-highlight/syntax-highlight.html').pipe(gulp.dest(settings.assetDest + 'highlightjs/'));
+  gulp.src(settings.js + 'vendor/highlight.pack.js').pipe(gulp.dest(settings.assetDest + 'highlightjs/'));
+  gulp.src(settings.css + 'vendor/github-gist.css').pipe(gulp.dest(settings.assetDest + 'highlightjs/styles/'));
 }

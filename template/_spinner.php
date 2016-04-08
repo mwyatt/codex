@@ -3,12 +3,13 @@
 
 <div class="typography">
 	<ul>
-		<li>flexible and portable spinning solution</li>
-		<li>must be able to set multiple spinners</li>
+		<li>Flexible and portable spinning solution.</li>
+		<li>Must be able to set multiple spinners.</li>
 	</ul>
 </div>
-<div class="spinner-container">
+<div class="block-margins">
     <div class="spinner"></div>
 </div>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($codeHtml) ?></code></pre>
-<pre class="rainbow-pre"><code data-language="js"><?php echo htmlentities($code) ?></code></pre>
+
+<syntax-highlight lang="html" theme="github-gist"><?php echo trim($codeHtml) ?></syntax-highlight>
+<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

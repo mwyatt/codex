@@ -5,7 +5,6 @@
 
 /* things which insert code */
 @import 'reset.css';
-@import 'reusable.css';
 @import 'keyframe.css';
 @import 'form.css';
 @import 'typography.css';
@@ -18,3 +17,5 @@
 @import 'button.css';
 @import 'link.css';
 @import 'general.css';
+
+@import 'reusable.css';
