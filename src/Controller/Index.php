@@ -17,14 +17,14 @@ class Index extends \Mwyatt\Core\Controller
 
                 // gulp tasks
             $gulpTasks = [];
-                // exec('gulp --tasks', $lines);
-                // $lineParts = [];
-                // foreach ($lines as $line) {
-                //     if (!strpos($line, 'gulp')) {
-                //         $lineParts = explode(' ', $line);
-                //         $gulpTasks[] = end($lineParts);
-                //     }
-                // }
+                exec('gulp --tasks', $lines);
+                $lineParts = [];
+                foreach ($lines as $line) {
+                    if (!strpos($line, 'gulp')) {
+                        $lineParts = explode(' ', $line);
+                        $gulpTasks[] = end($lineParts);
+                    }
+                }
                 $this->view->data->offsetSet('gulpTasks', $gulpTasks);
 
                 exec('npm version', $lines);

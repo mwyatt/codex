@@ -42,4 +42,7 @@ if ($route) {
 }
 
 $router->setHeaders($response);
+
+file_put_contents('index.html', $response->getContent());
+
 echo $response->getContent();
