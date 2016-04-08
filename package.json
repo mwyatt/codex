@@ -12,7 +12,18 @@
     "jquery": "1.11.2",
     "modernizr": "^3.3.1",
     "mustache": "~2.2.1",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^3.0.3"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:$",
+    "mustache": "global:Mustache"
+  },
+  "devDependencies": {
     "autoprefixer": "6.0.3",
     "browserify": "11.2.0",
     "browserify-shim": "^3.8.12",
@@ -35,15 +46,5 @@
     "postcss-hexrgba": "^0.2.0",
     "postcss-import": "^7.0.0",
     "run-sequence": "^1.1.5"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "jquery": "global:$",
-    "mustache": "global:Mustache"
-  },
-  "devDependencies": {}
+  }
 }
