@@ -18,7 +18,7 @@
 		
 	<?php foreach ($structure as $headingPrimary => $secondary): ?>
 		
-						<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link js-smooth-scroll"><?php echo $headingPrimary ?></a></div>
+						<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link js-smooth-scroll"><?php echo ucwords($headingPrimary) ?></a></div>
 
 	<?php endforeach ?>
 
