@@ -6,9 +6,7 @@
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
 	<link rel="import" href="asset/highlightjs/syntax-highlight.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<?php include $this->getPathTemplate('header/_css') ?>
-
+	<link href="<?php echo 'asset/common.bundle.css?' . $assetVersion ?>" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="body-inner-container clearfix">
@@ -64,8 +62,8 @@
 	</div>
 	<script>var phpUrl = <?php echo json_encode($url) ?></script>
 
-	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/lib.js') ?>"></script>
-	<script src="<?php echo $url->generateVersioned($this->getPathBase(), 'asset/common.bundle.js') ?>"></script>
+	<script src="<?php echo 'asset/lib.js?' . $assetVersion ?>"></script>
+	<script src="<?php echo 'asset/common.bundle.js?' . $assetVersion ?>"></script>
 
 </body>
 </html>

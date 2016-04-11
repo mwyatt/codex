@@ -37,7 +37,7 @@ class Index extends \Mwyatt\Core\Controller
                 }
                 $this->view->data->offsetSet('npmVersion', $npmVersion);
         
-		$this->view->appendAsset('css', 'common.bundle');
+        $this->view->data->offsetSet('assetVersion', 1);
 		$this->view->data->offsetSet('siteTitle', 'Codex');
 		$this->view->data->offsetSet('structure', $structure);
 		return $this->response($this->view->getTemplate('index'));
