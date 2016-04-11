@@ -72,7 +72,6 @@
 
 .example-code + .rainbow-pre {
   margin-top: 0;
-  border-radius: 0 0 3px 3px;
 }
 
 .example-code {
@@ -228,7 +227,21 @@ body {
 }
 
 syntax-highlight {
-    padding: 0 14px;
-    border: 1px dashed var(--color-secondary-1-4);
-        font-size: 13px;
+  padding: 0 14px;
+  border: 1px dashed var(--color-secondary-1-4);
+  font-size: 13px;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-0);
+}
+
+::-webkit-scrollbar-corner {
+  /*background: #000;*/
 }

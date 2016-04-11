@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var mustache = require('mustache');
 var getMotionEventName = require('./utility/getMotionEventName');
+var $document = $(document);
 
 /**
  * accepts a message and displays appropriatly, stacks
@@ -17,11 +18,6 @@ var FeedbackQueue = function(options) {
   };
   this.options = $.extend(defaults, options);
 
-  // render container if not already
-  if (!$('.js-feedback-queue').length) {
-    $('body').prepend(mustache.render(this.options.templateContainer));
-  };
-
   // fast message
   this.createMessage(this.options);
 };
@@ -33,6 +29,11 @@ var FeedbackQueue = function(options) {
  * @return {object}        jquery
  */
 FeedbackQueue.prototype.createMessage = function(config) {
+
+  // render container if not already
+  if (!$document.find('.js-feedback-queue').length) {
+    $document.find('body').prepend(mustache.render(this.options.templateContainer));
+  };
 
   // validate
   if (typeof config === 'undefined') {

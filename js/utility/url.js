@@ -1,17 +1,27 @@
 var $ = require('jquery');
+var defaults = require('./url/defaults');
 
 /**
  * handles all url operations
- * phpUrl must be defined to proceed
+ * phpUrl is optionally there for global setup
  */
 var Url = function() {
+  this.protocol;
+  this.base;
+  this.path;
+  this.routes;
+
   if (typeof phpUrl === 'undefined') {
-    return console.warn('variable phpUrl must be defined');
+    return;
   };
-  this.protocol = phpUrl.protocol;
-  this.base = phpUrl.base;
-  this.path = phpUrl.path;
-  this.routes = phpUrl.routes;
+  this.setup(phpUrl);
+};
+
+/**
+ * option for manual setup upon inclusion
+ */
+Url.prototype.setup = function(options) {
+  this.options = $.extend(defaults, options);
 };
 
 /**

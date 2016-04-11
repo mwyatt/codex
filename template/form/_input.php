@@ -10,4 +10,4 @@
     </ul>
 </div>
 <div class="clearfix example-code"><?php echo $code ?></div>
-<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities($code) ?></code></pre>
+<syntax-highlight lang="html" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

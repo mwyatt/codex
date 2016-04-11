@@ -4,4 +4,4 @@
 	<p>Use the '.form' class to style up a form using a common theme. Alternatively there are many reusable styles to be used independently.</p>
 </div>
 <div class="clearfix example-code"><?php echo $code ?></div>
-<pre class="rainbow-pre"><code data-language="html"><?php echo htmlentities($code) ?></code></pre>
+<syntax-highlight lang="html" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>

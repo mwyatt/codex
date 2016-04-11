@@ -12,4 +12,4 @@
 
 	</ul>
 </div>
-<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>
+<!-- <syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight> -->
