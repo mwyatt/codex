@@ -70,6 +70,9 @@
   font-size: 0.75em;
 }
 
+.p,
+.unordered-list,
+.ordered-list,
 .typography p {
   margin: 1em 0;
   line-height: var(--font-line-height);
@@ -124,13 +127,6 @@
 
 .text-size-smaller {
   font-size: 0.8em;
-}
-
-.p,
-.unordered-list,
-.ordered-list {
-  margin: 1em 0;
-  line-height: var(--font-line-height);
 }
 
 .blockquote {

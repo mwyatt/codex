@@ -1,12 +1,8 @@
 <p class="p">To install use the following command:</p>
 <syntax-highlight lang="bash" theme="github-gist"><?php echo htmlentities(trim("
-    npm install --save mwyatt-codex
+npm install --save mwyatt-codex
 ")) ?></syntax-highlight>
 <div class="typography">
-    <ul class="hidden">
-        <li><a href="https://github.com/mwyatt/codex" target="_blank">Github (mwyatt/codex)</a></li>
-        <li><a href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM (mwyatt-codex)</a></li>
-    </ul>
 
 <?php if (!empty($gulpTasks)): ?>
 
@@ -24,3 +20,15 @@
 <?php endif ?>    
 
 </div>
+<p class="p">Then you can import into css:</p>
+<syntax-highlight lang="css" theme="github-gist"><?php echo htmlentities(trim("
+@import 'mwyatt-codex/css/reset.css';
+@import 'mwyatt-codex/css/keyframe.css';
+@import 'mwyatt-codex/css/form.css';
+@import 'mwyatt-codex/css/typography.css';
+@import 'mwyatt-codex/css/reusable.css';
+")) ?></syntax-highlight>
+<p class="p">Scripts can be used like this:</p>
+<syntax-highlight lang="js" theme="github-gist"><?php echo htmlentities(trim("
+var url = require('mwyatt-codex/js/utility/url');
+")) ?></syntax-highlight>
