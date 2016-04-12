@@ -13,7 +13,7 @@ class Index extends \Mwyatt\Core\Controller
 
 
 	public function home() {
-		$structure = array_merge((array) json_decode(file_get_contents($this->view->getPathBase('json/structure/css.json'))), (array) json_decode(file_get_contents($this->view->getPathBase('json/structure/js.json'))));
+		$structure = json_decode(file_get_contents($this->view->getPathBase('json/structure/css.json')));
 
                 // gulp tasks
             $gulpTasks = [];
