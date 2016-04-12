@@ -11,5 +11,5 @@
     <div class="spinner"></div>
 </div>
 
-<pre><code><?php echo trim($codeHtml) ?></code></pre>
-<pre><code><?php echo trim($code) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($codeHtml)) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre>

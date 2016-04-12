@@ -3,4 +3,4 @@
 <div class="typography">
 	<p>Looks at the direction that the user is scrolling and can add a class.</p>
 </div>
-<pre><code><?php echo trim($code) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre>

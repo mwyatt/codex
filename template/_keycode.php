@@ -3,4 +3,4 @@
 <div class="typography">
 	<p>Allows easy reference of keycodes.</p>
 </div>
-<pre><code><?php echo trim($code) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre>

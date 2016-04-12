@@ -4,7 +4,7 @@
     <p>Handles all url retrieval and operations.</p>
 	<p>Here are the accepted options:</p>
 </div>
-<pre><code><?php echo trim($defaults) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($defaults)) ?></code></pre>
 <pre><code><?php echo trim("
 Url.prototype.setup();
 Url.prototype.getBase();

@@ -12,4 +12,4 @@
 
 	</ul>
 </div>
-<!-- <pre><code><?php echo trim($code) ?></code></pre> -->
+<!-- <pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre> -->

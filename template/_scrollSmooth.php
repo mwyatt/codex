@@ -4,4 +4,4 @@
 	<p>Point this to links which visit the document you are currently on and it will smoothly transition to that location.</p>
 	<p>Also possible to programmatically go to a target element.</p>
 </div>
-<pre><code><?php echo trim($code) ?></code></pre>
+<pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre>
