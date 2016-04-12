@@ -4,11 +4,11 @@
     <p>Handles all url retrieval and operations.</p>
 	<p>Here are the accepted options:</p>
 </div>
-<syntax-highlight lang="js" theme="github-gist"><?php echo trim($defaults) ?></syntax-highlight>
-<syntax-highlight lang="js" theme="github-gist"><?php echo trim("
+<pre><code><?php echo trim($defaults) ?></code></pre>
+<pre><code><?php echo trim("
 Url.prototype.setup();
 Url.prototype.getBase();
 Url.prototype.generate();
 Url.prototype.redirect();
 Url.prototype.redirectAbsolute();
-") ?></syntax-highlight>
+") ?></code></pre>

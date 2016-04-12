@@ -21,14 +21,14 @@ npm install --save mwyatt-codex
 
 </div>
 <p class="p">Then you can import into css:</p>
-<syntax-highlight lang="css" theme="github-gist"><?php echo htmlentities(trim("
+<pre><code><?php echo htmlentities(trim("
 @import 'mwyatt-codex/css/reset.css';
 @import 'mwyatt-codex/css/keyframe.css';
 @import 'mwyatt-codex/css/form.css';
 @import 'mwyatt-codex/css/typography.css';
 @import 'mwyatt-codex/css/reusable.css';
-")) ?></syntax-highlight>
+")) ?></code></pre>
 <p class="p">Scripts can be used like this:</p>
-<syntax-highlight lang="js" theme="github-gist"><?php echo htmlentities(trim("
+<pre><code><?php echo htmlentities(trim("
 var url = require('mwyatt-codex/js/utility/url');
-")) ?></syntax-highlight>
+")) ?></code></pre>

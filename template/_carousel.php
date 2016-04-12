@@ -7,4 +7,4 @@
 		<li>Loop through items</li>
 	</ul>
 </div>
-<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>
+<pre><code><?php echo trim($code) ?></code></pre>

@@ -11,5 +11,5 @@
     <div class="spinner"></div>
 </div>
 
-<syntax-highlight lang="html" theme="github-gist"><?php echo trim($codeHtml) ?></syntax-highlight>
-<syntax-highlight lang="js" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>
+<pre><code><?php echo trim($codeHtml) ?></code></pre>
+<pre><code><?php echo trim($code) ?></code></pre>

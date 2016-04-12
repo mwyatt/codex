@@ -4,4 +4,4 @@
 	<p>Buttons can be disabled using the 'disabled' element attribute. Alternatively using the '.disabled' class.</p>
 </div>
 <div class="clearfix example-code"><?php echo $code ?></div>
-<syntax-highlight lang="html" theme="github-gist"><?php echo trim($code) ?></syntax-highlight>
+<pre><code><?php echo trim($code) ?></code></pre>
