@@ -1,7 +1,7 @@
 <p class="p">To install use the following command:</p>
-<syntax-highlight lang="bash" theme="github-gist"><?php echo htmlentities(trim("
+<pre><code><?php echo htmlentities(trim("
 npm install --save mwyatt-codex
-")) ?></syntax-highlight>
+")) ?></code></pre>
 <div class="typography">
 
 <?php if (!empty($gulpTasks)): ?>

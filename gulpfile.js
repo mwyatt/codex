@@ -10,7 +10,8 @@ var settings = {
   nodeModules: 'node_modules/',
   jsLibs: [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/mustache/mustache.js'
+    'node_modules/mustache/mustache.js',
+    'node_modules/highlight.js/lib/highlight.js'
   ],
   css: 'css/',
   js: 'js/',

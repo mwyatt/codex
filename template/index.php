@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title><?php echo $siteTitle ?></title>
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
-	<link rel="import" href="asset/highlightjs/syntax-highlight.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="<?php echo 'asset/common.bundle.css?' . $assetVersion ?>" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
@@ -63,6 +62,8 @@
 	<script>var phpUrl = <?php echo json_encode($url) ?></script>
 
 	<script src="<?php echo 'asset/lib.js?' . $assetVersion ?>"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
 	<script src="<?php echo 'asset/common.bundle.js?' . $assetVersion ?>"></script>
 
 </body>
