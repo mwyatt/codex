@@ -1,5 +1,15 @@
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
 .block {
   display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .hidden {
@@ -11,10 +21,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.hide {
-  display: none;
 }
 
 .invisible {
@@ -122,25 +128,4 @@
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.table {
-  width: 100%;
-}
-
-.table th {
-  font-weight: 600;
-  text-align: left;
-}
-
-.table th,
-.table td {
-  padding: 0.5em;
-  border: 1px solid var(--color-secondary-1-0);
-}
-
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table;
 }

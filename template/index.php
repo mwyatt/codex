@@ -10,7 +10,7 @@
 <body>
 	<div class="body-inner-container clearfix">
 		<div class="site-heading-container">
-			<h1 class="site-heading"><a href="#installation" class="site-heading-link js-smooth-scroll"><?php echo $siteTitle ?> <span class="npm-version"><?php echo $npmVersion ?></span></a></h1>
+			<h1 class="site-heading"><a href="#installation" class="site-heading-link"><?php echo $siteTitle ?> <span class="npm-version"><?php echo $npmVersion ?></span></a></h1>
 			<div class="site-heading-menu-secondary">
 			    <div class="site-heading-menu-secondary-item"><a class="site-heading-menu-secondary-link" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			    <div class="site-heading-menu-secondary-item"><a class="site-heading-menu-secondary-link" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
@@ -22,7 +22,7 @@
 	
 <?php foreach ($structure as $headingPrimary => $secondary): ?>
 	
-					<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link js-smooth-scroll"><?php echo ucwords($headingPrimary) ?></a></div>
+					<div class="menu-primary-item"><a href="#<?php echo $headingPrimary ?>" class="menu-primary-item-link"><?php echo ucwords($headingPrimary) ?></a></div>
 
 <?php endforeach ?>
 

@@ -1,9 +1,5 @@
 <?php
 
-echo '<pre>';	
-print_r('variable');
-echo '</pre>';
-exit;
 session_start();
 $pathBase = (string) (__DIR__ . '/');
 include $pathBase . 'vendor/autoload.php';
@@ -19,6 +15,8 @@ $view->prependTemplatePath($pathBase . 'template/');
 $view->setPathBase($pathBase);
 
 $view->data->offsetSet('url', $url);
+
+$view->data->offsetSet('structure', include $view->getPathBase('structure.php'));
 
 $routes = array_merge(
     include $view->getPathBase('routes.php')

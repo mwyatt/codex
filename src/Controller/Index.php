@@ -13,7 +13,6 @@ class Index extends \Mwyatt\Core\Controller
 
 
 	public function home() {
-		$structure = json_decode(file_get_contents($this->view->getPathBase('json/structure/css.json')));
 
                 // gulp tasks
             $gulpTasks = [];
@@ -39,7 +38,6 @@ class Index extends \Mwyatt\Core\Controller
         
         $this->view->data->offsetSet('assetVersion', 1);
 		$this->view->data->offsetSet('siteTitle', 'Codex');
-		$this->view->data->offsetSet('structure', $structure);
 		return $this->response($this->view->getTemplate('index'));
 	}
 }
