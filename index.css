@@ -1,5 +1,5 @@
-@import 'settings.css';
-@import 'reset.css';
-@import 'form.css';
-@import 'typography.css';
-@import 'reusable.css';
+@import 'css/settings.css';
+@import 'css/reset.css';
+@import 'css/form.css';
+@import 'css/typography.css';
+@import 'css/reusable.css';
