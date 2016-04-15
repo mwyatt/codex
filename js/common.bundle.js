@@ -1,6 +1,6 @@
 var $ = require('jquery');
 var $document = $(document);
-var anchorScroll = require("anchor-scroll");
+var anchorScroll = require('anchor-scroll');
 var spinnerFactory = require('./spinner');
 var spinner1 = new spinnerFactory();
 

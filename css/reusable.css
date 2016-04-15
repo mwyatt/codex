@@ -52,6 +52,18 @@
   width: auto;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .left {
   float: left;
 }
@@ -118,12 +130,12 @@
   page-break-inside: avoid;
 }
 
-.text-size-smaller {
-  font-size: 75%;
+.text-size-larger {
+  font-size: 1.2em;
 }
 
-.text-size-larger {
-  font-size: 125%;
+.text-size-smaller {
+  font-size: 0.8em;
 }
 
 .cursor-pointer {

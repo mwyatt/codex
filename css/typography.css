@@ -70,9 +70,11 @@
   font-size: 0.75em;
 }
 
-.p,
 .unordered-list,
+.typography ul,
 .ordered-list,
+.typography ol,
+.p,
 .typography p {
   margin: 1em 0;
   line-height: var(--font-line-height);
@@ -107,26 +109,6 @@
 .typography mark {
   background-color: var(--color-primary-0);
   color: #ffffff;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-size-larger {
-  font-size: 1.2em;
-}
-
-.text-size-smaller {
-  font-size: 0.8em;
 }
 
 .blockquote {
