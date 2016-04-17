@@ -1,5 +1,5 @@
-@import '_settings.css';
-@import '_dependencies.css';
+@import '_settings';
+@import '_dependencies';
 
 .color-primary {
   color: var(--color-primary-0);

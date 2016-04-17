@@ -22,11 +22,11 @@ npm install --save mwyatt-codex
 </div>
 <p class="p">Then you can import into css:</p>
 <pre><code><?php echo htmlentities(trim("
-@import 'mwyatt-codex/css/reset.css';
-@import 'mwyatt-codex/css/keyframe.css';
-@import 'mwyatt-codex/css/form.css';
-@import 'mwyatt-codex/css/typography.css';
-@import 'mwyatt-codex/css/reusable.css';
+@import 'mwyatt-codex/css/reset';
+@import 'mwyatt-codex/css/keyframe';
+@import 'mwyatt-codex/css/form';
+@import 'mwyatt-codex/css/typography';
+@import 'mwyatt-codex/css/reusable';
 ")) ?></code></pre>
 <p class="p">Scripts can be used like this:</p>
 <pre><code><?php echo htmlentities(trim("

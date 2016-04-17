@@ -1,21 +1,21 @@
 @charset 'utf-8';
 
 /* things which dont input any code*/
-@import 'settings.css';
+@import 'settings';
 
 /* things which insert code */
-@import 'reset.css';
-@import 'keyframe.css';
-@import 'form.css';
-@import 'typography.css';
-@import 'spinner.css';
+@import 'reset';
+@import 'keyframe';
+@import 'form';
+@import 'typography';
+@import 'spinner';
 
 /* site specific */
 /* can be used to refer to as boilerplate solutions */
-@import 'alert.css';
-@import 'button.css';
-@import 'link.css';
-@import 'general.css';
+@import 'alert';
+@import 'button';
+@import 'link';
+@import 'general';
 
-@import 'reusable.css';
-@import 'highlight.js/styles/default.css';
+@import 'reusable';
+@import 'highlight.js/styles/default';
