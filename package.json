@@ -2,7 +2,7 @@
   "name": "mwyatt-codex",
   "author": "Martin Wyatt <martin.wyatt@gmail.com>",
   "description": "Collection of reusable css and js.",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mwyatt/codex.git"
