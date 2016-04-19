@@ -1,5 +1,6 @@
 # Codex - Lightweight reusable CSS
 Codex is a refreshing start for your css. Some advantages to using Codex are:
+- Normalise built in
 - Uses postcss
 - Takes advantage of the native var(--variable-name) syntax
 ### Installation
