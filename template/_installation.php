@@ -28,7 +28,3 @@ npm install --save mwyatt-codex
 @import 'mwyatt-codex/css/typography';
 @import 'mwyatt-codex/css/reusable';
 ")) ?></code></pre>
-<p class="p">Scripts can be used like this:</p>
-<pre><code><?php echo htmlentities(trim("
-var url = require('mwyatt-codex/js/utility/url');
-")) ?></code></pre>
