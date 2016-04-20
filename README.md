@@ -11,16 +11,16 @@ npm install --save-dev mwyatt-codex autoprefixer gulp gulp-postcss postcss-color
 ```
 ### Usage
 Within your *.bundle.css file:
-```sh
+```javascript
 @import 'mwyatt-codex';
 ```
 Importing any additional Codex resources:
-```sh
+```javascript
 @import 'mwyatt-codex/css/file-name';
 ```
 ### Gulp Task
 Your gulp build task should look something like this:
-```sh
+```javascript
 gulp.task('task-name', function() {
   return gulp.src('css/*.bundle.css')
     .pipe(postcss([
