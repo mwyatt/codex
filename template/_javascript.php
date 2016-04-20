@@ -1,7 +1,0 @@
-<?php $code = file_get_contents($this->getPathBase() . 'js/browserify-example.js') ?>
-
-<div class="typography">
-	<p>All js which is not specific to a particular page should be split into packages which can be required. Here will be a list of all pacAkages which are mostly universal across projects.</p>
-	<p>Below is an example of what the modules should include to work with browserify.</p>
-</div>
-<pre><code><?php echo htmlspecialchars(trim($code)) ?></code></pre>
