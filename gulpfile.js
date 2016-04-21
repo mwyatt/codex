@@ -32,7 +32,7 @@ var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var postcssImport = require('postcss-import');
 var postcssCsscomb = require('postcss-csscomb');
-var postcssCombOptions = require('./.csscomb.json');
+var postcssCombOptions = require('./gulp/.csscomb.json');
 var postcssColorFunction = require('postcss-color-function');
 var postcssHexrgba = require('postcss-hexrgba');
 var postcssConditionals = require('postcss-conditionals');
@@ -48,6 +48,7 @@ var postcssProcesses = [
 var browserify = require('browserify');
 var buffer = require('gulp-buffer');
 
+gulp.task('default', build);
 gulp.task('watch', watch);
 gulp.task('min', min);
 gulp.task('css', css);
@@ -59,6 +60,16 @@ gulp.task('jsMin', jsMin);
 gulp.task('jsTidy', jsTidy);
 gulp.task('mediaTidy', mediaTidy);
 gulp.task('copy', copy);
+
+function build() {
+  runSequence(
+    'copy',
+    'js',
+    'css',
+    'jsMin',
+    'cssMin'
+  );
+}
 
 function min() {
   runSequence(
@@ -132,7 +143,7 @@ function jsMin() {
 function jsTidy() {
   return gulp.src([settings.js + '**/*.js'])
     .pipe(jscs({
-      configPath: '.jsTidyGoogle.json',
+      configPath: 'gulp/.jsTidyGoogle.json',
       fix: true
     }))
     .pipe(gulp.dest('js'));

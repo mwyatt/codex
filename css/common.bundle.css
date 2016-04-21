@@ -12,10 +12,7 @@
 
 /* site specific */
 /* can be used to refer to as boilerplate solutions */
-@import 'alert';
 @import 'button';
-@import 'link';
 @import 'general';
 
 @import 'reusable';
-@import 'highlight.js/styles/default';
