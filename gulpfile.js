@@ -63,11 +63,11 @@ gulp.task('copy', copy);
 
 function build() {
   runSequence(
-    'copy',
     'js',
     'css',
     'jsMin',
-    'cssMin'
+    'cssMin',
+    'copy'
   );
 }
 
@@ -160,8 +160,6 @@ function mediaTidy() {
 }
 
 function copy() {
-  gulp.src(settings.media + '**').pipe(gulp.dest(settings.assetDest));
-  gulp.src(settings.nodeModules + 'syntax-highlight/syntax-highlight.html').pipe(gulp.dest(settings.assetDest + 'highlightjs/'));
-  gulp.src(settings.js + 'vendor/highlight.pack.js').pipe(gulp.dest(settings.assetDest + 'highlightjs/'));
-  gulp.src(settings.css + 'vendor/github-gist.css').pipe(gulp.dest(settings.assetDest + 'highlightjs/styles/'));
+  gulp.src('index.html').pipe(gulp.dest('dist'));
+  gulp.src('asset/common.bundle.css').pipe(gulp.dest('dist/asset'));
 }
