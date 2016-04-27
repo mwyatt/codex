@@ -1,24 +1,16 @@
-.form-label,
-.form label {
+.form-label {
   font-weight: 600;
   margin-right: 1em;
   line-height: 1.8;
 }
 
-.form-label,
-.form label.block {
+.form-label.block {
   margin-bottom: 6px;
   margin-right: 0;
   line-height: 1.5;
 }
 
 .form-textarea,
-.form textarea,
-.form input[type='url'],
-.form input[type='email'],
-.form input[type='tel'],
-.form input[type='password'],
-.form input[type='text'],
 .form-input {
   font-size: 1em;
   box-sizing: border-box;
@@ -32,20 +24,14 @@
 }
 
 .form-textarea:focus,
-.form textarea:focus,
-.form input[type='url']:focus,
-.form input[type='email']:focus,
-.form input[type='tel']:focus,
-.form input[type='password']:focus,
-.form input[type='text']:focus,
 .form-input:focus {
   box-shadow: 0 0 3px rgba(#000000, 0.2);
   border-color: var(--color-secondary-1-0);
   color: var(--body-color);
 }
 
-.form label > input[type='checkbox'],
-.form label > input[type='radio'] {
+.form-checkbox,
+.form-radio {
   margin-right: 10px;
 }
 
@@ -64,12 +50,4 @@
   box-shadow: 0 0 3px rgba(#000000, 0.2);
   border-color: var(--color-secondary-1-0);
   color: var(--body-color);
-}
-
-.form-action .left {
-  margin-right: 1em;
-}
-
-.form-action .right {
-  margin-left: 1em;
 }

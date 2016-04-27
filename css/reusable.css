@@ -8,6 +8,10 @@
   display: block;
 }
 
+.block-margins {
+  margin: 1em 0;
+}
+
 .hide {
   display: none;
 }
@@ -17,18 +21,14 @@
   visibility: hidden;
 }
 
-.text-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .invisible {
   visibility: hidden;
 }
 
-.block-margins {
-  margin: 1em 0;
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .visuallyhidden {
@@ -74,10 +74,6 @@
 
 .w100 {
   width: 100%;
-}
-
-.block-clear {
-  margin: 1em 0;
 }
 
 .m1 {
