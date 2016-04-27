@@ -8,6 +8,7 @@
 	<link href="asset/common.bundle.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
+	<input type="hidden" value="<?php echo 'parsed' ?>">
 	<div class="body-inner-container clearfix">
 		<div class="site-heading-container">
 			<h1 class="site-heading">Codex <span class="npm-version">2.*.*</span></h1>

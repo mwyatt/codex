@@ -160,6 +160,6 @@ function mediaTidy() {
 }
 
 function copy() {
-  gulp.src('index.html').pipe(gulp.dest('dist'));
-  gulp.src('asset/common.bundle.css').pipe(gulp.dest('dist/asset'));
+  // gulp.src('index.html').pipe(gulp.dest('dist'));
+  // gulp.src('asset/common.bundle.css').pipe(gulp.dest('dist/asset'));
 }
