@@ -12,12 +12,41 @@
 		<div class="site-heading-container">
 			<h1 class="site-heading">Codex <span class="npm-version">2</span></h1>
 			<div class="site-slogan">A refreshing start for your css.</div>
-			<div class="site-heading-menu">
+			<div class="clearfix site-heading-menu">
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			</div>
 		</div>
 		<div class="topics-container">
+			<div class="topic-container">
+				<h2 class="topic-heading">Typography</h2>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Heading</h3>
+					<div class="topic-html typography">
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<h4>Heading 4</h4>
+						<h5>Heading 5</h5>
+						<h6>Heading 6</h6>
+					</div>
+				</div>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">List</h3>
+					<div class="topic-html typography">
+						<ul>
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+						</ul>
+						<ol>
+							<li>List item 1</li>
+							<li>List item 2</li>
+							<li>List item 3</li>
+						</ol>
+					</div>
+				</div>
+			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Form</h2>
 				<p class="p">About the form area.</p>
@@ -32,10 +61,8 @@
 			<div class="topic-container">
 				<h2 class="topic-heading">Button</h2>
 				<div class="topic-html">
-					<label for="example-radio" class="form-label block">Example Label</label>
-					<input id="example-radio" class="form-radio" name="example" type="radio">
-					<label for="example-radio-2" class="form-label block">Example Label</label>
-					<input id="example-radio-2" class="form-radio" name="example" type="radio">
+					<button class="button">Button 1</button>
+					<button class="button secondary">Button 2</button>
 				</div>
 			</div>
 		</div>
