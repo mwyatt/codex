@@ -17,7 +17,7 @@
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			</div>
 		</div>
-		<div class="topics-container">
+		<div class="topics-container hide">
 			<div class="topic-container">
 				<h2 class="topic-heading">Typography</h2>
 				<div class="topic-container-secondary">
