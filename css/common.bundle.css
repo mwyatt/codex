@@ -1,11 +1,6 @@
 @charset 'utf-8';
-
-/* things which dont input any code*/
 @import 'settings';
-
-/* things which insert code */
 @import 'reset';
-@import 'keyframe';
 @import 'form';
 @import 'typography';
 @import 'spinner';

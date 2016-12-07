@@ -120,3 +120,12 @@ html {
     max-width: 1280px;
     margin: 0 auto;
 }
+
+.ease-container {
+  
+}
+
+.ease-ball {
+  animation-name: easer;
+  animation-duration: 1000ms;
+}

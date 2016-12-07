@@ -17,6 +17,15 @@
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			</div>
 		</div>
+
+<?php foreach ($easings as $ease): ?>
+	
+		<div class="ease-container">
+			<div class="ease-ball <?php echo $ease ?>"></div>
+		</div>
+
+<?php endforeach ?>
+
 		<div class="topics-container hide">
 			<div class="topic-container">
 				<h2 class="topic-heading">Typography</h2>
