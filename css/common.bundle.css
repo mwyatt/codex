@@ -8,6 +8,7 @@
 /* site specific */
 /* can be used to refer to as boilerplate solutions */
 @import 'button';
+@import 'easing';
 @import 'general';
 
 @import 'reusable';

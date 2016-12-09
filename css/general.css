@@ -121,11 +121,24 @@ html {
     margin: 0 auto;
 }
 
-.ease-container {
-  
-}
-
 .ease-ball {
   animation-name: easer;
-  animation-duration: 1000ms;
+  animation-duration: 5s;
+  animation-iteration-count: 99;
+  width: 20px;
+  height: 20px;
+  background: red;
+  margin: 10px;
+}
+
+@keyframes easer {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
