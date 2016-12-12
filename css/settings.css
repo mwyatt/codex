@@ -1,5 +1,5 @@
 :root {
-  --color-primary-0: #ffffff;
+  --color-primary-0: #666;
   --color-primary-1: color(var(--color-primary-0) shade(25%));
   --color-primary-2: color(var(--color-primary-0) shade(50%));
   --color-primary-3: color(var(--color-primary-0) tint(25%));
