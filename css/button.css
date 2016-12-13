@@ -17,7 +17,7 @@
   border-color: color(var(--color-primary-0) tint(50%));
 }
 
-/*.button:hover {
+.button:hover {
   background-color: color(var(--color-primary-0) tint(20%));
   border-color: color(var(--color-primary-0) tint(20%));
 }
@@ -26,11 +26,10 @@
   background-color: color(var(--color-primary-0) shade(20%));
   border-color: color(var(--color-primary-0) shade(20%));
 }
-*/
 
 .button:focus {
-  /*border-color: var(--color-primary-0);*/
-  /*box-shadow: 0 0 3px var(--color-primary-0);*/
+  border-color: var(--color-primary-0);
+  box-shadow: 0 0 3px var(--color-primary-0);
 }
 
 .button.secondary {

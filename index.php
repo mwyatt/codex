@@ -1,5 +1,7 @@
 <?php
 
+$package = file_get_contents('./package.json');
+$package = json_decode($package);
 $easings = [
     'ease-in-sine',
     'ease-out-sine',
@@ -26,4 +28,4 @@ $easings = [
     'ease-in-out-back',
 ];
 
-include 'template/index.php';
+include 'template/home.php';

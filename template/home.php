@@ -8,27 +8,16 @@
 	<link href="asset/common.bundle.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div class="body-inner-container clearfix">
+	<div class="body-inner-container site-padding">
 		<div class="site-heading-container">
-			<h1 class="site-heading">Codex <span class="npm-version">2</span></h1>
+			<h1 class="site-heading">Codex <span class="npm-version"><?php echo $package->version ?></span></h1>
 			<div class="site-slogan">A refreshing start for your css.</div>
-			<div class="clearfix site-heading-menu">
+			<div class="site-heading-menu">
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
 			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			</div>
 		</div>
 		<div class="topics-container">
-			<div class="topic-container topic-easing">
-
-<?php foreach ($easings as $ease): ?>
-	
-				<div class="ease-container">
-					<div class="ease-ball <?php echo $ease ?>"></div>
-				</div>
-
-<?php endforeach ?>
-
-			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Typography</h2>
 				<div class="topic-container-secondary">
@@ -40,6 +29,12 @@
 						<h4>Heading 4</h4>
 						<h5>Heading 5</h5>
 						<h6>Heading 6</h6>
+					</div>
+				</div>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Paragraph</h3>
+					<div class="topic-html typography">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
 					</div>
 				</div>
 				<div class="topic-container-secondary">
@@ -60,20 +55,42 @@
 			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Form</h2>
-				<p class="p">About the form area.</p>
-				<h3 class="topic-heading-secondary">Radio</h3>
-				<div class="topic-html">
-					<label for="example-radio" class="form-label block">Example Label</label>
-					<input id="example-radio" class="form-radio" name="example" type="radio">
-					<label for="example-radio-2" class="form-label block">Example Label</label>
-					<input id="example-radio-2" class="form-radio" name="example" type="radio">
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Input</h3>
+					<div class="topic-html">
+						<input type="text" class="form-input" placeholder="John Smith">
+					</div>
+				</div>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Radio</h3>
+					<div class="topic-html">
+						<label for="example-radio" class="form-label block">Example Label</label>
+						<input id="example-radio" class="form-radio" name="example" type="radio">
+						<label for="example-radio-2" class="form-label block">Example Label</label>
+						<input id="example-radio-2" class="form-radio" name="example" type="radio">
+					</div>
 				</div>
 			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Button</h2>
 				<div class="topic-html">
-					<button class="button">Button 1</button>
-					<button class="button secondary">Button 2</button>
+					<button class="button text-size-larger">Primary Button</button>
+					<button class="button text-size-larger secondary">Secondary Button</button>
+				</div>
+			</div>
+			<div class="topic-container">
+				<h2 class="topic-heading">Easing</h2>
+				<div class="easings-container">
+
+<?php foreach ($easings as $ease): ?>
+	
+					<div class="ease-container">
+						<div class="ease-ball <?php echo $ease ?>"></div>
+						<span class="ease-label"><?php echo $ease ?></span>
+					</div>
+
+<?php endforeach ?>
+
 				</div>
 			</div>
 		</div>
