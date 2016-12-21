@@ -58,7 +58,23 @@
 				<div class="topic-container-secondary">
 					<h3 class="topic-heading-secondary">Input</h3>
 					<div class="topic-html">
+						<label class="block">Name</label>
 						<input type="text" class="form-input" placeholder="John Smith">
+					</div>
+				</div>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Select</h3>
+					<div class="topic-html">
+						<select class="form-select">
+							<option value="">Foo</option>
+							<option value="">Bar</option>
+						</select>
+					</div>
+				</div>
+				<div class="topic-container-secondary">
+					<h3 class="topic-heading-secondary">Textarea</h3>
+					<div class="topic-html">
+						<textarea class="form-textarea"></textarea>
 					</div>
 				</div>
 				<div class="topic-container-secondary">
