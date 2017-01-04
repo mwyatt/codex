@@ -2,3 +2,5 @@
 /vendor/
 /asset/
 /npm-debug.log
+/deployment*
+/composer.lock
