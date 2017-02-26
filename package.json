@@ -32,14 +32,11 @@
     "postcss-import": "7.1.3"
   },
   "devDependencies": {
-    "postcss-csscomb": "0.0.0",
-    "jquery": "1.11.2",
-    "modernizr": "3.3.1",
-    "mustache": "2.2.1",
     "anchor-scroll": "2.0.0",
     "browserify": "11.2.0",
     "browserify-shim": "3.8.12",
     "es6-promise": "3.1.2",
+    "flexboxgrid": "6.3.1",
     "gulp-buffer": "0.0.2",
     "gulp-concat": "2.6.0",
     "gulp-cssmin": "0.1.7",
@@ -49,6 +46,10 @@
     "gulp-uglify": "1.5.3",
     "gulp-util": "3.0.7",
     "imagemin-pngquant": "4.2.2",
+    "jquery": "1.11.2",
+    "modernizr": "3.3.1",
+    "mustache": "2.2.1",
+    "postcss-csscomb": "0.0.0",
     "run-sequence": "1.1.5"
   }
 }

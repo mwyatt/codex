@@ -27,6 +27,16 @@
 				</div>
 			</div>
 			<div class="topic-container">
+				<h2 class="topic-heading">Grid</h2>
+				<div class="topic-html">
+					<div class="row">
+						<div class="col-xs-4">col</div>
+						<div class="col-xs-4">col</div>
+						<div class="col-xs-4">col</div>
+					</div>
+				</div>
+			</div>
+			<div class="topic-container">
 				<h2 class="topic-heading">Typography</h2>
 				<p class="topic-description p">Use the class 'typography' to wrap typographic elements. This will style them automatically.</p>
 				<div class="topic-container-secondary">
