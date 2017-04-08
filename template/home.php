@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>Codex</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
 	<link href="asset/common.bundle.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -13,8 +13,8 @@
 			<h1 class="site-heading">Codex <span class="npm-version"><?php echo $package->version ?></span></h1>
 			<div class="site-slogan">A refreshing start for your css.</div>
 			<div class="site-heading-menu">
-			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
-			    <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
+				<div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
+				<div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
 			</div>
 		</div>
 		<div class="topics-container">
@@ -30,11 +30,34 @@
 				<h2 class="topic-heading">Grid</h2>
 				<div class="topic-html">
 					<div class="row">
-						<div class="col-xs-4">col</div>
-						<div class="col-xs-4">col</div>
-						<div class="col-xs-4">col</div>
+						<div class="col-md-4">col</div>
+						<div class="col-md-4">col</div>
+						<div class="col-md-4">col</div>
 					</div>
 				</div>
+			</div>
+			<div class="topic-container">
+				<h2 class="topic-heading">Portlet</h2>
+				
+				<div class="row">
+
+					<?php foreach ([1, 2, 3] as $key): ?>
+
+						<div class="col-md-4">
+							<div class="portlet">
+								<div class="portlet-title">
+									General
+								</div>
+								<div class="portlet-body p1">
+									<p>This a portlet body.</p>
+								</div>
+							</div>
+						</div>
+
+					<?php endforeach ?>
+
+				</div>
+
 			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Typography</h2>
@@ -119,14 +142,14 @@
 				<h2 class="topic-heading">Easing</h2>
 				<div class="easings-container">
 
-<?php foreach ($easings as $ease): ?>
-	
-					<div class="ease-container">
-						<div class="ease-ball <?php echo $ease ?>"></div>
-						<span class="ease-label"><?php echo $ease ?></span>
-					</div>
+					<?php foreach ($easings as $ease): ?>
 
-<?php endforeach ?>
+						<div class="ease-container">
+							<div class="ease-ball <?php echo $ease ?>"></div>
+							<span class="ease-label"><?php echo $ease ?></span>
+						</div>
+
+					<?php endforeach ?>
 
 				</div>
 			</div>

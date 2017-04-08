@@ -1,0 +1,12 @@
+.portlet {
+    border: 1px solid;
+}
+
+.portlet-title {
+    padding: 1rem;
+    font-size: 2em;
+}
+
+.portlet-body {
+    
+}

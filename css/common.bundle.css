@@ -2,11 +2,12 @@
 @import 'settings';
 @import 'settings/ease';
 @import 'reset';
-@import 'form';
+@import 'flexboxgrid';
 @import 'typography';
 @import 'link';
+@import 'form';
 @import 'spinner';
-@import 'flexboxgrid';
+@import '../portlet';
 
 @import 'button';
 @import 'general';
