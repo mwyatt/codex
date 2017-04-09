@@ -141,3 +141,8 @@
 .position-relative {
   position: relative;
 }
+
+.border {
+  border-width: 1px;
+  border-style: solid;
+}

@@ -43,7 +43,7 @@
 
 					<?php foreach ([1, 2, 3] as $key): ?>
 
-						<div class="col-md-4">
+						<div class="col-sm-12 col-md-4">
 							<div class="portlet">
 								<div class="portlet-title">
 									General
