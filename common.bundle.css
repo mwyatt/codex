@@ -7,7 +7,9 @@
 @import 'link';
 @import 'form';
 @import 'spinner';
-@import '../portlet';
+@import 'portlet';
+@import 'alert';
+@import 'table';
 
 @import 'button';
 @import 'general';

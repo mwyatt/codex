@@ -1,1 +1,41 @@
-@import 'css/link';
+.link:visited,
+.typography a:visited,
+.link,
+.typography a {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  color: var(--color-primary-0);
+  border-bottom-color: var(--color-primary-0);
+  cursor: pointer;
+}
+
+.link:hover,
+.typography a:hover {
+  color: color(var(--color-primary-0) shade(20%));
+  border-bottom-color: color(var(--color-primary-0) shade(20%));
+}
+
+.link:focus,
+.typography a:focus {
+  box-shadow: 0 0 3px var(--color-primary-0);
+}
+
+.link:active,
+.typography a:active {
+  color: color(var(--color-primary-0) shade(50%));
+  border-bottom-color: color(var(--color-primary-0) shade(50%));
+}
+
+.link.secondary:visited,
+.link.secondary {
+  color: var(--color-secondary-1-0);
+}
+
+.link.secondary:hover {
+  color: color(var(--color-secondary-1-0) shade(20%));
+}
+
+.link.secondary:active {
+  color: color(var(--color-secondary-1-0) shade(50%));
+  border-bottom-color: color(var(--color-secondary-1-0) shade(50%));
+}

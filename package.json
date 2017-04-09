@@ -49,6 +49,7 @@
     "jquery": "1.11.2",
     "modernizr": "3.3.1",
     "mustache": "2.2.1",
+    "stringify": "5.1.0",
     "postcss-csscomb": "0.0.0",
     "run-sequence": "1.1.5"
   }

@@ -1,12 +1,45 @@
 .portlet {
-    border: 1px solid;
+    border: 1px solid var(--color-gray-20);
+    border-radius: var(--border-radius);
+    margin: 1em 0;
 }
 
 .portlet-title {
-    padding: 1rem;
-    font-size: 2em;
+    font-size: 1.5em;
+    border-bottom: 1px solid var(--color-gray-20);
+    padding: 0.6em 0.9em;
 }
 
 .portlet-body {
     
+}
+
+.portlet-actions {
+    padding: 0.6em;
+}
+
+.portlet-actions .button {
+    margin-left: 0.3em;
+}
+
+.portlet-body .table {
+    border-color: var(--color-gray-10);
+}
+
+.portlet-body .table tr:first-child th {
+  border-top: 0;
+}
+
+.portlet-body .table tr:last-child td {
+  border-bottom: 0;
+}
+
+.portlet-body .table tr td:first-child,
+.portlet-body .table tr th:first-child {
+  border-left: 0;
+}
+
+.portlet-body .table tr td:last-child,
+.portlet-body .table tr th:last-child {
+  border-right: 0;
 }

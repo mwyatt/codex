@@ -5,7 +5,7 @@
 	<title>Codex</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
-	<link href="asset/common.bundle.css" media="screen, projection, print" rel="stylesheet" type="text/css" />
+	<link href="asset/common.bundle.css?<?php echo filemtime('asset/common.bundle.css') ?>" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="body-inner-container site-padding">
@@ -27,12 +27,34 @@
 				</div>
 			</div>
 			<div class="topic-container">
+				<h2 class="topic-heading">BMS Menu</h2>
+				<div class="topic-html">
+					hi
+				</div>
+			</div>
+			<div class="topic-container">
+				<h2 class="topic-heading">Alert</h2>
+				
+				<div class="row">
+
+					<?php foreach (['', 'success', 'fail'] as $type): ?>
+
+						<div class="col-sm-4">
+							<div class="alert <?php echo $type ?>">Hello alert <?php echo $type ?></div>
+						</div>
+
+					<?php endforeach ?>
+
+				</div>
+				
+			</div>
+			<div class="topic-container">
 				<h2 class="topic-heading">Grid</h2>
 				<div class="topic-html">
 					<div class="row">
-						<div class="col-md-4">col</div>
-						<div class="col-md-4">col</div>
-						<div class="col-md-4">col</div>
+						<div class="col-xs-12 col-md-4">col</div>
+						<div class="col-xs-12 col-md-4">col</div>
+						<div class="col-xs-12 col-md-4">col</div>
 					</div>
 				</div>
 			</div>
@@ -40,11 +62,12 @@
 				<h2 class="topic-heading">Portlet</h2>
 				
 				<div class="row">
-
-					<?php foreach ([1, 2, 3] as $key): ?>
-
-						<div class="col-sm-12 col-md-4">
+						<div class="col-xs-12 col-md-4">
 							<div class="portlet">
+								<div class="portlet-actions right">
+									<button class="button outline">Ok</button>
+									<button class="button outline">Cancel</button>
+								</div>
 								<div class="portlet-title">
 									General
 								</div>
@@ -53,9 +76,29 @@
 								</div>
 							</div>
 						</div>
-
-					<?php endforeach ?>
-
+						<div class="col-xs-12 col-md-4">
+							<div class="portlet">
+								<div class="portlet-actions right">
+									<button class="button outline">Ok</button>
+									<button class="button outline">Cancel</button>
+								</div>
+								<div class="portlet-title">
+									General
+								</div>
+								<div class="portlet-body">
+									<table class="table">
+										<tr>
+											<th>Heading</th>
+											<th>Heading</th>
+										</tr>
+										<tr>
+											<td>Content</td>
+											<td>Content</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
 				</div>
 
 			</div>
@@ -100,42 +143,50 @@
 			<div class="topic-container">
 				<h2 class="topic-heading">Form</h2>
 				<div class="topic-container-secondary">
-					<h3 class="topic-heading-secondary">Input</h3>
-					<div class="topic-html">
-						<label class="block">Name</label>
-						<input type="text" class="form-input" placeholder="John Smith">
+					<div class="row form-vertical">
+						<div class="col-xs-12 col-sm-4">
+							<div class="form-group">
+								<label class="form-label" for="name">Input Text</label>
+								<input id="name" type="text" class="form-control w100" placeholder="John Smith">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="select">Select</label>
+								<select id="select" class="form-control w100">
+									<option value="">Foo</option>
+									<option value="">Bar</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-4">
+							<div class="form-group">
+								<label class="form-label" for="textarea">Textarea</label>
+								<textarea id="textarea" class="form-control w100"></textarea>
+							</div>							
+							<div class="form-group">
+								<label class="form-label" for="example-radio" class="form-label block">Example Label</label>
+								<input id="example-radio" class="form-radio" name="example" type="radio">
+								<label class="form-label" for="example-radio-2" class="form-label block">Example Label</label>
+								<input id="example-radio-2" class="form-radio" name="example" type="radio">
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="topic-container-secondary">
-					<h3 class="topic-heading-secondary">Select</h3>
-					<div class="topic-html">
-						<select class="form-select">
-							<option value="">Foo</option>
-							<option value="">Bar</option>
-						</select>
-					</div>
-				</div>
-				<div class="topic-container-secondary">
-					<h3 class="topic-heading-secondary">Textarea</h3>
-					<div class="topic-html">
-						<textarea class="form-textarea"></textarea>
-					</div>
-				</div>
-				<div class="topic-container-secondary">
-					<h3 class="topic-heading-secondary">Radio</h3>
-					<div class="topic-html">
-						<label for="example-radio" class="form-label block">Example Label</label>
-						<input id="example-radio" class="form-radio" name="example" type="radio">
-						<label for="example-radio-2" class="form-label block">Example Label</label>
-						<input id="example-radio-2" class="form-radio" name="example" type="radio">
+					<div class="text-right block-margins">
+						<button class="button primary">Submit</button>
 					</div>
 				</div>
 			</div>
 			<div class="topic-container">
 				<h2 class="topic-heading">Button</h2>
 				<div class="topic-html">
-					<button class="button text-size-larger">Primary Button</button>
-					<button class="button text-size-larger secondary">Secondary Button</button>
+					<div class="block-margins">
+						<button class="button primary text-size-larger">Primary Button</button>
+					</div>
+					<div class="block-margins">
+						<button class="button outline">Primary Button</button>
+					</div>
+					<div class="block-margins">
+						<button class="button text-size-larger secondary">Secondary Button</button>
+					</div>
 				</div>
 			</div>
 			<div class="topic-container">

@@ -5,6 +5,7 @@
   color: var(--body-color);
   border: 1px solid color(var(--body-color) tint(50%));
   background-color: color(var(--body-color) tint(80%));
+  border-radius: var(--border-radius);
 }
 
 .alert *:first-child {
@@ -16,9 +17,9 @@
 }
 
 .alert.fail {
-  color: var(--color-secondary-2-0);
-  border-color: color(var(--color-secondary-2-0) tint(50%));
-  background-color: color(var(--color-secondary-2-0) tint(80%));
+  color: var(--color-secondary-1-0);
+  border-color: color(var(--color-secondary-1-0) tint(50%));
+  background-color: color(var(--color-secondary-1-0) tint(80%));
 }
 
 .alert.success {
