@@ -1,0 +1,31 @@
+.bms-nav-item {
+    float: left;
+    margin-right: 1em;
+}
+
+.bms-nav {
+    min-height: 50px;
+    margin: 1em 0;
+    position: relative;
+}
+
+.bm-nav-item-link {
+    display: block;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 3px;
+    font-size: 1.6em;
+    padding: 0.5em 1em;
+}
+
+.bms-nav-item-children {
+    min-height: 20px;
+    background-color: #ccc;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    right: 0;
+}

@@ -13,6 +13,7 @@
 
 @import 'button';
 @import 'general';
+@import 'bms-nav';
 
 @import 'reusable';
 @import 'ease';
