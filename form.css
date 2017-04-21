@@ -1,5 +1,5 @@
 .form-group {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .form-label {
@@ -7,18 +7,18 @@
 }
 
 .form-label.block {
-  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
   margin-right: 0;
   line-height: 1.5;
 }
 
 .form-control {
-  font-size: 1em;
+  font-size: 1rem;
   box-sizing: border-box;
   color: var(--body-color);
   font-family: var(--font-family);
   border: 1px solid var(--color-secondary-1-0);
-  padding: 0.4em;
+  padding: 0.4rem;
   margin: 0;
   border-radius: var(--border-radius);
 }
@@ -31,11 +31,11 @@
 
 .form-checkbox,
 .form-radio {
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 
 select.form-control {
-  padding: 0.3em 0.2em;
+  padding: 0.3rem 0.2rem;
 }
 
 input.form-control {
@@ -50,5 +50,5 @@ input.form-control {
 
 .form-vertical .form-label {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: .5rem;
 }

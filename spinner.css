@@ -10,8 +10,8 @@
 
 .spinner {
   animation: rotateFull 0.5s infinite linear;
-  height: 26px;
-  width: 26px;
+  height: 1.5rem;
+  width: 1.5rem;
   margin: 0 auto;
   position: relative;
   border-left-color: #cccccc;

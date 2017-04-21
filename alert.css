@@ -1,7 +1,7 @@
 .alert {
   line-height: 1.5;
-  margin: 1em 0;
-  padding: 1em;
+  margin: 1rem 0;
+  padding: 1rem;
   color: var(--body-color);
   border: 1px solid color(var(--body-color) tint(50%));
   background-color: color(var(--body-color) tint(80%));
@@ -29,5 +29,5 @@
 }
 
 .alert p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }

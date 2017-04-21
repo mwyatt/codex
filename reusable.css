@@ -9,7 +9,7 @@
 }
 
 .block-margins {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .hide {
@@ -77,7 +77,7 @@
 }
 
 .m1 {
-  margin: 1em;
+  margin: 1rem;
 }
 
 .mt0 {
@@ -85,39 +85,39 @@
 }
 
 .mt1 {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .mr1 {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 .mb1 {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .ml1 {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .p1 {
-  padding: 1em;
+  padding: 1rem;
 }
 
 .pt1 {
-  padding-top: 1em;
+  padding-top: 1rem;
 }
 
 .pr1 {
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 .pb1 {
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 .pl1 {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 .page-break {
@@ -127,11 +127,11 @@
 }
 
 .text-size-larger {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .text-size-smaller {
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .cursor-pointer {

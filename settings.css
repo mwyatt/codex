@@ -27,11 +27,11 @@
   --body-color: var(--color-secondary-1-0);
   --selection-background-color: var(--color-primary-0);
   --placeholder-color: color(#ffffff shade(30%));
-  --heading-color: var(--color-secondary-1-1);
+  --heading-color: var(--color-secondary-1-3);
   
   --font-family: 'Open Sans', 'Arial', 'sans-serif';
   --font-weight: 400;
-  --font-size: 14px;
+  --font-size: 1rem;
   --font-line-height: 1.5;
   --font-family-heading: var(--font-family);
   --background-color: #fff;
