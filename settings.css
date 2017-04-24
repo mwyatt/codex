@@ -1,6 +1,8 @@
 :root {
 
   --color-primary-0: #ff5722;
+  --color-primary-0: #D21480;
+  --color-primary-0: #F1043F;
   --color-primary-1: color(var(--color-primary-0) shade(25%));
   --color-primary-2: color(var(--color-primary-0) shade(50%));
   --color-primary-3: color(var(--color-primary-0) tint(25%));
