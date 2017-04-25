@@ -45,7 +45,7 @@ function setGlobalEvents(options) {
     closeAllExcept(exceptions)
   })
   bean.on(window, 'keyup', function(event) {
-    if (event.which == keycode('escape') {
+    if (event.which == keycode('escape')) {
       closeAllExcept([])
     }
   })

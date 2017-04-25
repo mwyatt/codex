@@ -67,9 +67,6 @@
 }
 
 .npm-version {
-    transition-timing-function: var(--ease-out-expo);
-    transition-duration: 500ms;
-    transition-property: transform box-shadow;
     padding: 0.5rem 0.7rem 0.6rem;
     border-radius: var(--border-radius);
     line-height: 1;
@@ -82,11 +79,11 @@
     font-size: 1.5rem;
     transform: translateZ(0);
     display: inline-block;
-}
-
-.npm-version:hover {
-    transform: rotate3d(1, 1, 0, -10deg);
-    box-shadow: -6px 8px 3px rgba(0,0,0,0.1);
+    animation-name: flipInX;
+    animation-duration: 750ms;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: var(--ease-out-circ);
 }
 
 .topic-heading-secondary {
@@ -149,6 +146,10 @@
 .example-2-toggle-open .toggle-example-2-menu,
 .example-1-toggle-open .toggle-example-1-menu {
     display: block;
+    animation-name: flipInX;
+    animation-duration: 350ms;
+    animation-iteration-count: 1;
+    animation-timing-function: var(--ease-out-circ);
 }
 
 .toggle-example-2-menu,
