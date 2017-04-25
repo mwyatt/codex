@@ -145,3 +145,17 @@
     left: 0.5rem;
     font-size: .7rem;
 }
+
+.example-2-toggle-open .toggle-example-2-menu,
+.example-1-toggle-open .toggle-example-1-menu {
+    display: block;
+}
+
+.toggle-example-2-menu,
+.toggle-example-1-menu {
+    top: 2rem;
+}
+
+.is-past-threshold .cx-to-top {
+    bottom: .5rem;
+}

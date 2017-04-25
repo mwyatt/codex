@@ -8,6 +8,7 @@
     <link href="asset/common.bundle.css?<?php echo filemtime('asset/common.bundle.css') ?>" media="screen, projection, print" rel="stylesheet" type="text/css" />
 </head>
 <body>
+    <a href="#" class="cx-to-top">To Top</a>
     <div class="body-inner-container site-padding">
         <div class="site-heading-container row">
             <div class="col-xs-12 col-sm-8">
@@ -39,5 +40,6 @@
 
         </div>
     </div>
+    <script src="asset/common.bundle.js?<?php echo filemtime('asset/common.bundle.js') ?>"></script>
 </body>
 </html>

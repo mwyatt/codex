@@ -28,6 +28,7 @@ $easings = [
     'ease-in-out-back',
 ];
 $areaTemplates = [
+    'toggler',
     'reset',
     'bms-menu',
     'alert',

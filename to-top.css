@@ -1,0 +1,13 @@
+.cx-to-top {
+    transition-duration: 250ms;
+    transition-property: transform bottom;
+    transition-timing-function: var(--ease-out-expo);
+    position: fixed;
+    bottom: -3rem;
+    right: .5rem;
+    z-index: 1;
+    background-color: var(--color-gray-10);
+    color: var(--color-gray-40);
+    padding: 0.7rem;
+    border-radius: var(--border-radius);
+}
