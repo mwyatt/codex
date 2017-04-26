@@ -33,7 +33,7 @@ gulp.task('js', function() {
       file.contents = browserify(file.path, {debug: true})
         .transform(stringify, {
           global: true,
-          appliesTo: {includeExtensions: ['.mst']},
+          appliesTo: {includeExtensions: ['.mst', '.mustache']},
           minify: true
         })
         // .transform('browserify-shim', {global: true})

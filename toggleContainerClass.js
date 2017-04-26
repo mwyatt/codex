@@ -7,13 +7,15 @@ var openToggles = []
 var ToggleContainerClass = function (options) {
   var defaults = {
     openClass: '',
-    togglerClass: '',
+    toggler: '',
+    container: '',
     containerClass: 'html',
     parentCloseStop: '',
   }
   options = extend(defaults, options)
-  options.container = document.querySelector(options.containerClass)
-  options.toggler = document.querySelector(options.togglerClass)
+  if (options.containerClass.length) {
+    options.container = document.querySelector(options.containerClass)
+  }
   if (!options.container || !options.toggler) {
     return console.warn('Unable to run ToggleContainerClass as container or toggler cannot be selected.')
   } else if (!options.openClass) {
@@ -39,7 +41,7 @@ function setGlobalEvents(options) {
     }
     for (var index = openToggles.length - 1; index >= 0; index--) {
       if (isDescendant(openToggles[index].parentCloseStop, event.target)) {
-        exceptions.push(openToggles[index].togglerClass)
+        exceptions.push(openToggles[index].openClass)
       }
     }
     closeAllExcept(exceptions)
@@ -53,33 +55,32 @@ function setGlobalEvents(options) {
 }
 
 function togglerClick(event, options) {
-  closeAllExcept([options.togglerClass])
+  closeAllExcept([options.openClass])
   options.container.classList.toggle(options.openClass)
   if (options.container.classList.contains(options.openClass)) {
     openToggles.push(options)
   } else {
-    closeByTogglerClass(options.togglerClass)
+    closeByTogglerClass(options.openClass)
   }
-  console.log(openToggles)
 }
 
-function closeByTogglerClass(togglerClass) {
+function closeByTogglerClass(openClass) {
   var togglesKeep = []
   for (var index = openToggles.length - 1; index >= 0; index--) {
-    if (openToggles[index].togglerClass !== togglerClass) {
+    if (openToggles[index].openClass !== openClass) {
       togglesKeep.push(openToggles[index])
     }
   }
   openToggles = togglesKeep
 }
 
-function closeAllExcept(togglerClasses) {
+function closeAllExcept(openClasses) {
   if (!openToggles) {
     return
   }
   var openToggle;
   for (var index = openToggles.length - 1; index >= 0; index--) {
-    if (arrayHasValue(togglerClasses, openToggles[index].togglerClass)) {
+    if (arrayHasValue(openClasses, openToggles[index].openClass)) {
       openToggle = openToggles[index]
     } else {
       openToggles[index].container.classList.remove(openToggles[index].openClass)
