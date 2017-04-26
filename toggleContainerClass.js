@@ -29,6 +29,7 @@ var ToggleContainerClass = function (options) {
 
 ToggleContainerClass.prototype.setEvents = function(options) {
   bean.on(options.toggler, 'click', function(event) {
+    event.stopImmediatePropagation()
     togglerClick(event, options)
   })
 }
