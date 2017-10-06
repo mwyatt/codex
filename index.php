@@ -28,6 +28,7 @@ $easings = [
     'ease-in-out-back',
 ];
 $areaTemplates = [
+    'palette',
     'dialogue',
     'toggler',
     'reset',

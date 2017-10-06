@@ -160,3 +160,18 @@
 .is-past-threshold .cx-to-top {
     bottom: .5rem;
 }
+
+.colour {
+    float: left;
+    margin: 1rem;
+    width: 5rem;
+}
+
+.colour-swatch {
+    height: 3rem;
+    border-radius: 3px;
+    background: #eee;
+    margin-bottom: 0.5rem;
+}
+
+.colour-swatch-name {font-size: 0.8rem;}
