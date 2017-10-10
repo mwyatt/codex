@@ -9,7 +9,8 @@
 }
 
 .block-margins {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .hide {
@@ -120,6 +121,10 @@
   padding-left: 1rem;
 }
 
+.height7 {
+    height: 7rem;
+}
+
 .page-break {
   display: block;
   page-break-after: always;
@@ -146,4 +151,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: var(--color-gray-20);
+}
+
+.rounded-corners {
+    border-radius: var(--border-radius);
 }

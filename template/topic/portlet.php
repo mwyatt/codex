@@ -1,4 +1,4 @@
-<h2 class="topic-heading h2">Portlet</h2>
+<h2 class="topic-heading">Portlet</h2>
 <div class="row">
     <div class="col-xs-12 col-md-4">
         <div class="portlet">

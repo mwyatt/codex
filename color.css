@@ -1,0 +1,47 @@
+.background-scorpion {
+    background-color: var(--scorpion);
+}
+
+.background-gallery {
+    background-color: var(--gallery);
+}
+
+.background-razzmatazz {
+    background-color: var(--razzmatazz);
+}
+
+.background-bud {
+    background-color: var(--bud);
+}
+
+.background-red-damask {
+    background-color: var(--red-damask);
+}
+
+.background-white {
+    background-color: var(--white);
+}
+
+.color-scorpion {
+    color: var(--scorpion);
+}
+
+.color-gallery {
+    color: var(--gallery);
+}
+
+.color-razzmatazz {
+    color: var(--razzmatazz);
+}
+
+.color-bud {
+    color: var(--bud);
+}
+
+.color-red-damask {
+    color: var(--red-damask);
+}
+
+.color-white {
+    color: var(--white);
+}

@@ -28,18 +28,20 @@ $easings = [
     'ease-in-out-back',
 ];
 $areaTemplates = [
+    'form',
+    'animation',
+    'easing',
+    'grid',
     'palette',
     'dialogue',
     'toggler',
     'reset',
-    'bms-menu',
+    // 'bms-menu',
     'alert',
     'grid',
     'portlet',
     'typography',
-    'form',
     'button',
-    'easing',
 ];
 
 include 'template/home.php';

@@ -1,4 +1,4 @@
-<h2 class="topic-heading h2">Typography</h2>
+<h2 class="topic-heading">Typography</h2>
 <p class="topic-description p">Use the class 'typography' to wrap typographic elements. This will style them automatically.</p>
 <div class="topic-container-secondary">
     <div class="topic-html typography">

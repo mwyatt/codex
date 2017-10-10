@@ -2,7 +2,6 @@
   line-height: 1.5;
   margin: 1rem 0;
   padding: 1rem;
-  color: var(--body-color);
   border: 1px solid color(var(--body-color) tint(50%));
   background-color: color(var(--body-color) tint(80%));
   border-radius: var(--border-radius);
@@ -16,7 +15,7 @@
   margin-bottom: 0;
 }
 
-.alert.fail {
+/*.alert.fail {
   color: var(--color-secondary-1-0);
   border-color: color(var(--color-secondary-1-0) tint(50%));
   background-color: color(var(--color-secondary-1-0) tint(80%));
@@ -27,7 +26,7 @@
   border-color: color(var(--color-primary-0) tint(50%));
   background-color: color(var(--color-primary-0) tint(80%));
 }
-
+*/
 .alert p {
   margin: 1rem 0;
 }

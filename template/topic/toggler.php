@@ -1,4 +1,4 @@
-<h2 class="topic-heading h2">Toggle Container Class</h2>
+<h2 class="topic-heading">Toggle Container Class</h2>
 <div class="typography">
     <div class="position-relative js-toggle-example-1-container">
         <span class="button primary js-toggle-example-1">Toggle</span>

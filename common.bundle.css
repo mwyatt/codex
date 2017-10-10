@@ -4,12 +4,14 @@
 @import 'reset';
 @import 'flexboxgrid';
 @import 'keyframe';
+@import 'animation';
 @import 'typography';
 @import 'link';
 @import 'form';
 @import 'spinner';
 @import 'portlet';
 @import 'alert';
+@import 'color';
 @import 'table';
 @import 'mwyatt-dialogue';
 

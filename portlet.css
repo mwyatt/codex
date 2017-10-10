@@ -1,12 +1,12 @@
 .portlet {
-    border: 1px solid var(--color-gray-20);
+    border: 1px solid;
     border-radius: var(--border-radius);
     margin: 1rem 0;
 }
 
 .portlet-title {
     font-size: 1.5rem;
-    border-bottom: 1px solid var(--color-gray-20);
+    border-bottom: 1px solid;
     padding: 0.6rem 0.9rem;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .portlet-body .table {
-    border-color: var(--color-gray-10);
+    /*border-color: var(--color-gray-10);*/
 }
 
 .portlet-body .table tr:first-child th {

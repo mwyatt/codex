@@ -1,0 +1,35 @@
+.animated {
+    animation-duration: 5s;
+    animation-timing-function: var(--ease-in-out-circ);
+    animation-iteration-count: infinite;
+
+        width: 3rem;
+        height: 3rem;
+        background: var(--bud);
+        border-radius: .2rem;
+        margin: 0 auto;
+}
+
+.zoomOut {animation-name: zoomOut}
+.zoomIn {animation-name: zoomIn}
+.fadeOut {animation-name: fadeOut}
+.fadeOutRight {animation-name: fadeOutRight}
+.fadeOutLeft {animation-name: fadeOutLeft}
+.fadeIn {animation-name: fadeIn}
+.fadeInTop {animation-name: fadeInTop}
+.fadeOutTop {animation-name: fadeOutTop}
+.fadeOutBottom {animation-name: fadeOutBottom}
+.verticalFlip {animation-name: verticalFlip}
+.horizontalFlip {animation-name: horizontalFlip}
+.bounceOutBottom {animation-name: bounceOutBottom}
+.bounceOutTop {animation-name: bounceOutTop}
+.bounceOutLeft {animation-name: bounceOutLeft}
+.bounceOutRight {animation-name: bounceOutRight}
+.rubberBand {animation-name: rubberBand}
+.tada {animation-name: tada}
+.rollOutRight {animation-name: rollOutRight}
+.rollOutLeft {animation-name: rollOutLeft}
+.rotateClockwise {animation-name: rotateClockwise}
+.rotateAntiClockwise {animation-name: rotateAntiClockwise}
+.flipInX {animation-name: flipInX}
+.flipOutX {animation-name: flipOutX}

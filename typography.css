@@ -114,8 +114,8 @@
 
 .mark,
 .typography mark {
-  background-color: var(--color-primary-0);
-  color: #ffffff;
+  background-color: var(--body-color);
+  color: var(--white);
 }
 
 .blockquote,

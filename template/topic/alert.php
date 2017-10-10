@@ -1,4 +1,4 @@
-<h2 class="topic-heading h2">Alert</h2>
+<h2 class="topic-heading">Alert</h2>
 <div class="row">
 
     <?php foreach ([''] as $type): ?>

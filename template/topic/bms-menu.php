@@ -1,4 +1,4 @@
-<h2 class="topic-heading h2">BMS Menu</h2>
+<h2 class="topic-heading">BMS Menu</h2>
 <div class="bms-nav">
 
     <?php foreach ([1, 2, 3] as $key): ?>

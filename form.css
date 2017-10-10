@@ -2,11 +2,11 @@
   margin: 1rem 0;
 }
 
-.form-label {
-  font-weight: 600;
+.control-label {
+  /*font-weight: 600;*/
 }
 
-.form-label.block {
+.control-label.block {
   margin-bottom: 0.5rem;
   margin-right: 0;
   line-height: 1.5;
@@ -15,17 +15,17 @@
 .form-control {
   font-size: 1rem;
   box-sizing: border-box;
-  color: var(--body-color);
+  color: var(--form-control-color);
   font-family: var(--font-family);
-  border: 1px solid var(--color-secondary-1-0);
+  border: 1px solid var(--form-control-border-color);
   padding: 0.4rem;
-  margin: 0;
   border-radius: var(--border-radius);
 }
 
+.form-select:focus,
 .form-control:focus {
-  box-shadow: 0 0 3px rgba(#000000, 0.2);
-  border-color: var(--color-secondary-1-0);
+  /*box-shadow: 0 0 3px rgba(#000000, 0.2);*/
+  border-color: color(var(--form-control-border-color) tint(20%));
   color: var(--body-color);
 }
 
@@ -42,13 +42,12 @@ input.form-control {
   appearance: none;
 }
 
-.form-select:focus {
-  box-shadow: 0 0 3px rgba(#000000, 0.2);
-  border-color: var(--color-secondary-1-0);
-  color: var(--body-color);
-}
-
-.form-vertical .form-label {
+.form-vertical .control-label {
   display: block;
   margin-bottom: .5rem;
+}
+
+.form-horizontal .form-group > .control-label {
+    line-height: 2.3;
+    text-align: right;
 }
