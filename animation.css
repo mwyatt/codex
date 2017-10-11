@@ -1,13 +1,15 @@
 .animated {
-    animation-duration: 5s;
-    animation-timing-function: var(--ease-in-out-circ);
-    animation-iteration-count: infinite;
-
-        width: 3rem;
+            width: 3rem;
         height: 3rem;
         background: var(--bud);
         border-radius: .2rem;
         margin: 0 auto;
+}
+
+.animated:hover {
+    animation-duration: 1s;
+    /*animation-timing-function: var(--ease-in-out-circ);*/
+    animation-iteration-count: infinite;
 }
 
 .zoomOut {animation-name: zoomOut}

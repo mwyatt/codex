@@ -1,0 +1,35 @@
+.badge {
+    display: inline-block;
+    padding: .25rem .4rem;
+    font-size: 75%;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: var(--border-radius);
+}
+
+.badge-primary {
+    background-color: var(--badge-background-color);
+}
+
+.badge-primary[href]:hover {
+    background-color: color(var(--badge-background-color) tint(15%));
+}
+
+.badge-primary[href]:active {
+    background-color: color(var(--badge-background-color) shade(15%));
+}
+
+.badge-secondary {
+    background-color: var(--badge-secondary-background-color);
+}
+
+.badge-secondary[href]:hover {
+    background-color: color(var(--badge-secondary-background-color) tint(15%));
+}
+
+.badge-secondary[href]:active {
+    background-color: color(var(--badge-secondary-background-color) shade(15%));
+}

@@ -33,7 +33,7 @@
                     <label class="control-label block"><input class="form-checkbox" name="foo" type="checkbox">Bar</label>
                 </div>
                 <div class="block-margins">
-                    <button class="button primary text-size-larger">Submit</button>
+                    <button class="btn btn-primary text-size-larger">Submit</button>
                 </div>
             </div>
         </div>

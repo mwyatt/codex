@@ -18,10 +18,10 @@
             <div class="col-xs-12 col-sm-4 site-heading-menu">
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
+                        <div class="site-heading-menu-item"><a class="site-heading-menu-link btn btn-primary" href="https://www.npmjs.com/package/mwyatt-codex" target="_blank">NPM</a></div>
                     </div>
                     <div class="col-xs-6">
-                        <div class="site-heading-menu-item"><a class="site-heading-menu-link button" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
+                        <div class="site-heading-menu-item"><a class="site-heading-menu-link btn btn-primary" href="https://github.com/mwyatt/codex" target="_blank">Github</a></div>
                     </div>
                 </div>
             </div>

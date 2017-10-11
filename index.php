@@ -28,6 +28,8 @@ $easings = [
     'ease-in-out-back',
 ];
 $areaTemplates = [
+    'button',
+    'badge',
     'form',
     'animation',
     'easing',
@@ -41,7 +43,6 @@ $areaTemplates = [
     'grid',
     'portlet',
     'typography',
-    'button',
 ];
 
 include 'template/home.php';

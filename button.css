@@ -1,4 +1,4 @@
-.button {
+.btn {
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -10,58 +10,53 @@
   background-color: transparent;
 }
 
-.button.primary {
-  background-color: var(--razzmatazz);
+.btn:focus {
+    outline: 0;
+}
+
+.btn-primary {
+  background-color: var(--button-background-color);
   color: var(--white);
 }
 
-.button.outline {
-  border: 1px solid;
+.btn-outline:focus {
+  box-shadow: 0 0 0 2px var(--button-background-color);
 }
 
-.button.primary.disabled,
-.button.primary:disabled {
+.btn-outline {
+  border: 1px solid var(--button-background-color);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
   cursor: default;
-  background-color: color(var(--razzmatazz) tint(50%));
-  border-color: color(var(--razzmatazz) tint(50%));
+  background-color: color(var(--button-background-color) tint(50%));
 }
 
-.button.primary:hover {
-  background-color: color(var(--razzmatazz) tint(20%));
-  border-color: color(var(--razzmatazz) tint(20%));
+.btn-primary:hover {
+  background-color: color(var(--button-background-color) tint(20%));
 }
 
-.button.primary:active {
-  background-color: color(var(--razzmatazz) shade(20%));
-  border-color: color(var(--razzmatazz) shade(20%));
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: color(var(--button-background-color) shade(20%));
 }
 
-.button.primary:focus {
-  border-color: var(--razzmatazz);
-  box-shadow: 0 0 3px var(--razzmatazz);
+.btn-secondary {
+    color: var(--white);
+  background-color: var(--button-secondary-background-color);
 }
 
-.button.secondary {
-  background-color: var(--bud);
+.btn-secondary:hover {
+  background-color: color(var(--button-secondary-background-color) tint(20%));
 }
 
-.button.secondary:hover {
-  background-color: color(var(--bud) tint(20%));
-  border-color: color(var(--bud) tint(20%));
+.btn-secondary:active,
+.btn-secondary:focus {
+  background-color: color(var(--button-secondary-background-color) shade(20%));
 }
 
-.button.secondary:active {
-  background-color: color(var(--bud) shade(20%));
-  border-color: color(var(--bud) shade(20%));
-}
-
-.button.secondary:focus {
-  border-color: var(--bud);
-  box-shadow: 0 0 3px var(--bud);
-}
-
-.button.secondary.disabled,
-.button.secondary:disabled {
-  background-color: color(var(--bud) tint(50%));
-  border-color: color(var(--bud) tint(50%));
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  background-color: color(var(--button-secondary-background-color) tint(50%));
 }

@@ -7,6 +7,7 @@
 @import 'animation';
 @import 'typography';
 @import 'link';
+@import 'badge';
 @import 'form';
 @import 'spinner';
 @import 'portlet';

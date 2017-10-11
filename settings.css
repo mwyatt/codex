@@ -25,6 +25,9 @@
     --button-background-color: var(--razzmatazz);
     --button-secondary-background-color: var(--red-damask);
 
+    --badge-background-color: var(--razzmatazz);
+    --badge-secondary-background-color: var(--red-damask);
+
     --font-family: 'Open Sans', 'Arial', 'sans-serif';
     --font-weight: 400;
     --font-size: 1rem;
