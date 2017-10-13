@@ -3,9 +3,11 @@
 
     <?php foreach ($easings as $ease): ?>
 
-        <div class="ease-container">
-            <div class="ease-ball <?php echo $ease ?>"></div>
-            <span class="ease-label"><?php echo $ease ?></span>
+        <div class="containing-box ease-container">
+            <div class="ease-ball-container">
+                <div class="ease-ball <?php echo $ease ?>"></div>
+            </div>
+            <div class="ease-label"><?php echo $ease ?></div>
         </div>
 
     <?php endforeach ?>

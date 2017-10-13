@@ -4,10 +4,11 @@
   border: none;
   text-align: center;
   line-height: 1;
-  padding: 0.4rem 0.5rem;
+  padding: 0.3em 0.4em;
   display: inline-block;
   border-radius: var(--border-radius);
   background-color: transparent;
+transition: background-color .2s ease;
 }
 
 .btn:focus {
@@ -23,8 +24,18 @@
   box-shadow: 0 0 0 2px var(--button-background-color);
 }
 
+.btn-outline:hover {
+  border-color: color(var(--button-outline-color) tint(20%));
+  color: color(var(--button-outline-color) tint(20%));
+}
+
+.btn-outline:active {
+  border-color: color(var(--button-outline-color) shade(20%));
+  color: color(var(--button-outline-color) shade(20%));
+}
+
 .btn-outline {
-  border: 1px solid var(--button-background-color);
+  border: 1px solid var(--button-outline-color);
 }
 
 .btn-primary.disabled,

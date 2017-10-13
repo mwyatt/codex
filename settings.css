@@ -6,24 +6,28 @@
     --red-damask: #DD614A;
     --white: #FFFFFF;
 
+    --border-color: var(--gallery);
     --body-color: var(--scorpion);
     --background-color: var(--gallery);
 
     --selection-background-color: var(--razzmatazz);
     --selection-color: var(--white);
 
-    --placeholder-color: var(--bud);
+    --placeholder-color: color(var(--gallery) shade(20%));
 
     --heading-color: color(var(--scorpion) shade(20%));
 
     --form-control-color: var(--scorpion);
-    --form-control-border-color: var(--scorpion);
+    --form-control-border-color: color(var(--scorpion) tint(30%));
 
     --link-color: var(--razzmatazz);
     --link-secondary-color: var(--bud);
 
     --button-background-color: var(--razzmatazz);
     --button-secondary-background-color: var(--red-damask);
+    --button-outline-color: var(--scorpion);
+
+    --portlet-border-color: color(var(--scorpion) tint(80%));
 
     --badge-background-color: var(--razzmatazz);
     --badge-secondary-background-color: var(--red-damask);

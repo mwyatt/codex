@@ -6,8 +6,8 @@
     bottom: -3rem;
     right: .5rem;
     z-index: 1;
-    background-color: var(--color-gray-10);
-    color: var(--color-gray-40);
-    padding: 0.7rem;
+    background-color: var(--bud);
+    color: var(--white);
     border-radius: var(--border-radius);
+    padding: 0.3em 0.5em;
 }

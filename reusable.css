@@ -131,11 +131,11 @@
   page-break-inside: avoid;
 }
 
-.text-size-larger {
+.text-larger {
   font-size: 1.2rem;
 }
 
-.text-size-smaller {
+.text-smaller {
   font-size: 0.8rem;
 }
 
@@ -150,7 +150,7 @@
 .border {
   border-width: 1px;
   border-style: solid;
-  border-color: var(--color-gray-20);
+  border-color: var(--border-color);
 }
 
 .rounded-corners {

@@ -29,13 +29,15 @@ $animations = [
  ?>
 
 <h2 class="topic-heading">Animation</h2>
-<div class="topic-html clearfix">
+<div class="clearfix easings-container">
     
 <?php foreach ($animations as $animation): ?>
     
-    <div class="animation">
-        <div class="animated <?php echo $animation ?>"></div>
-        <span><?php echo $animation ?></span>
+    <div class="animation containing-box ease-container">
+        <div class="ease-ball-container">
+            <div class="animated <?php echo $animation ?>"></div>
+        </div>
+        <div class="ease-label"><?php echo $animation ?></div>
     </div>
 
 <?php endforeach ?>

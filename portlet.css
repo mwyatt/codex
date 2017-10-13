@@ -1,13 +1,13 @@
 .portlet {
-    border: 1px solid;
+    border: 1px solid var(--portlet-border-color);
     border-radius: var(--border-radius);
     margin: 1rem 0;
 }
 
 .portlet-title {
-    font-size: 1.5rem;
-    border-bottom: 1px solid;
-    padding: 0.6rem 0.9rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--portlet-border-color);
+    padding: 0.3em 0.5em;
 }
 
 .portlet-body {
@@ -18,8 +18,9 @@
     padding: 0.6rem;
 }
 
-.portlet-actions .button {
+.portlet-actions .btn {
     margin-left: 0.3rem;
+    font-size: .9rem;
 }
 
 .portlet-body .table {

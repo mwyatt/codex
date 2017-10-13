@@ -21,12 +21,13 @@
     "mustache": "global:Mustache"
   },
   "dependencies": {
-    "normalize.css": "~3.0.3",
-    "bean": "~1.0.15",
-    "keycode": "~2.1.8",
     "autoprefixer": "~6.0.3",
+    "bean": "~1.0.15",
     "gulp": "~3.9.0",
     "gulp-postcss": "~6.1.0",
+    "gulp-watch": "^4.3.11",
+    "keycode": "~2.1.8",
+    "normalize.css": "~3.0.3",
     "postcss-color-function": "~2.0.1",
     "postcss-conditionals": "~2.0.2",
     "postcss-custom-properties": "~5.0.0",

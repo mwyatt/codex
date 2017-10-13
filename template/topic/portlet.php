@@ -3,8 +3,8 @@
     <div class="col-xs-12 col-md-4">
         <div class="portlet">
             <div class="portlet-actions right">
-                <button class="button outline">Ok</button>
-                <button class="button outline">Cancel</button>
+                <button class="btn btn-outline">Ok</button>
+                <button class="btn btn-outline">Cancel</button>
             </div>
             <div class="portlet-title">
                 General
@@ -17,8 +17,8 @@
     <div class="col-xs-12 col-md-4">
         <div class="portlet">
             <div class="portlet-actions right">
-                <button class="button outline">Ok</button>
-                <button class="button outline">Cancel</button>
+                <button class="btn btn-outline">Ok</button>
+                <button class="btn btn-outline">Cancel</button>
             </div>
             <div class="portlet-title">
                 General

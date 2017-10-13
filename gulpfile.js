@@ -2,6 +2,7 @@ var gulp = require('gulp')
 var gutil = require('gulp-util')
 var tap = require('gulp-tap')
 var runSequence = require('run-sequence')
+var watch = require('gulp-watch')
 
 var stringify = require('stringify')
 var browserify = require('browserify')
@@ -22,6 +23,13 @@ var postcssProcesses = [
   postcssColorFunction(),
   autoprefixer({browsers: ['last 1 version']})
 ];
+
+gulp.task('watch', function() {
+  gutil.log('watching...')
+  watch(['**.css', '**.js'], function() {
+    runSequence(['css', 'js'])
+  })
+})
 
 gulp.task('default', function() {
   runSequence(['css', 'js'])

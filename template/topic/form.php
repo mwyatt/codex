@@ -82,7 +82,7 @@
                     <label class="control-label block"><input class="form-checkbox" name="bar" type="checkbox">Bar</label>
                 </div>
                 <div class="block-margins">
-                    <button class="button primary">Submit</button>
+                    <button class="btn btn-primary">Submit</button>
                 </div>
             </div>
         </div>

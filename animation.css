@@ -1,8 +1,8 @@
 .animated {
-            width: 3rem;
-        height: 3rem;
+            width: 1.5rem;
+        height: 1.5rem;
         background: var(--bud);
-        border-radius: .2rem;
+        border-radius: var(--border-radius);
         margin: 0 auto;
 }
 

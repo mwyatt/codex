@@ -28,9 +28,10 @@ $easings = [
     'ease-in-out-back',
 ];
 $areaTemplates = [
+    'layout',
+    'form',
     'button',
     'badge',
-    'form',
     'animation',
     'easing',
     'grid',

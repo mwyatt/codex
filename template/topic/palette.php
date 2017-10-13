@@ -20,7 +20,7 @@ $colours = [
 
 <?php foreach ($colours as $colour): ?>
     
-    <div class="colour">
+    <div class="colour containing-box">
         <div class="colour-swatch background-<?php echo $colour ?>"></div>
         <span class=""><?php echo $colour ?></span>
     </div>
